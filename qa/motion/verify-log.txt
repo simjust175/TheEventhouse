@@ -1,0 +1,71 @@
+PASS hero: single photograph → 1 static layer, no toggle, no rotation  — {"n":1,"toggle":false}
+PASS hero: single video → muted, loop, playsinline, autoplaying, poster set  — {"tag":"VIDEO","op":1,"active":true,"front":true,"src":"hero-venue.mp4","paused":false,"muted":true,"loop":true,"pi":true,"poster":"hero-venue.webp","pos":""}
+PASS hero: pause toggle pauses and resumes the video  — {"afterPause":true,"afterPlay":false}
+PASS hero: multiple photographs rotate through every item  — [0,1,2]
+PASS hero: crossfade layers over a fully opaque previous image (never blank)  — {"frontOpacity":0.116253,"underActiveOpacity":1}
+PASS hero: multiple videos → second clip fades in and plays  — {"idx":1,"layers":[["hero-venue.mp4",true,false],["aisle-florals.mp4",false,true]]}
+PASS hero: video that has faded out is paused (saves decode/battery)  — [["hero-venue.mp4",true],["aisle-florals.mp4",false]]
+PASS hero: production config is a mixed video/photo sequence  — ["VIDEO","IMG","VIDEO","IMG"]
+PASS hero: mixed sequence advances from the video to the photo, label follows  — {"idx":1,"label":"A set banquet table with glassware and blush roses"}
+PASS hero: missing video file falls back to its poster image  — {"tag":"IMG","op":0.00221067,"active":false,"front":false,"src":"hero-venue.webp","paused":null,"poster":null,"pos":""}
+PASS hero: mobile uses the portrait video encode and the mobile crop  — {"video":"hero-venue-m.mp4","crop":"20% 50%"}
+PASS hero: reduced motion → first item only, poster still instead of video, no toggle  — {"n":1,"tag":"IMG"}
+PASS parallax d1440 carousel: photo moves inside frame (rate 0.151), no blank edge (min overscan 0.0px)  — {"dy":[-244.8,-190.4,-136,-81.6,-27.2]}
+PASS parallax d1440 teaser: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)  — {"dy":[-76.5,-59.9,-43.3,-26.7,-10.1]}
+PASS parallax d1440 trio-left: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)  — {"dy":[-81.9,-63.7,-45.5,-27.3,-9.1]}
+PASS parallax d1440 trio-centre: photo moves inside frame (rate 0.092), no blank edge (min overscan 0.0px)  — {"dy":[-126.9,-100.2,-73.6,-47.1,-20.5]}
+PASS parallax d1440 trio-right: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)  — {"dy":[-80,-61.8,-43.6,-25.4,-7.2]}
+PASS parallax d1440 florals: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)  — {"dy":[-165.7,-121.8,-77.9,-46.8,-15.6]}
+PASS parallax d1440 gallery-strip: photo moves inside frame (rate 0.052), no blank edge (min overscan 0.0px)  — {"dy":[-54,-42,-30,-18,-6]}
+PASS parallax d1440 footer-band: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)  — {"dy":[-169.2,-131.6]}
+PASS carousel d1440: new category keeps the same parallax offset and keeps moving with scroll  — {"hit":{"el":"BUTTON.carousel__zone carousel__zone--next","cur":"1","sy":2176,"ih":900},"nb":{"x":1036.8125,"y":224.53125,"width":403.1875,"height":900},"beforeDy":-170,"enteringDy":-172.2,"afterDy":-170,"after300pxDy":-124.7}
+PASS layout d1440: no horizontal overflow  — {"innerW":1440,"clientW":1440,"scrollW":1440}
+PASS console d1440: no errors  — []
+PASS parallax d1920 carousel: photo moves inside frame (rate 0.151), no blank edge (min overscan 0.0px)  — {"dy":[-293.4,-228.2,-163,-97.8,-32.6]}
+PASS parallax d1920 teaser: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)  — {"dy":[-94.2,-73.8,-53.4,-33,-12.6]}
+PASS parallax d1920 trio-left: photo moves inside frame (rate 0.071), no blank edge (min overscan 0.0px)  — {"dy":[-100.8,-78.4,-56,-33.6,-11.2]}
+PASS parallax d1920 trio-centre: photo moves inside frame (rate 0.092), no blank edge (min overscan 0.0px)  — {"dy":[-158.9,-125.6,-92.4,-59.3,-26]}
+PASS parallax d1920 trio-right: photo moves inside frame (rate 0.071), no blank edge (min overscan 0.0px)  — {"dy":[-98.3,-75.9,-53.5,-31.1,-8.7]}
+PASS parallax d1920 florals: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)  — {"dy":[-200.1,-147.1,-94,-56.5,-18.8]}
+PASS parallax d1920 gallery-strip: photo moves inside frame (rate 0.052), no blank edge (min overscan 0.0px)  — {"dy":[-65.7,-51.1,-36.5,-21.9,-7.3]}
+PASS parallax d1920 footer-band: photo moves inside frame (rate 0.121), no blank edge (min overscan 0.0px)  — {"dy":[-202.5,-157.5]}
+PASS carousel d1920: new category keeps the same parallax offset and keeps moving with scroll  — {"hit":{"el":"BUTTON.carousel__zone carousel__zone--next","cur":"1","sy":2721,"ih":1080},"nb":{"x":1382.40625,"y":269.796875,"width":537.59375,"height":1080},"beforeDy":-203.8,"enteringDy":-204.8,"afterDy":-203.8,"after300pxDy":-158.5}
+PASS layout d1920: no horizontal overflow  — {"innerW":1920,"clientW":1920,"scrollW":1920}
+PASS console d1920: no errors  — []
+PASS parallax t768 carousel: photo moves inside frame (rate 0.091), no blank edge (min overscan 0.0px)  — {"dy":[-168.3,-130.9,-93.5,-56.1,-18.7]}
+PASS parallax t768 teaser: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)  — {"dy":[-62.6,-48.9,-35.4,-21.8,-8.2]}
+PASS parallax t768 trio-centre: photo moves inside frame (rate 0.056), no blank edge (min overscan 0.0px)  — {"dy":[-74.7,-58.1,-41.5,-24.9,-8.3]}
+PASS parallax t768 trio-right: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)  — {"dy":[-57.8,-44.8,-31.8,-18.7,-5.8]}
+PASS parallax t768 florals: photo moves inside frame (rate 0.08), no blank edge (min overscan 0.0px)  — {"dy":[-122.7,-88.1,-53.5,-32.1,-10.7]}
+PASS parallax t768 gallery-strip: photo moves inside frame (rate 0.032), no blank edge (min overscan 0.0px)  — {"dy":[-35.1,-27.3,-19.5,-11.7,-3.9]}
+PASS parallax t768 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)  — {"dy":[-105.3,-81.9]}
+PASS carousel t768: new category keeps the same parallax offset and keeps moving with scroll  — {"hit":{"el":"svg.[object SVGAnimatedString]","cur":"1","sy":2778,"ih":1024},"nb":{"x":697.4375,"y":526.359375,"width":45.65625,"height":45.65625},"beforeDy":-116.9,"enteringDy":-120.6,"afterDy":-116.9,"after300pxDy":-89.5}
+PASS layout t768: no horizontal overflow  — {"innerW":768,"clientW":768,"scrollW":768}
+PASS console t768: no errors  — []
+PASS parallax m390 carousel: photo moves inside frame (rate 0.091), no blank edge (min overscan 0.0px)  — {"dy":[-138.6,-107.8,-77,-46.2,-15.4]}
+PASS parallax m390 teaser: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)  — {"dy":[-45.5,-35.7,-25.8,-16.1,-6.3]}
+PASS parallax m390 trio-centre: photo moves inside frame (rate 0.056), no blank edge (min overscan 0.0px)  — {"dy":[-53.9,-42,-30,-18,-6]}
+PASS parallax m390 trio-right: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)  — {"dy":[-41.6,-32.2,-22.8,-13.4,-4]}
+PASS parallax m390 florals: photo moves inside frame (rate 0.077), no blank edge (min overscan 0.0px)  — {"dy":[-81.3,-59.4,-37.5,-22.5,-7.5]}
+PASS parallax m390 gallery-strip: photo moves inside frame (rate 0.032), no blank edge (min overscan 0.0px)  — {"dy":[-30.6,-23.8,-17,-10.2,-3.4]}
+PASS parallax m390 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)  — {"dy":[-87.3,-67.9]}
+PASS carousel m390: new category keeps the same parallax offset and keeps moving with scroll  — {"hit":{"el":"svg.[object SVGAnimatedString]","cur":"1","sy":2448,"ih":844},"nb":{"x":327.625,"y":412.25,"width":45.75,"height":45.75},"beforeDy":-96.3,"enteringDy":-101.5,"afterDy":-96.3,"after300pxDy":-68.9}
+PASS layout m390: no horizontal overflow  — {"innerW":390,"clientW":390,"scrollW":390}
+PASS console m390: no errors  — []
+PASS shape d1440: capsule (single radius = h/2, straight top/bottom 766.4px, ratio 2.21)  — {"w":1400,"h":633.6,"radius":"317px"}
+PASS shape d1440: text and CTA centred and inside the shape  — ["SPAN","H2","P","A"]
+PASS shape d1440: grows from soft rectangle (radius increases while entering)  — ["enter:182.6px","mid:299px","settled:317px"]
+PASS shape: live resize 1440→700→1440 switches capsule→circle→capsule cleanly  — {"at700":[654.6,654.6,"327.5px"],"back1440":[1400,633.6,"317px"]}
+PASS shape d1920: capsule (single radius = h/2, straight top/bottom 1089.1px, ratio 2.401)  — {"w":1866.7,"h":777.6,"radius":"389px"}
+PASS shape d1920: text and CTA centred and inside the shape  — ["SPAN","H2","P","A"]
+PASS shape d1920: grows from soft rectangle (radius increases while entering)  — ["enter:224.3px","mid:365.8px","settled:389px"]
+PASS shape t768: true circle (w=h, radius = w/2, not elliptical)  — {"w":718.2,"h":718.2,"radius":"359px"}
+PASS shape t768: text and CTA centred and inside the shape  — ["SPAN","H2","P","A"]
+PASS shape t768: grows from soft rectangle (radius increases while entering)  — ["enter:208.8px","mid:339px","settled:359px"]
+PASS shape m390: true circle (w=h, radius = w/2, not elliptical)  — {"w":356.8,"h":356.8,"radius":"178.5px"}
+PASS shape m390: text and CTA centred and inside the shape  — ["SPAN","H2","P","A"]
+PASS shape m390: grows from soft rectangle (radius increases while entering)  — ["enter:125.6px","mid:177.3px","settled:178.5px"]
+PASS perf m390 (4× CPU throttle, real touch swipes): scrolled to 12022/12022, 83 fps avg, p95 16.8ms, unexpected layout shift 0  — {"frames":1200,"avgMs":12,"fps":83,"over50ms":1,"p95":16.8,"cls":0,"heroResizeShift":0.168,"y":12022,"maxY":12022,"docHBefore":12866,"docHAfter":12866}
+PASS perf d1440: scrolled to 9882/9882, 118 fps avg, p95 8.4ms, unexpected layout shift 0  — {"frames":621,"avgMs":8.5,"fps":118,"over50ms":0,"p95":8.4,"cls":0,"heroResizeShift":0.21,"y":9882,"maxY":9882,"docHBefore":10782,"docHAfter":10782}
+
+69/69 passed

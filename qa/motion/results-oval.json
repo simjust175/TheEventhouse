@@ -1,0 +1,529 @@
+{
+ "checks": [
+  {
+   "name": "shape d1440: capsule (single radius = h/2, straight top/bottom 766.4px, ratio 2.21)",
+   "ok": true,
+   "detail": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "317px"
+   }
+  },
+  {
+   "name": "shape d1440: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape d1440: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:182.6px",
+    "mid:299px",
+    "settled:317px"
+   ]
+  },
+  {
+   "name": "shape: live resize 1440→700→1440 switches capsule→circle→capsule cleanly",
+   "ok": true,
+   "detail": {
+    "at700": [
+     654.6,
+     654.6,
+     "327.5px"
+    ],
+    "back1440": [
+     1400,
+     633.6,
+     "317px"
+    ]
+   }
+  },
+  {
+   "name": "shape d1920: capsule (single radius = h/2, straight top/bottom 1089.1px, ratio 2.401)",
+   "ok": true,
+   "detail": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "389px"
+   }
+  },
+  {
+   "name": "shape d1920: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape d1920: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:224.3px",
+    "mid:365.8px",
+    "settled:389px"
+   ]
+  },
+  {
+   "name": "shape t768: true circle (w=h, radius = w/2, not elliptical)",
+   "ok": true,
+   "detail": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "359px"
+   }
+  },
+  {
+   "name": "shape t768: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape t768: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:208.8px",
+    "mid:339px",
+    "settled:359px"
+   ]
+  },
+  {
+   "name": "shape m390: true circle (w=h, radius = w/2, not elliptical)",
+   "ok": true,
+   "detail": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "178.5px"
+   }
+  },
+  {
+   "name": "shape m390: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape m390: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:125.6px",
+    "mid:177.3px",
+    "settled:178.5px"
+   ]
+  }
+ ],
+ "parallax": {},
+ "oval": {
+  "d1440": {
+   "enter": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "182.6px",
+    "elliptical": false,
+    "R": 182.6,
+    "ratio": 2.21,
+    "straight": 1034.8,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 719.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 719.984375
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "299px",
+    "elliptical": false,
+    "R": 299,
+    "ratio": 2.21,
+    "straight": 802,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 719.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 719.984375
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "317px",
+    "elliptical": false,
+    "R": 316.8,
+    "ratio": 2.21,
+    "straight": 766.4,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 719.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 719.984375
+     }
+    ],
+    "centred": true
+   }
+  },
+  "d1920": {
+   "enter": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "224.3px",
+    "elliptical": false,
+    "R": 224.3,
+    "ratio": 2.401,
+    "straight": 1418.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 959.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 959.9921875
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "365.8px",
+    "elliptical": false,
+    "R": 365.8,
+    "ratio": 2.401,
+    "straight": 1135.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 959.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 959.9921875
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "389px",
+    "elliptical": false,
+    "R": 388.8,
+    "ratio": 2.401,
+    "straight": 1089.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 959.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 959.9921875
+     }
+    ],
+    "centred": true
+   }
+  },
+  "t768": {
+   "enter": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "208.8px",
+    "elliptical": false,
+    "R": 208.8,
+    "ratio": 1,
+    "straight": 300.6,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 383.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 383.984375
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "339px",
+    "elliptical": false,
+    "R": 339,
+    "ratio": 1,
+    "straight": 40.2,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 383.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 383.984375
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "359px",
+    "elliptical": false,
+    "R": 359,
+    "ratio": 1,
+    "straight": 0.2,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 383.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 383.984375
+     }
+    ],
+    "centred": true
+   }
+  },
+  "m390": {
+   "enter": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "125.6px",
+    "elliptical": false,
+    "R": 125.6,
+    "ratio": 1,
+    "straight": 105.6,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 194.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 194.984375
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "177.3px",
+    "elliptical": false,
+    "R": 177.3,
+    "ratio": 1,
+    "straight": 2.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 194.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 194.984375
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "178.5px",
+    "elliptical": false,
+    "R": 178.4,
+    "ratio": 1,
+    "straight": 0,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 194.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 194.984375
+     }
+    ],
+    "centred": true
+   }
+  }
+ },
+ "hero": {},
+ "perf": {}
+}

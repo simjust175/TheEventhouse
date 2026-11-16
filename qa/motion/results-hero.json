@@ -1,0 +1,158 @@
+{
+ "checks": [
+  {
+   "name": "hero: single photograph → 1 static layer, no toggle, no rotation",
+   "ok": true,
+   "detail": {
+    "n": 1,
+    "toggle": false
+   }
+  },
+  {
+   "name": "hero: single video → muted, loop, playsinline, autoplaying, poster set",
+   "ok": true,
+   "detail": {
+    "tag": "VIDEO",
+    "op": 1,
+    "active": true,
+    "front": true,
+    "src": "hero-venue.mp4",
+    "paused": false,
+    "muted": true,
+    "loop": true,
+    "pi": true,
+    "poster": "hero-venue.webp",
+    "pos": ""
+   }
+  },
+  {
+   "name": "hero: pause toggle pauses and resumes the video",
+   "ok": true,
+   "detail": {
+    "afterPause": true,
+    "afterPlay": false
+   }
+  },
+  {
+   "name": "hero: multiple photographs rotate through every item",
+   "ok": true,
+   "detail": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "name": "hero: crossfade layers over a fully opaque previous image (never blank)",
+   "ok": true,
+   "detail": {
+    "frontOpacity": 0.116428,
+    "underActiveOpacity": 1
+   }
+  },
+  {
+   "name": "hero: multiple videos → second clip fades in and plays",
+   "ok": true,
+   "detail": {
+    "idx": 1,
+    "layers": [
+     [
+      "hero-venue.mp4",
+      true,
+      false
+     ],
+     [
+      "aisle-florals.mp4",
+      false,
+      true
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hero: video that has faded out is paused (saves decode/battery)",
+   "ok": true,
+   "detail": [
+    [
+     "hero-venue.mp4",
+     true
+    ],
+    [
+     "aisle-florals.mp4",
+     false
+    ]
+   ]
+  },
+  {
+   "name": "hero: production config is a mixed video/photo sequence",
+   "ok": true,
+   "detail": [
+    "VIDEO",
+    "IMG",
+    "VIDEO",
+    "IMG"
+   ]
+  },
+  {
+   "name": "hero: mixed sequence advances from the video to the photo, label follows",
+   "ok": true,
+   "detail": {
+    "idx": 1,
+    "label": "A set banquet table with glassware and blush roses"
+   }
+  },
+  {
+   "name": "hero: missing video file falls back to its poster image",
+   "ok": true,
+   "detail": {
+    "tag": "IMG",
+    "op": 0.00140444,
+    "active": false,
+    "front": false,
+    "src": "hero-venue.webp",
+    "paused": null,
+    "poster": null,
+    "pos": ""
+   }
+  },
+  {
+   "name": "hero: mobile uses the portrait video encode and the mobile crop",
+   "ok": true,
+   "detail": {
+    "video": "hero-venue-m.mp4",
+    "crop": "20% 50%"
+   }
+  },
+  {
+   "name": "hero: reduced motion → first item only, poster still instead of video, no toggle",
+   "ok": true,
+   "detail": {
+    "n": 1,
+    "tag": "IMG"
+   }
+  }
+ ],
+ "parallax": {},
+ "oval": {},
+ "hero": {
+  "singlePhoto": {
+   "idx": 0,
+   "n": 1,
+   "label": "Table",
+   "toggle": false,
+   "layers": [
+    {
+     "tag": "IMG",
+     "op": 1,
+     "active": true,
+     "front": true,
+     "src": "hero-table.webp",
+     "paused": null,
+     "poster": null,
+     "pos": "50% 55%"
+    }
+   ]
+  }
+ },
+ "perf": {}
+}

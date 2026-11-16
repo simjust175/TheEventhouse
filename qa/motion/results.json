@@ -1,0 +1,1973 @@
+{
+ "checks": [
+  {
+   "name": "hero: single photograph → 1 static layer, no toggle, no rotation",
+   "ok": true,
+   "detail": {
+    "n": 1,
+    "toggle": false
+   }
+  },
+  {
+   "name": "hero: single video → muted, loop, playsinline, autoplaying, poster set",
+   "ok": true,
+   "detail": {
+    "tag": "VIDEO",
+    "op": 1,
+    "active": true,
+    "front": true,
+    "src": "hero-venue.mp4",
+    "paused": false,
+    "muted": true,
+    "loop": true,
+    "pi": true,
+    "poster": "hero-venue.webp",
+    "pos": ""
+   }
+  },
+  {
+   "name": "hero: pause toggle pauses and resumes the video",
+   "ok": true,
+   "detail": {
+    "afterPause": true,
+    "afterPlay": false
+   }
+  },
+  {
+   "name": "hero: multiple photographs rotate through every item",
+   "ok": true,
+   "detail": [
+    0,
+    1,
+    2
+   ]
+  },
+  {
+   "name": "hero: crossfade layers over a fully opaque previous image (never blank)",
+   "ok": true,
+   "detail": {
+    "frontOpacity": 0.116253,
+    "underActiveOpacity": 1
+   }
+  },
+  {
+   "name": "hero: multiple videos → second clip fades in and plays",
+   "ok": true,
+   "detail": {
+    "idx": 1,
+    "layers": [
+     [
+      "hero-venue.mp4",
+      true,
+      false
+     ],
+     [
+      "aisle-florals.mp4",
+      false,
+      true
+     ]
+    ]
+   }
+  },
+  {
+   "name": "hero: video that has faded out is paused (saves decode/battery)",
+   "ok": true,
+   "detail": [
+    [
+     "hero-venue.mp4",
+     true
+    ],
+    [
+     "aisle-florals.mp4",
+     false
+    ]
+   ]
+  },
+  {
+   "name": "hero: production config is a mixed video/photo sequence",
+   "ok": true,
+   "detail": [
+    "VIDEO",
+    "IMG",
+    "VIDEO",
+    "IMG"
+   ]
+  },
+  {
+   "name": "hero: mixed sequence advances from the video to the photo, label follows",
+   "ok": true,
+   "detail": {
+    "idx": 1,
+    "label": "A set banquet table with glassware and blush roses"
+   }
+  },
+  {
+   "name": "hero: missing video file falls back to its poster image",
+   "ok": true,
+   "detail": {
+    "tag": "IMG",
+    "op": 0.00221067,
+    "active": false,
+    "front": false,
+    "src": "hero-venue.webp",
+    "paused": null,
+    "poster": null,
+    "pos": ""
+   }
+  },
+  {
+   "name": "hero: mobile uses the portrait video encode and the mobile crop",
+   "ok": true,
+   "detail": {
+    "video": "hero-venue-m.mp4",
+    "crop": "20% 50%"
+   }
+  },
+  {
+   "name": "hero: reduced motion → first item only, poster still instead of video, no toggle",
+   "ok": true,
+   "detail": {
+    "n": 1,
+    "tag": "IMG"
+   }
+  },
+  {
+   "name": "parallax d1440 carousel: photo moves inside frame (rate 0.151), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -244.8,
+     -190.4,
+     -136,
+     -81.6,
+     -27.2
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 teaser: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -76.5,
+     -59.9,
+     -43.3,
+     -26.7,
+     -10.1
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 trio-left: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -81.9,
+     -63.7,
+     -45.5,
+     -27.3,
+     -9.1
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 trio-centre: photo moves inside frame (rate 0.092), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -126.9,
+     -100.2,
+     -73.6,
+     -47.1,
+     -20.5
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 trio-right: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -80,
+     -61.8,
+     -43.6,
+     -25.4,
+     -7.2
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 florals: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -165.7,
+     -121.8,
+     -77.9,
+     -46.8,
+     -15.6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 gallery-strip: photo moves inside frame (rate 0.052), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -54,
+     -42,
+     -30,
+     -18,
+     -6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 footer-band: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -169.2,
+     -131.6
+    ]
+   }
+  },
+  {
+   "name": "carousel d1440: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "BUTTON.carousel__zone carousel__zone--next",
+     "cur": "1",
+     "sy": 2176,
+     "ih": 900
+    },
+    "nb": {
+     "x": 1036.8125,
+     "y": 224.53125,
+     "width": 403.1875,
+     "height": 900
+    },
+    "beforeDy": -170,
+    "enteringDy": -172.2,
+    "afterDy": -170,
+    "after300pxDy": -124.7
+   }
+  },
+  {
+   "name": "layout d1440: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 1440,
+    "clientW": 1440,
+    "scrollW": 1440
+   }
+  },
+  {
+   "name": "console d1440: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "parallax d1920 carousel: photo moves inside frame (rate 0.151), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -293.4,
+     -228.2,
+     -163,
+     -97.8,
+     -32.6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 teaser: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -94.2,
+     -73.8,
+     -53.4,
+     -33,
+     -12.6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 trio-left: photo moves inside frame (rate 0.071), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -100.8,
+     -78.4,
+     -56,
+     -33.6,
+     -11.2
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 trio-centre: photo moves inside frame (rate 0.092), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -158.9,
+     -125.6,
+     -92.4,
+     -59.3,
+     -26
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 trio-right: photo moves inside frame (rate 0.071), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -98.3,
+     -75.9,
+     -53.5,
+     -31.1,
+     -8.7
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 florals: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -200.1,
+     -147.1,
+     -94,
+     -56.5,
+     -18.8
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 gallery-strip: photo moves inside frame (rate 0.052), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -65.7,
+     -51.1,
+     -36.5,
+     -21.9,
+     -7.3
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 footer-band: photo moves inside frame (rate 0.121), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -202.5,
+     -157.5
+    ]
+   }
+  },
+  {
+   "name": "carousel d1920: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "BUTTON.carousel__zone carousel__zone--next",
+     "cur": "1",
+     "sy": 2721,
+     "ih": 1080
+    },
+    "nb": {
+     "x": 1382.40625,
+     "y": 269.796875,
+     "width": 537.59375,
+     "height": 1080
+    },
+    "beforeDy": -203.8,
+    "enteringDy": -204.8,
+    "afterDy": -203.8,
+    "after300pxDy": -158.5
+   }
+  },
+  {
+   "name": "layout d1920: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 1920,
+    "clientW": 1920,
+    "scrollW": 1920
+   }
+  },
+  {
+   "name": "console d1920: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "parallax t768 carousel: photo moves inside frame (rate 0.091), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -168.3,
+     -130.9,
+     -93.5,
+     -56.1,
+     -18.7
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 teaser: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -62.6,
+     -48.9,
+     -35.4,
+     -21.8,
+     -8.2
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 trio-centre: photo moves inside frame (rate 0.056), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -74.7,
+     -58.1,
+     -41.5,
+     -24.9,
+     -8.3
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 trio-right: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -57.8,
+     -44.8,
+     -31.8,
+     -18.7,
+     -5.8
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 florals: photo moves inside frame (rate 0.08), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -122.7,
+     -88.1,
+     -53.5,
+     -32.1,
+     -10.7
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 gallery-strip: photo moves inside frame (rate 0.032), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -35.1,
+     -27.3,
+     -19.5,
+     -11.7,
+     -3.9
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -105.3,
+     -81.9
+    ]
+   }
+  },
+  {
+   "name": "carousel t768: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "svg.[object SVGAnimatedString]",
+     "cur": "1",
+     "sy": 2778,
+     "ih": 1024
+    },
+    "nb": {
+     "x": 697.4375,
+     "y": 526.359375,
+     "width": 45.65625,
+     "height": 45.65625
+    },
+    "beforeDy": -116.9,
+    "enteringDy": -120.6,
+    "afterDy": -116.9,
+    "after300pxDy": -89.5
+   }
+  },
+  {
+   "name": "layout t768: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 768,
+    "clientW": 768,
+    "scrollW": 768
+   }
+  },
+  {
+   "name": "console t768: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "parallax m390 carousel: photo moves inside frame (rate 0.091), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -138.6,
+     -107.8,
+     -77,
+     -46.2,
+     -15.4
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 teaser: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -45.5,
+     -35.7,
+     -25.8,
+     -16.1,
+     -6.3
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 trio-centre: photo moves inside frame (rate 0.056), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -53.9,
+     -42,
+     -30,
+     -18,
+     -6
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 trio-right: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -41.6,
+     -32.2,
+     -22.8,
+     -13.4,
+     -4
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 florals: photo moves inside frame (rate 0.077), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -81.3,
+     -59.4,
+     -37.5,
+     -22.5,
+     -7.5
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 gallery-strip: photo moves inside frame (rate 0.032), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -30.6,
+     -23.8,
+     -17,
+     -10.2,
+     -3.4
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -87.3,
+     -67.9
+    ]
+   }
+  },
+  {
+   "name": "carousel m390: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "svg.[object SVGAnimatedString]",
+     "cur": "1",
+     "sy": 2448,
+     "ih": 844
+    },
+    "nb": {
+     "x": 327.625,
+     "y": 412.25,
+     "width": 45.75,
+     "height": 45.75
+    },
+    "beforeDy": -96.3,
+    "enteringDy": -101.5,
+    "afterDy": -96.3,
+    "after300pxDy": -68.9
+   }
+  },
+  {
+   "name": "layout m390: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 390,
+    "clientW": 390,
+    "scrollW": 390
+   }
+  },
+  {
+   "name": "console m390: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "shape d1440: capsule (single radius = h/2, straight top/bottom 766.4px, ratio 2.21)",
+   "ok": true,
+   "detail": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "317px"
+   }
+  },
+  {
+   "name": "shape d1440: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape d1440: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:182.6px",
+    "mid:299px",
+    "settled:317px"
+   ]
+  },
+  {
+   "name": "shape: live resize 1440→700→1440 switches capsule→circle→capsule cleanly",
+   "ok": true,
+   "detail": {
+    "at700": [
+     654.6,
+     654.6,
+     "327.5px"
+    ],
+    "back1440": [
+     1400,
+     633.6,
+     "317px"
+    ]
+   }
+  },
+  {
+   "name": "shape d1920: capsule (single radius = h/2, straight top/bottom 1089.1px, ratio 2.401)",
+   "ok": true,
+   "detail": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "389px"
+   }
+  },
+  {
+   "name": "shape d1920: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape d1920: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:224.3px",
+    "mid:365.8px",
+    "settled:389px"
+   ]
+  },
+  {
+   "name": "shape t768: true circle (w=h, radius = w/2, not elliptical)",
+   "ok": true,
+   "detail": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "359px"
+   }
+  },
+  {
+   "name": "shape t768: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape t768: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:208.8px",
+    "mid:339px",
+    "settled:359px"
+   ]
+  },
+  {
+   "name": "shape m390: true circle (w=h, radius = w/2, not elliptical)",
+   "ok": true,
+   "detail": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "178.5px"
+   }
+  },
+  {
+   "name": "shape m390: text and CTA centred and inside the shape",
+   "ok": true,
+   "detail": [
+    "SPAN",
+    "H2",
+    "P",
+    "A"
+   ]
+  },
+  {
+   "name": "shape m390: grows from soft rectangle (radius increases while entering)",
+   "ok": true,
+   "detail": [
+    "enter:125.6px",
+    "mid:177.3px",
+    "settled:178.5px"
+   ]
+  },
+  {
+   "name": "perf m390 (4× CPU throttle, real touch swipes): scrolled to 12022/12022, 83 fps avg, p95 16.8ms, unexpected layout shift 0",
+   "ok": true,
+   "detail": {
+    "frames": 1200,
+    "avgMs": 12,
+    "fps": 83,
+    "over50ms": 1,
+    "p95": 16.8,
+    "cls": 0,
+    "heroResizeShift": 0.168,
+    "y": 12022,
+    "maxY": 12022,
+    "docHBefore": 12866,
+    "docHAfter": 12866
+   }
+  },
+  {
+   "name": "perf d1440: scrolled to 9882/9882, 118 fps avg, p95 8.4ms, unexpected layout shift 0",
+   "ok": true,
+   "detail": {
+    "frames": 621,
+    "avgMs": 8.5,
+    "fps": 118,
+    "over50ms": 0,
+    "p95": 8.4,
+    "cls": 0,
+    "heroResizeShift": 0.21,
+    "y": 9882,
+    "maxY": 9882,
+    "docHBefore": 10782,
+    "docHAfter": 10782
+   }
+  }
+ ],
+ "parallax": {
+  "d1440": {
+   "carousel": {
+    "rate": 0.151,
+    "minOverscanPx": 0,
+    "dy": [
+     -244.8,
+     -190.4,
+     -136,
+     -81.6,
+     -27.2
+    ],
+    "y": [
+     1681,
+     2041,
+     2401,
+     2761,
+     3121
+    ]
+   },
+   "teaser": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -76.5,
+     -59.9,
+     -43.3,
+     -26.7,
+     -10.1
+    ],
+    "y": [
+     2583,
+     2814,
+     3045,
+     3276,
+     3507
+    ]
+   },
+   "trio-left": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -81.9,
+     -63.7,
+     -45.5,
+     -27.3,
+     -9.1
+    ],
+    "y": [
+     3836,
+     4090,
+     4343,
+     4597,
+     4850
+    ]
+   },
+   "trio-centre": {
+    "rate": 0.092,
+    "minOverscanPx": 0,
+    "dy": [
+     -126.9,
+     -100.2,
+     -73.6,
+     -47.1,
+     -20.5
+    ],
+    "y": [
+     3711,
+     4001,
+     4291,
+     4580,
+     4870
+    ]
+   },
+   "trio-right": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -80,
+     -61.8,
+     -43.6,
+     -25.4,
+     -7.2
+    ],
+    "y": [
+     3877,
+     4131,
+     4385,
+     4638,
+     4892
+    ]
+   },
+   "florals": {
+    "rate": 0.122,
+    "minOverscanPx": 0,
+    "dy": [
+     -165.7,
+     -121.8,
+     -77.9,
+     -46.8,
+     -15.6
+    ],
+    "y": [
+     4847,
+     5154,
+     5461,
+     5767,
+     6074
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.052,
+    "minOverscanPx": 0,
+    "dy": [
+     -54,
+     -42,
+     -30,
+     -18,
+     -6
+    ],
+    "y": [
+     8318,
+     8548,
+     8778,
+     9008,
+     9238
+    ]
+   },
+   "footer-band": {
+    "rate": 0.122,
+    "minOverscanPx": 0,
+    "dy": [
+     -169.2,
+     -131.6
+    ],
+    "y": [
+     9389,
+     9698
+    ]
+   },
+   "carouselSwitch": {
+    "before": {
+     "y": 2176,
+     "dy": -170,
+     "top": 170,
+     "bottom": 102,
+     "left": 0,
+     "right": 0,
+     "fTop": 224.53125,
+     "fH": 900,
+     "fL": 0,
+     "fW": 1440,
+     "vh": 900
+    },
+    "mid": {
+     "dy": -172.2,
+     "top": 172.1734619140625,
+     "bottom": 104.1734619140625
+    },
+    "after": {
+     "y": 2176,
+     "dy": -170,
+     "top": 170,
+     "bottom": 102,
+     "left": 0,
+     "right": 0,
+     "fTop": 224.53125,
+     "fH": 900,
+     "fL": 0,
+     "fW": 1440,
+     "vh": 900
+    },
+    "moved": {
+     "y": 2476,
+     "dy": -124.7,
+     "top": 124.7,
+     "bottom": 147.3,
+     "left": 0,
+     "right": 0,
+     "fTop": -75.46875,
+     "fH": 900,
+     "fL": 0,
+     "fW": 1440,
+     "vh": 900
+    }
+   }
+  },
+  "d1920": {
+   "carousel": {
+    "rate": 0.151,
+    "minOverscanPx": 0,
+    "dy": [
+     -293.4,
+     -228.2,
+     -163,
+     -97.8,
+     -32.6
+    ],
+    "y": [
+     2127,
+     2559,
+     2991,
+     3423,
+     3855
+    ]
+   },
+   "teaser": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -94.2,
+     -73.8,
+     -53.4,
+     -33,
+     -12.6
+    ],
+    "y": [
+     3222,
+     3506,
+     3790,
+     4074,
+     4358
+    ]
+   },
+   "trio-left": {
+    "rate": 0.071,
+    "minOverscanPx": 0,
+    "dy": [
+     -100.8,
+     -78.4,
+     -56,
+     -33.6,
+     -11.2
+    ],
+    "y": [
+     4893,
+     5207,
+     5521,
+     5835,
+     6149
+    ]
+   },
+   "trio-centre": {
+    "rate": 0.092,
+    "minOverscanPx": 0,
+    "dy": [
+     -158.9,
+     -125.6,
+     -92.4,
+     -59.3,
+     -26
+    ],
+    "y": [
+     4726,
+     5089,
+     5451,
+     5813,
+     6176
+    ]
+   },
+   "trio-right": {
+    "rate": 0.071,
+    "minOverscanPx": 0,
+    "dy": [
+     -98.3,
+     -75.9,
+     -53.5,
+     -31.1,
+     -8.7
+    ],
+    "y": [
+     4948,
+     5262,
+     5576,
+     5890,
+     6204
+    ]
+   },
+   "florals": {
+    "rate": 0.122,
+    "minOverscanPx": 0,
+    "dy": [
+     -200.1,
+     -147.1,
+     -94,
+     -56.5,
+     -18.8
+    ],
+    "y": [
+     6234,
+     6605,
+     6977,
+     7348,
+     7720
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.052,
+    "minOverscanPx": 0,
+    "dy": [
+     -65.7,
+     -51.1,
+     -36.5,
+     -21.9,
+     -7.3
+    ],
+    "y": [
+     10800,
+     11083,
+     11365,
+     11648,
+     11931
+    ]
+   },
+   "footer-band": {
+    "rate": 0.121,
+    "minOverscanPx": 0,
+    "dy": [
+     -202.5,
+     -157.5
+    ],
+    "y": [
+     12211,
+     12582
+    ]
+   },
+   "carouselSwitch": {
+    "before": {
+     "y": 2721,
+     "dy": -203.8,
+     "top": 203.8,
+     "bottom": 122.2,
+     "left": 0,
+     "right": 0,
+     "fTop": 269.796875,
+     "fH": 1080,
+     "fL": 0,
+     "fW": 1920,
+     "vh": 1080
+    },
+    "mid": {
+     "dy": -204.8,
+     "top": 204.7974853515625,
+     "bottom": 123.197509765625
+    },
+    "after": {
+     "y": 2721,
+     "dy": -203.8,
+     "top": 203.8,
+     "bottom": 122.2,
+     "left": 0,
+     "right": 0,
+     "fTop": 269.796875,
+     "fH": 1080,
+     "fL": 0,
+     "fW": 1920,
+     "vh": 1080
+    },
+    "moved": {
+     "y": 3021,
+     "dy": -158.5,
+     "top": 158.5,
+     "bottom": 167.5,
+     "left": 0,
+     "right": 0,
+     "fTop": -30.203125,
+     "fH": 1080,
+     "fL": 0,
+     "fW": 1920,
+     "vh": 1080
+    }
+   }
+  },
+  "t768": {
+   "carousel": {
+    "rate": 0.091,
+    "minOverscanPx": 0,
+    "dy": [
+     -168.3,
+     -130.9,
+     -93.5,
+     -56.1,
+     -18.7
+    ],
+    "y": [
+     2215,
+     2624,
+     3034,
+     3444,
+     3853
+    ]
+   },
+   "teaser": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -62.6,
+     -48.9,
+     -35.4,
+     -21.8,
+     -8.2
+    ],
+    "y": [
+     3581,
+     3894,
+     4206,
+     4519,
+     4831
+    ]
+   },
+   "trio-left": "not displayed at this width",
+   "trio-centre": {
+    "rate": 0.056,
+    "minOverscanPx": 0,
+    "dy": [
+     -74.7,
+     -58.1,
+     -41.5,
+     -24.9,
+     -8.3
+    ],
+    "y": [
+     6167,
+     6465,
+     6763,
+     7062,
+     7360
+    ]
+   },
+   "trio-right": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -57.8,
+     -44.8,
+     -31.8,
+     -18.7,
+     -5.8
+    ],
+    "y": [
+     6188,
+     6486,
+     6784,
+     7083,
+     7381
+    ]
+   },
+   "florals": {
+    "rate": 0.08,
+    "minOverscanPx": 0,
+    "dy": [
+     -122.7,
+     -88.1,
+     -53.5,
+     -32.1,
+     -10.7
+    ],
+    "y": [
+     7679,
+     8028,
+     8376,
+     8724,
+     9073
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.032,
+    "minOverscanPx": 0,
+    "dy": [
+     -35.1,
+     -27.3,
+     -19.5,
+     -11.7,
+     -3.9
+    ],
+    "y": [
+     12113,
+     12359,
+     12605,
+     12852,
+     13098
+    ]
+   },
+   "footer-band": {
+    "rate": 0.073,
+    "minOverscanPx": 0,
+    "dy": [
+     -105.3,
+     -81.9
+    ],
+    "y": [
+     13751,
+     14070
+    ]
+   },
+   "carouselSwitch": {
+    "before": {
+     "y": 2778,
+     "dy": -116.9,
+     "top": 116.9,
+     "bottom": 70.1,
+     "left": 0,
+     "right": 0,
+     "fTop": 255.9375,
+     "fH": 1024,
+     "fL": 0,
+     "fW": 768,
+     "vh": 1024
+    },
+    "mid": {
+     "dy": -120.6,
+     "top": 120.63116455078125,
+     "bottom": 73.83099365234375
+    },
+    "after": {
+     "y": 2778,
+     "dy": -116.9,
+     "top": 116.9,
+     "bottom": 70.1,
+     "left": 0,
+     "right": 0,
+     "fTop": 255.9375,
+     "fH": 1024,
+     "fL": 0,
+     "fW": 768,
+     "vh": 1024
+    },
+    "moved": {
+     "y": 3078,
+     "dy": -89.5,
+     "top": 89.5,
+     "bottom": 97.5,
+     "left": 0,
+     "right": 0,
+     "fTop": -44.0625,
+     "fH": 1024,
+     "fL": 0,
+     "fW": 768,
+     "vh": 1024
+    }
+   }
+  },
+  "m390": {
+   "carousel": {
+    "rate": 0.091,
+    "minOverscanPx": 0,
+    "dy": [
+     -138.6,
+     -107.8,
+     -77,
+     -46.2,
+     -15.4
+    ],
+    "y": [
+     1984,
+     2321,
+     2659,
+     2997,
+     3334
+    ]
+   },
+   "teaser": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -45.5,
+     -35.7,
+     -25.8,
+     -16.1,
+     -6.3
+    ],
+    "y": [
+     3229,
+     3451,
+     3674,
+     3896,
+     4118
+    ]
+   },
+   "trio-left": "not displayed at this width",
+   "trio-centre": {
+    "rate": 0.056,
+    "minOverscanPx": 0,
+    "dy": [
+     -53.9,
+     -42,
+     -30,
+     -18,
+     -6
+    ],
+    "y": [
+     5020,
+     5234,
+     5448,
+     5662,
+     5876
+    ]
+   },
+   "trio-right": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -41.6,
+     -32.2,
+     -22.8,
+     -13.4,
+     -4
+    ],
+    "y": [
+     5040,
+     5255,
+     5469,
+     5683,
+     5897
+    ]
+   },
+   "florals": {
+    "rate": 0.077,
+    "minOverscanPx": 0,
+    "dy": [
+     -81.3,
+     -59.4,
+     -37.5,
+     -22.5,
+     -7.5
+    ],
+    "y": [
+     6304,
+     6544,
+     6784,
+     7024,
+     7265
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.032,
+    "minOverscanPx": 0,
+    "dy": [
+     -30.6,
+     -23.8,
+     -17,
+     -10.2,
+     -3.4
+    ],
+    "y": [
+     9961,
+     10172,
+     10382,
+     10592,
+     10803
+    ]
+   },
+   "footer-band": {
+    "rate": 0.073,
+    "minOverscanPx": 0,
+    "dy": [
+     -87.3,
+     -67.9
+    ],
+    "y": [
+     11681,
+     11945
+    ]
+   },
+   "carouselSwitch": {
+    "before": {
+     "y": 2448,
+     "dy": -96.3,
+     "top": 96.3,
+     "bottom": 57.7,
+     "left": 0,
+     "right": 0,
+     "fTop": 210.984375,
+     "fH": 844,
+     "fL": 0,
+     "fW": 390,
+     "vh": 844
+    },
+    "mid": {
+     "dy": -101.5,
+     "top": 101.52899169921875,
+     "bottom": 62.928955078125
+    },
+    "after": {
+     "y": 2448,
+     "dy": -96.3,
+     "top": 96.3,
+     "bottom": 57.7,
+     "left": 0,
+     "right": 0,
+     "fTop": 210.984375,
+     "fH": 844,
+     "fL": 0,
+     "fW": 390,
+     "vh": 844
+    },
+    "moved": {
+     "y": 2748,
+     "dy": -68.9,
+     "top": 68.9,
+     "bottom": 85.1,
+     "left": 0,
+     "right": 0,
+     "fTop": -89.015625,
+     "fH": 844,
+     "fL": 0,
+     "fW": 390,
+     "vh": 844
+    }
+   }
+  }
+ },
+ "oval": {
+  "d1440": {
+   "enter": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "182.6px",
+    "elliptical": false,
+    "R": 182.6,
+    "ratio": 2.21,
+    "straight": 1034.8,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 719.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 719.984375
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "299px",
+    "elliptical": false,
+    "R": 299,
+    "ratio": 2.21,
+    "straight": 802,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 719.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 719.984375
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 1400,
+    "h": 633.6,
+    "radius": "317px",
+    "elliptical": false,
+    "R": 316.8,
+    "ratio": 2.21,
+    "straight": 766.4,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 719.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 719.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 719.984375
+     }
+    ],
+    "centred": true
+   }
+  },
+  "d1920": {
+   "enter": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "224.3px",
+    "elliptical": false,
+    "R": 224.3,
+    "ratio": 2.401,
+    "straight": 1418.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 959.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 959.9921875
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "365.8px",
+    "elliptical": false,
+    "R": 365.8,
+    "ratio": 2.401,
+    "straight": 1135.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 959.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 959.9921875
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 1866.7,
+    "h": 777.6,
+    "radius": "389px",
+    "elliptical": false,
+    "R": 388.8,
+    "ratio": 2.401,
+    "straight": 1089.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 960
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 959.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 959.9921875
+     }
+    ],
+    "centred": true
+   }
+  },
+  "t768": {
+   "enter": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "208.8px",
+    "elliptical": false,
+    "R": 208.8,
+    "ratio": 1,
+    "straight": 300.6,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 383.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 383.984375
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "339px",
+    "elliptical": false,
+    "R": 339,
+    "ratio": 1,
+    "straight": 40.2,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 383.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 383.984375
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 718.2,
+    "h": 718.2,
+    "radius": "359px",
+    "elliptical": false,
+    "R": 359,
+    "ratio": 1,
+    "straight": 0.2,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 383.984375
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 383.9921875
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 383.984375
+     }
+    ],
+    "centred": true
+   }
+  },
+  "m390": {
+   "enter": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "125.6px",
+    "elliptical": false,
+    "R": 125.6,
+    "ratio": 1,
+    "straight": 105.6,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 194.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 194.984375
+     }
+    ],
+    "centred": true
+   },
+   "mid": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "177.3px",
+    "elliptical": false,
+    "R": 177.3,
+    "ratio": 1,
+    "straight": 2.1,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 194.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 194.984375
+     }
+    ],
+    "centred": true
+   },
+   "settled": {
+    "w": 356.8,
+    "h": 356.8,
+    "radius": "178.5px",
+    "elliptical": false,
+    "R": 178.4,
+    "ratio": 1,
+    "straight": 0,
+    "kids": [
+     {
+      "tag": "SPAN",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "H2",
+      "ok": true,
+      "cx": 194.9921875
+     },
+     {
+      "tag": "P",
+      "ok": true,
+      "cx": 194.984375
+     },
+     {
+      "tag": "A",
+      "ok": true,
+      "cx": 194.984375
+     }
+    ],
+    "centred": true
+   }
+  }
+ },
+ "hero": {
+  "singlePhoto": {
+   "idx": 0,
+   "n": 1,
+   "label": "Table",
+   "toggle": false,
+   "layers": [
+    {
+     "tag": "IMG",
+     "op": 1,
+     "active": true,
+     "front": true,
+     "src": "hero-table.webp",
+     "paused": null,
+     "poster": null,
+     "pos": "50% 55%"
+    }
+   ]
+  }
+ },
+ "perf": {
+  "m390": {
+   "frames": 1200,
+   "avgMs": 12,
+   "fps": 83,
+   "over50ms": 1,
+   "p95": 16.8,
+   "cls": 0,
+   "heroResizeShift": 0.168,
+   "y": 12022,
+   "maxY": 12022,
+   "docHBefore": 12866,
+   "docHAfter": 12866
+  },
+  "d1440": {
+   "frames": 621,
+   "avgMs": 8.5,
+   "fps": 118,
+   "over50ms": 0,
+   "p95": 8.4,
+   "cls": 0,
+   "heroResizeShift": 0.21,
+   "y": 9882,
+   "maxY": 9882,
+   "docHBefore": 10782,
+   "docHAfter": 10782
+  }
+ }
+}

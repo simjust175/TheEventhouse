@@ -1,0 +1,969 @@
+{
+ "checks": [
+  {
+   "name": "parallax d1440 carousel: photo moves inside frame (rate 0.151), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -244.8,
+     -190.4,
+     -136,
+     -81.6,
+     -27.2
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 teaser: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -76.5,
+     -59.9,
+     -43.3,
+     -26.7,
+     -10.1
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 trio-left: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -81.9,
+     -63.7,
+     -45.5,
+     -27.3,
+     -9.1
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 trio-centre: photo moves inside frame (rate 0.092), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -126.9,
+     -100.2,
+     -73.6,
+     -47.1,
+     -20.5
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 trio-right: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -80,
+     -61.8,
+     -43.6,
+     -25.4,
+     -7.2
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 florals: photo moves inside frame (rate 0.124), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -183.2,
+     -134.1,
+     -85,
+     -51,
+     -17.1
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 gallery-strip: photo moves inside frame (rate 0.052), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -54,
+     -42,
+     -30,
+     -18,
+     -6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1440 footer-band: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -169.2,
+     -131.5
+    ]
+   }
+  },
+  {
+   "name": "layout d1440: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 1440,
+    "clientW": 1440,
+    "scrollW": 1440
+   }
+  },
+  {
+   "name": "console d1440: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "parallax d1920 carousel: photo moves inside frame (rate 0.151), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -293.4,
+     -228.2,
+     -163,
+     -97.8,
+     -32.6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 teaser: photo moves inside frame (rate 0.072), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -94.2,
+     -73.8,
+     -53.4,
+     -33,
+     -12.6
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 trio-left: photo moves inside frame (rate 0.071), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -100.8,
+     -78.4,
+     -56,
+     -33.6,
+     -11.2
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 trio-centre: photo moves inside frame (rate 0.092), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -158.9,
+     -125.6,
+     -92.4,
+     -59.3,
+     -26
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 trio-right: photo moves inside frame (rate 0.071), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -98.3,
+     -75.9,
+     -53.5,
+     -31.1,
+     -8.7
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 florals: photo moves inside frame (rate 0.124), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -218.9,
+     -160.2,
+     -101.6,
+     -60.9,
+     -20.3
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 gallery-strip: photo moves inside frame (rate 0.052), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -65.7,
+     -51.1,
+     -36.5,
+     -21.9,
+     -7.3
+    ]
+   }
+  },
+  {
+   "name": "parallax d1920 footer-band: photo moves inside frame (rate 0.121), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -202.5,
+     -157.5
+    ]
+   }
+  },
+  {
+   "name": "layout d1920: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 1920,
+    "clientW": 1920,
+    "scrollW": 1920
+   }
+  },
+  {
+   "name": "console d1920: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "parallax t768 carousel: photo moves inside frame (rate 0.091), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -168.3,
+     -130.9,
+     -93.5,
+     -56.1,
+     -18.7
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 teaser: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -62.6,
+     -48.9,
+     -35.4,
+     -21.8,
+     -8.2
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 trio-centre: photo moves inside frame (rate 0.056), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -74.7,
+     -58.1,
+     -41.5,
+     -24.9,
+     -8.3
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 trio-right: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -57.8,
+     -44.8,
+     -31.8,
+     -18.7,
+     -5.8
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 florals: photo moves inside frame (rate 0.08), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -122.7,
+     -88.1,
+     -53.5,
+     -32.1,
+     -10.7
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 gallery-strip: photo moves inside frame (rate 0.032), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -35.1,
+     -27.3,
+     -19.5,
+     -11.7,
+     -3.9
+    ]
+   }
+  },
+  {
+   "name": "parallax t768 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -105.3,
+     -81.9
+    ]
+   }
+  },
+  {
+   "name": "layout t768: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 768,
+    "clientW": 768,
+    "scrollW": 768
+   }
+  },
+  {
+   "name": "console t768: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "parallax m390 carousel: photo moves inside frame (rate 0.091), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -138.6,
+     -107.8,
+     -77,
+     -46.2,
+     -15.4
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 teaser: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -45.5,
+     -35.7,
+     -25.8,
+     -16.1,
+     -6.3
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 trio-centre: photo moves inside frame (rate 0.056), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -53.9,
+     -42,
+     -30,
+     -18,
+     -6
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 trio-right: photo moves inside frame (rate 0.044), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -41.6,
+     -32.2,
+     -22.8,
+     -13.4,
+     -4
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 florals: photo moves inside frame (rate 0.077), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -81.3,
+     -59.4,
+     -37.5,
+     -22.5,
+     -7.5
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 gallery-strip: photo moves inside frame (rate 0.032), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -30.6,
+     -23.8,
+     -17,
+     -10.2,
+     -3.4
+    ]
+   }
+  },
+  {
+   "name": "parallax m390 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)",
+   "ok": true,
+   "detail": {
+    "dy": [
+     -87.3,
+     -67.9
+    ]
+   }
+  },
+  {
+   "name": "layout m390: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 390,
+    "clientW": 390,
+    "scrollW": 390
+   }
+  },
+  {
+   "name": "console m390: no errors",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "parallax": {
+  "d1440": {
+   "carousel": {
+    "rate": 0.151,
+    "minOverscanPx": 0,
+    "dy": [
+     -244.8,
+     -190.4,
+     -136,
+     -81.6,
+     -27.2
+    ],
+    "y": [
+     1681,
+     2041,
+     2401,
+     2761,
+     3121
+    ]
+   },
+   "teaser": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -76.5,
+     -59.9,
+     -43.3,
+     -26.7,
+     -10.1
+    ],
+    "y": [
+     2583,
+     2814,
+     3045,
+     3276,
+     3507
+    ]
+   },
+   "trio-left": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -81.9,
+     -63.7,
+     -45.5,
+     -27.3,
+     -9.1
+    ],
+    "y": [
+     3836,
+     4090,
+     4343,
+     4597,
+     4850
+    ]
+   },
+   "trio-centre": {
+    "rate": 0.092,
+    "minOverscanPx": 0,
+    "dy": [
+     -126.9,
+     -100.2,
+     -73.6,
+     -47.1,
+     -20.5
+    ],
+    "y": [
+     3711,
+     4001,
+     4291,
+     4580,
+     4870
+    ]
+   },
+   "trio-right": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -80,
+     -61.8,
+     -43.6,
+     -25.4,
+     -7.2
+    ],
+    "y": [
+     3877,
+     4131,
+     4385,
+     4638,
+     4892
+    ]
+   },
+   "florals": {
+    "rate": 0.124,
+    "minOverscanPx": 0,
+    "dy": [
+     -183.2,
+     -134.1,
+     -85,
+     -51,
+     -17.1
+    ],
+    "y": [
+     4861,
+     5196,
+     5531,
+     5866,
+     6200
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.052,
+    "minOverscanPx": 0,
+    "dy": [
+     -54,
+     -42,
+     -30,
+     -18,
+     -6
+    ],
+    "y": [
+     8459,
+     8689,
+     8919,
+     9149,
+     9379
+    ]
+   },
+   "footer-band": {
+    "rate": 0.122,
+    "minOverscanPx": 0,
+    "dy": [
+     -169.2,
+     -131.5
+    ],
+    "y": [
+     9529,
+     9839
+    ]
+   }
+  },
+  "d1920": {
+   "carousel": {
+    "rate": 0.151,
+    "minOverscanPx": 0,
+    "dy": [
+     -293.4,
+     -228.2,
+     -163,
+     -97.8,
+     -32.6
+    ],
+    "y": [
+     2127,
+     2559,
+     2991,
+     3423,
+     3855
+    ]
+   },
+   "teaser": {
+    "rate": 0.072,
+    "minOverscanPx": 0,
+    "dy": [
+     -94.2,
+     -73.8,
+     -53.4,
+     -33,
+     -12.6
+    ],
+    "y": [
+     3222,
+     3506,
+     3790,
+     4074,
+     4358
+    ]
+   },
+   "trio-left": {
+    "rate": 0.071,
+    "minOverscanPx": 0,
+    "dy": [
+     -100.8,
+     -78.4,
+     -56,
+     -33.6,
+     -11.2
+    ],
+    "y": [
+     4893,
+     5207,
+     5521,
+     5835,
+     6149
+    ]
+   },
+   "trio-centre": {
+    "rate": 0.092,
+    "minOverscanPx": 0,
+    "dy": [
+     -158.9,
+     -125.6,
+     -92.4,
+     -59.3,
+     -26
+    ],
+    "y": [
+     4726,
+     5089,
+     5451,
+     5813,
+     6176
+    ]
+   },
+   "trio-right": {
+    "rate": 0.071,
+    "minOverscanPx": 0,
+    "dy": [
+     -98.3,
+     -75.9,
+     -53.5,
+     -31.1,
+     -8.7
+    ],
+    "y": [
+     4948,
+     5262,
+     5576,
+     5890,
+     6204
+    ]
+   },
+   "florals": {
+    "rate": 0.124,
+    "minOverscanPx": 0,
+    "dy": [
+     -218.9,
+     -160.2,
+     -101.6,
+     -60.9,
+     -20.3
+    ],
+    "y": [
+     6249,
+     6651,
+     7052,
+     7454,
+     7856
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.052,
+    "minOverscanPx": 0,
+    "dy": [
+     -65.7,
+     -51.1,
+     -36.5,
+     -21.9,
+     -7.3
+    ],
+    "y": [
+     10951,
+     11234,
+     11517,
+     11799,
+     12082
+    ]
+   },
+   "footer-band": {
+    "rate": 0.121,
+    "minOverscanPx": 0,
+    "dy": [
+     -202.5,
+     -157.5
+    ],
+    "y": [
+     12362,
+     12733
+    ]
+   }
+  },
+  "t768": {
+   "carousel": {
+    "rate": 0.091,
+    "minOverscanPx": 0,
+    "dy": [
+     -168.3,
+     -130.9,
+     -93.5,
+     -56.1,
+     -18.7
+    ],
+    "y": [
+     2215,
+     2624,
+     3034,
+     3444,
+     3853
+    ]
+   },
+   "teaser": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -62.6,
+     -48.9,
+     -35.4,
+     -21.8,
+     -8.2
+    ],
+    "y": [
+     3581,
+     3894,
+     4206,
+     4519,
+     4831
+    ]
+   },
+   "trio-left": "not displayed at this width",
+   "trio-centre": {
+    "rate": 0.056,
+    "minOverscanPx": 0,
+    "dy": [
+     -74.7,
+     -58.1,
+     -41.5,
+     -24.9,
+     -8.3
+    ],
+    "y": [
+     6167,
+     6465,
+     6763,
+     7062,
+     7360
+    ]
+   },
+   "trio-right": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -57.8,
+     -44.8,
+     -31.8,
+     -18.7,
+     -5.8
+    ],
+    "y": [
+     6188,
+     6486,
+     6784,
+     7083,
+     7381
+    ]
+   },
+   "florals": {
+    "rate": 0.08,
+    "minOverscanPx": 0,
+    "dy": [
+     -122.7,
+     -88.1,
+     -53.5,
+     -32.1,
+     -10.7
+    ],
+    "y": [
+     7679,
+     8028,
+     8376,
+     8724,
+     9073
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.032,
+    "minOverscanPx": 0,
+    "dy": [
+     -35.1,
+     -27.3,
+     -19.5,
+     -11.7,
+     -3.9
+    ],
+    "y": [
+     12113,
+     12359,
+     12605,
+     12852,
+     13098
+    ]
+   },
+   "footer-band": {
+    "rate": 0.073,
+    "minOverscanPx": 0,
+    "dy": [
+     -105.3,
+     -81.9
+    ],
+    "y": [
+     13751,
+     14070
+    ]
+   }
+  },
+  "m390": {
+   "carousel": {
+    "rate": 0.091,
+    "minOverscanPx": 0,
+    "dy": [
+     -138.6,
+     -107.8,
+     -77,
+     -46.2,
+     -15.4
+    ],
+    "y": [
+     1984,
+     2321,
+     2659,
+     2997,
+     3334
+    ]
+   },
+   "teaser": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -45.5,
+     -35.7,
+     -25.8,
+     -16.1,
+     -6.3
+    ],
+    "y": [
+     3229,
+     3451,
+     3674,
+     3896,
+     4118
+    ]
+   },
+   "trio-left": "not displayed at this width",
+   "trio-centre": {
+    "rate": 0.056,
+    "minOverscanPx": 0,
+    "dy": [
+     -53.9,
+     -42,
+     -30,
+     -18,
+     -6
+    ],
+    "y": [
+     5020,
+     5234,
+     5448,
+     5662,
+     5876
+    ]
+   },
+   "trio-right": {
+    "rate": 0.044,
+    "minOverscanPx": 0,
+    "dy": [
+     -41.6,
+     -32.2,
+     -22.8,
+     -13.4,
+     -4
+    ],
+    "y": [
+     5040,
+     5255,
+     5469,
+     5683,
+     5897
+    ]
+   },
+   "florals": {
+    "rate": 0.077,
+    "minOverscanPx": 0,
+    "dy": [
+     -81.3,
+     -59.4,
+     -37.5,
+     -22.5,
+     -7.5
+    ],
+    "y": [
+     6304,
+     6544,
+     6784,
+     7024,
+     7265
+    ]
+   },
+   "gallery-strip": {
+    "rate": 0.032,
+    "minOverscanPx": 0,
+    "dy": [
+     -30.6,
+     -23.8,
+     -17,
+     -10.2,
+     -3.4
+    ],
+    "y": [
+     9961,
+     10172,
+     10382,
+     10592,
+     10803
+    ]
+   },
+   "footer-band": {
+    "rate": 0.073,
+    "minOverscanPx": 0,
+    "dy": [
+     -87.3,
+     -67.9
+    ],
+    "y": [
+     11681,
+     11945
+    ]
+   }
+  }
+ },
+ "oval": {},
+ "hero": {},
+ "perf": {}
+}

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enquiry · The Event House</title>
+  <meta name="description" content="Provisional prototype: review your enquiry basket and tell us about your event.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="enquiry" data-header="solid">
+<a class="skip-link" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-emblem" viewBox="0 0 40 44"><g fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 43V18a14 14 0 0 1 28 0v25"/><path d="M12.5 43V20.5a7.5 7.5 0 0 1 15 0V43"/><path d="M1 43h38"/><path d="M20 4.2V1"/></g></symbol>
+  <symbol id="i-basket" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.2"><path d="M3.5 9.5h17l-1.6 10.2a1.5 1.5 0 0 1-1.5 1.3H6.6a1.5 1.5 0 0 1-1.5-1.3L3.5 9.5Z"/><path d="M8 9.5 11 3.5M16 9.5 13 3.5"/><path d="M9 13.5v4M12 13.5v4M15 13.5v4"/></g></symbol>
+  <symbol id="i-close" viewBox="0 0 20 20"><path d="M2 2l16 16M18 2 2 18" stroke="currentColor" stroke-width="1.3" fill="none"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 12"><path d="M0 6h22.5M17.5 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.1"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="M14.5 6 8.5 12l6 6" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 20 20"><path d="M10 2v16M2 10h16" stroke="currentColor" stroke-width="1.2" fill="none"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+</svg>
+
+<header class="header" data-header>
+  <div class="header__left">
+    <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu" data-menu-open><span></span></button>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#events" data-nav="events"><span>Events</span><span aria-hidden="true">Events</span></a>
+      <a href="index.html#services" data-nav="services"><span>Services</span><span aria-hidden="true">Services</span></a>
+      <a href="collection.html" data-nav="collection"><span>Collection</span><span aria-hidden="true">Collection</span></a>
+      <a href="gallery.html" data-nav="gallery"><span>Gallery</span><span aria-hidden="true">Gallery</span></a>
+    </nav>
+  </div>
+  <a class="brand" href="index.html" aria-label="The Event House, home">
+    <svg class="brand__mark" viewBox="0 0 40 44" aria-hidden="true"><use href="#i-emblem"/></svg>
+    <span class="brand__name">The Event House</span>
+  </a>
+  <div class="header__right">
+    <button class="basket-btn" type="button" data-basket-open aria-controls="basket" aria-expanded="false">
+      <svg aria-hidden="true"><use href="#i-basket"/></svg>
+      <span class="basket-label">Enquiry</span>
+      <span class="basket-count" aria-hidden="true"><span data-basket-count>0</span></span>
+      <span class="sr-only" data-basket-sr>Enquiry basket, 0 items</span>
+    </button>
+    <a class="btn btn--primary" href="enquiry.html">Enquire</a>
+  </div>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Site menu" data-menu hidden>
+  <div class="menu__panel">
+    <button class="menu__close" type="button" aria-label="Close menu" data-menu-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <ul class="menu__links">
+      <li><a href="index.html"><span>Home</span></a></li>
+      <li><a href="index.html#events"><span>Events</span></a></li>
+      <li><a href="index.html#services"><span>Services</span></a></li>
+      <li><a href="collection.html"><span>Collection</span></a></li>
+      <li><a href="gallery.html"><span>Gallery</span></a></li>
+      <li><a href="enquiry.html"><span>Enquiry</span></a></li>
+    </ul>
+    <div class="menu__foot">
+      <div>
+        <p>Event design, florals and décor rentals.</p>
+        <p class="placeholder">Studio location <span class="tbc">to confirm</span></p>
+        <a class="btn btn--s" href="enquiry.html" style="margin-top:2rem">Begin an enquiry</a>
+      </div>
+      <div>
+        <p class="placeholder">Email <span class="tbc">to confirm</span></p>
+        <p class="placeholder">Telephone <span class="tbc">to confirm</span></p>
+        <p class="placeholder">Social channels <span class="tbc">to confirm</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="menu__media"><img src="assets/img/hero-venue.webp" alt="" loading="lazy"></div>
+</div>
+
+<div class="drawer" id="basket" data-drawer hidden>
+  <div class="drawer__scrim" data-drawer-close></div>
+  <aside class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="basket-title">
+    <div class="drawer__head">
+      <h2 class="title" id="basket-title">Your enquiry</h2>
+      <button class="drawer__close" type="button" aria-label="Close enquiry basket" data-drawer-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="drawer__body" data-drawer-list></div>
+    <div class="drawer__foot">
+      <p class="note">No payment is taken. Your selection is sent as an enquiry and the studio replies with availability and a tailored proposal.</p>
+      <a class="btn btn--primary" href="enquiry.html" data-drawer-cta>Review &amp; send enquiry</a>
+    </div>
+  </aside>
+</div>
+<div class="toast" role="status" aria-live="polite" data-toast><span data-toast-text></span><button type="button" data-basket-open>View enquiry</button></div>
+
+
+
+<main id="main" class="enq">
+  <div class="container">
+    <header class="enq__head">
+      <span class="overline overline--spaced" data-reveal>Enquiry</span>
+      <h1 class="ptitle" data-split>Tell us about your event</h1>
+      <p data-reveal>Share a few details and the pieces you have in mind. Nothing is purchased online: the studio replies personally with availability and a tailored proposal.</p>
+    </header>
+
+    <div class="enq__grid">
+      <aside class="enq__basket" aria-labelledby="sel-title">
+        <h2 id="sel-title" tabindex="-1">Your selection</h2>
+        <p class="muted" data-sel-count></p>
+        <div class="enq__list" data-sel-list></div>
+      </aside>
+
+      <div data-enq-form-wrap>
+        <form class="form" novalidate data-enq-form>
+          <fieldset>
+            <legend>Your event</legend>
+            <div class="field">
+              <label for="f-type">Occasion</label>
+              <select id="f-type" name="type">
+                <option value="wedding">Wedding</option>
+                <option value="private">Private celebration</option>
+                <option value="corporate">Corporate or gala</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-date">Event date</label>
+              <input id="f-date" name="date" type="date">
+            </div>
+            <div class="field">
+              <label for="f-guests">Guests</label>
+              <select id="f-guests" name="guests">
+                <option value="under-30">Up to 30</option>
+                <option value="30-80" selected>30 to 80</option>
+                <option value="80-150">80 to 150</option>
+                <option value="150-plus">150+</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-place">Venue or town</label>
+              <input id="f-place" name="place" type="text" autocomplete="address-level2" placeholder="e.g. Lucerne">
+            </div>
+            <div class="field field--full">
+              <span class="label" id="svc-label">Services of interest</span>
+              <div class="checks" role="group" aria-labelledby="svc-label">
+                <label class="check"><input type="checkbox" name="service" value="design"><span>Event design</span></label>
+                <label class="check"><input type="checkbox" name="service" value="styling"><span>Styling &amp; décor</span></label>
+                <label class="check"><input type="checkbox" name="service" value="florals"><span>Florals</span></label>
+                <label class="check"><input type="checkbox" name="service" value="rentals"><span>Rentals</span></label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Your details</legend>
+            <div class="field">
+              <label for="f-name">Full name *</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name">
+              <span class="field__error" id="e-name" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-email">Email *</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email">
+              <span class="field__error" id="e-email" aria-live="polite"></span>
+            </div>
+            <div class="field">
+              <label for="f-phone">Telephone</label>
+              <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="f-lang">Preferred language</label>
+              <select id="f-lang" name="lang"><option>English</option><option>Deutsch</option><option>Français</option><option>Italiano</option></select>
+            </div>
+            <div class="field field--full">
+              <label for="f-msg">Your vision</label>
+              <textarea id="f-msg" name="message" placeholder="Colours, mood, venue details, anything that inspires you."></textarea>
+            </div>
+          </fieldset>
+          <label class="consent"><input type="checkbox" name="consent" required aria-describedby="e-consent"> <span>I agree that The Event House may use these details to reply to my enquiry. <span class="tbc">Privacy wording to confirm</span><br><span class="field__error" id="e-consent" aria-live="polite"></span></span></label>
+          <div class="form__submit">
+            <button class="btn btn--primary" type="submit">Send enquiry</button>
+            <p class="note">Prototype: no data leaves your browser. In production this form would be delivered to the studio’s inbox or CRM.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer footer--compact">
+  <div class="container">
+    <div class="footer__cgrid">
+      <div>
+        <p class="footer__wordmark">The Event House</p>
+        <p class="footer__social">Social channels <span class="tbc">to confirm</span></p>
+      </div>
+      <div>
+        <span class="footer__heading">Explore</span>
+        <div class="footer__twocol">
+          <a href="index.html">Home</a><a href="collection.html">The Collection</a>
+          <a href="index.html#events">Events</a><a href="gallery.html">Gallery</a>
+          <a href="index.html#services">Services</a><a href="enquiry.html">Enquiry</a>
+        </div>
+      </div>
+      <div>
+        <span class="footer__heading">Get in touch</span>
+        <div class="footer__contact">
+          <a href="enquiry.html">Send an enquiry</a>
+          <span class="placeholder">Telephone &amp; email <span class="tbc">to confirm</span></span>
+        </div>
+      </div>
+      <div>
+        <span class="footer__heading">Studio</span>
+        <div class="footer__contact"><span>Switzerland</span><span class="placeholder">Address &amp; hours <span class="tbc">to confirm</span></span></div>
+      </div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 The Event House <span class="tbc">provisional name</span></span><span>Prototype by ORDOO · Placeholder photography</span></div>
+  </div>
+</footer>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/SplitText.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/products.js"></script>
+<script src="assets/js/core.js"></script>
+
+<script src="assets/js/enquiry.js"></script>
+</body>
+</html>

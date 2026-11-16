@@ -1,0 +1,69 @@
+{
+ "checks": [
+  {
+   "name": "perf m390 (4× CPU throttle, real touch swipes): scrolled to 12022/12022, 63 fps avg, p95 33.3ms, unexpected layout shift 0",
+   "ok": true,
+   "detail": {
+    "frames": 1113,
+    "avgMs": 15.8,
+    "fps": 63,
+    "over50ms": 11,
+    "p95": 33.3,
+    "cls": 0,
+    "heroResizeShift": 0.178,
+    "y": 12022,
+    "maxY": 12022,
+    "docHBefore": 12866,
+    "docHAfter": 12866
+   }
+  },
+  {
+   "name": "perf d1440: scrolled to 10022/10022, 112 fps avg, p95 16.6ms, unexpected layout shift 0.0002",
+   "ok": true,
+   "detail": {
+    "frames": 575,
+    "avgMs": 8.9,
+    "fps": 112,
+    "over50ms": 0,
+    "p95": 16.6,
+    "cls": 0.0002,
+    "heroResizeShift": 0.217,
+    "y": 10022,
+    "maxY": 10022,
+    "docHBefore": 10922,
+    "docHAfter": 10922
+   }
+  }
+ ],
+ "parallax": {},
+ "oval": {},
+ "hero": {},
+ "perf": {
+  "m390": {
+   "frames": 1113,
+   "avgMs": 15.8,
+   "fps": 63,
+   "over50ms": 11,
+   "p95": 33.3,
+   "cls": 0,
+   "heroResizeShift": 0.178,
+   "y": 12022,
+   "maxY": 12022,
+   "docHBefore": 12866,
+   "docHAfter": 12866
+  },
+  "d1440": {
+   "frames": 575,
+   "avgMs": 8.9,
+   "fps": 112,
+   "over50ms": 0,
+   "p95": 16.6,
+   "cls": 0.0002,
+   "heroResizeShift": 0.217,
+   "y": 10022,
+   "maxY": 10022,
+   "docHBefore": 10922,
+   "docHAfter": 10922
+  }
+ }
+}

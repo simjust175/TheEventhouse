@@ -1,0 +1,213 @@
+{
+  "_note": "PLACEHOLDER photography for the prototype only. Source: images.unsplash.com (Unsplash License: free commercial use, no attribution legally required, no Unsplash+ images). Photographer names could not be retrieved because unsplash.com pages are blocked by the local network filter; confirm credits via https://unsplash.com/photos/<page-id> lookup before any public use, or (preferred) replace with the client's own licensed photography.",
+  "images": [
+    {
+      "file": "hero-venue.webp",
+      "id": "1510076857177-7470076d4098",
+      "w": 2400,
+      "use": "Home hero (main frame)"
+    },
+    {
+      "file": "hero-table.webp",
+      "id": "1561912774-79769a0a0a7a",
+      "w": 1600,
+      "use": "Home hero sequence frame 2; gallery"
+    },
+    {
+      "file": "hero-bouquet.webp",
+      "id": "1519741497674-611481863552",
+      "w": 1600,
+      "use": "Home hero sequence frame 3; gallery"
+    },
+    {
+      "file": "hero-candles.webp",
+      "id": "1572726729207-a78d6feb18d7",
+      "w": 1200,
+      "use": "Home hero final square; collection candles"
+    },
+    {
+      "file": "cat-weddings.webp",
+      "id": "1511795409834-ef04bbd61622",
+      "w": 2400,
+      "use": "Home carousel: Weddings; gallery"
+    },
+    {
+      "file": "cat-celebrations.webp",
+      "id": "1522413452208-996ff3f3e740",
+      "w": 2400,
+      "use": "Home carousel: Private celebrations; tablescape hotspots"
+    },
+    {
+      "file": "cat-florals.webp",
+      "id": "1529636798458-92182e662485",
+      "w": 2400,
+      "use": "Home carousel: Florals; gallery"
+    },
+    {
+      "file": "table-white.webp",
+      "id": "1519225421980-715cb0215aed",
+      "w": 1600,
+      "use": "Gallery; home trio"
+    },
+    {
+      "file": "aisle-florals.webp",
+      "id": "1469371670807-013ccf25f16a",
+      "w": 1600,
+      "use": "Home media trio; gallery"
+    },
+    {
+      "file": "garden-chairs.webp",
+      "id": "1522673607200-164d1b6ce486",
+      "w": 1600,
+      "use": "Home media trio; gallery"
+    },
+    {
+      "file": "beach-table.webp",
+      "id": "1530023367847-a683933f4172",
+      "w": 1600,
+      "use": "Gallery"
+    },
+    {
+      "file": "ballroom.webp",
+      "id": "1519167758481-83f550bb49b3",
+      "w": 1600,
+      "use": "Gallery (corporate)"
+    },
+    {
+      "file": "conference.webp",
+      "id": "1511578314322-379afb476865",
+      "w": 1600,
+      "use": "Gallery (corporate)"
+    },
+    {
+      "file": "gazebo.webp",
+      "id": "1523438885200-e635ba2c371e",
+      "w": 1200,
+      "use": "Gallery (weddings)"
+    },
+    {
+      "file": "wine-table.webp",
+      "id": "1482275548304-a58859dc31b7",
+      "w": 1600,
+      "use": "Gallery (celebrations)"
+    },
+    {
+      "file": "pink-flowers.webp",
+      "id": "1487530811176-3780de880c2d",
+      "w": 1200,
+      "use": "Gallery (editorial)"
+    },
+    {
+      "file": "cake.webp",
+      "id": "1535254973040-607b474cb50d",
+      "w": 1200,
+      "use": "Gallery (weddings)"
+    },
+    {
+      "file": "posy.webp",
+      "id": "1563241527-3004b7be0ffd",
+      "w": 1200,
+      "use": "Collection: florals; gallery"
+    },
+    {
+      "file": "candle-single.webp",
+      "id": "1603006905003-be475563bc59",
+      "w": 1200,
+      "use": "Collection: candles"
+    },
+    {
+      "file": "dark-florals.webp",
+      "id": "1457089328109-e5d9bd499191",
+      "w": 2000,
+      "use": "Home oval feature; collection florals spotlight"
+    },
+    {
+      "file": "red-roses.webp",
+      "id": "1519378058457-4c29a0a2efac",
+      "w": 1200,
+      "use": "Gallery (editorial)"
+    },
+    {
+      "file": "rose-pour.webp",
+      "id": "1547595628-c61a29f496f0",
+      "w": 1200,
+      "use": "Collection: glassware"
+    },
+    {
+      "file": "wine-pour.webp",
+      "id": "1553361371-9b22f78e8b1d",
+      "w": 1200,
+      "use": "Gallery"
+    },
+    {
+      "file": "cocktail.webp",
+      "id": "1514362545857-3bc16c4c7d1b",
+      "w": 1200,
+      "use": "Gallery (private)"
+    },
+    {
+      "file": "lake-terrace.webp",
+      "id": "1559339352-11d035aa65de",
+      "w": 2400,
+      "use": "CTA band (gallery/collection)"
+    },
+    {
+      "file": "swiss-lake.webp",
+      "id": "1527668752968-14dc70a27c95",
+      "w": 2400,
+      "use": "Home footer image band; menu panel"
+    },
+    {
+      "file": "alps.webp",
+      "id": "1530122037265-a5f1f91d3b99",
+      "w": 1600,
+      "use": "Gallery (editorial)"
+    },
+    {
+      "file": "pool-resort.webp",
+      "id": "1566073771259-6a8506099945",
+      "w": 1600,
+      "use": "Gallery (private)"
+    },
+    {
+      "file": "dark-lounge.webp",
+      "id": "1606744824163-985d376605aa",
+      "w": 1600,
+      "use": "Gallery (corporate lounge); collection furniture"
+    },
+    {
+      "file": "vase-plinth.webp",
+      "id": "1612196808214-b8e1d6145a8c",
+      "w": 1600,
+      "use": "Collection: featured vase"
+    },
+    {
+      "file": "ceramic-bowls.webp",
+      "id": "1610701596007-11502861dcfa",
+      "w": 1600,
+      "use": "Collection: the edit (ceramics)"
+    },
+    {
+      "file": "brass-pendants.webp",
+      "id": "1540932239986-30128078f3c5",
+      "w": 1200,
+      "use": "Collection: lighting"
+    },
+    {
+      "file": "stone-plates.webp",
+      "id": "1578749556568-bc2c40e68b61",
+      "w": 1600,
+      "use": "Collection: tableware"
+    },
+    {
+      "file": "candles-trio.webp",
+      "id": "1602874801007-bd458bb1b8b6",
+      "w": 1200,
+      "use": "Collection: candle holders"
+    }
+  ],
+  "_removed": [
+    "1587271407850-8d438ca9fdf2 (religious ceremony; conflicts with broad-market brief)",
+    "1464366400600-7168b8af9bc3 (festival tent look; off-brand)"
+  ]
+}

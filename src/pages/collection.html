@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Collection · The Event House</title>
+  <meta name="description" content="Provisional prototype: a curated collection of décor, florals, tableware, candles, rentals and paper goods, requested through an enquiry basket.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="collection" data-cta-title="Build Your Collection" data-cta-text="Let our team help you curate the perfect pieces for your next event." data-cta-btn="Submit an enquiry">
+<!-- @include header -->
+
+<main id="main">
+  <section class="page-hero page-hero--center" aria-labelledby="c-title">
+    <img class="page-hero__img" src="assets/img/hero-table.webp" alt="" style="object-position: 50% 60%">
+    <div class="container page-hero__inner">
+      <h1 class="page-hero__title" id="c-title" data-split>The Collection</h1>
+      <p class="overline" data-reveal style="--d:.2s">Curated pieces for extraordinary events</p>
+    </div>
+  </section>
+
+  <section class="c-intro" aria-label="About the collection">
+    <div><span class="overline" data-reveal>The Event House</span><span class="rule" data-reveal></span></div>
+    <p data-reveal style="--d:.08s">A curated collection of elevated pieces for exceptional events. From refined décor and florals to tableware, linens and statement rentals, each item is selected for its beauty, quality and timeless appeal.</p>
+  </section>
+
+  <nav class="c-tabs wrap" aria-label="Collection categories">
+    <div class="tabs" role="group" data-tabs>
+      <button type="button" class="tab is-active" aria-pressed="true" data-filter="all">All</button>
+      <button type="button" class="tab" aria-pressed="false" data-filter="decor">Décor</button>
+      <button type="button" class="tab" aria-pressed="false" data-filter="florals">Florals</button>
+      <button type="button" class="tab" aria-pressed="false" data-filter="tableware">Tableware</button>
+      <button type="button" class="tab" aria-pressed="false" data-filter="candles">Candles</button>
+      <button type="button" class="tab" aria-pressed="false" data-filter="rentals">Rentals</button>
+      <button type="button" class="tab" aria-pressed="false" data-filter="paper">Paper goods</button>
+    </div>
+    <p class="sr-only" aria-live="polite" data-filter-status></p>
+  </nav>
+
+  <div class="c-editorial wrap">
+    <!-- Featured piece -->
+    <section class="feature" aria-labelledby="f-title">
+      <button class="feature__img img-reveal" type="button" data-qv="limestone-urn" aria-label="Quick view: Limestone Urn Vase"><img src="assets/img/vase-plinth.webp" alt="A pale stone vase on a plinth beside trailing greenery" loading="lazy"></button>
+      <div class="feature__side">
+        <div class="feature__copy">
+          <span class="overline" data-reveal>Featured piece</span>
+          <h2 class="ptitle" id="f-title" data-split>Limestone<br>Urn Vase</h2>
+          <p data-reveal>A timeless foundation for floral arrangements, sculptural branches, or standalone styling.</p>
+          <button class="btn-line" type="button" data-add="limestone-urn" data-reveal>Add to enquiry <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="minis">
+          <article class="mini" data-reveal>
+            <button class="mini__img" type="button" data-qv="amber-candle" aria-label="Quick view: Amber Glass Candle"><img src="assets/img/candles-trio-sm.webp" alt="An amber glass candle glowing" loading="lazy" style="object-position:50% 80%"></button>
+            <h3 class="mini__name">Amber Glass Candle</h3>
+            <button class="link-arrow" type="button" data-add="amber-candle">Add to enquiry <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </article>
+          <article class="mini" data-reveal style="--d:.08s">
+            <button class="mini__img" type="button" data-qv="crystal-stemware" aria-label="Quick view: Crystal Stemware"><img src="assets/img/rose-pour-sm.webp" alt="Rosé poured into crystal stemware" loading="lazy"></button>
+            <h3 class="mini__name">Crystal Stemware</h3>
+            <button class="link-arrow" type="button" data-add="crystal-stemware">Add to enquiry <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- The edit -->
+    <section class="edit" aria-labelledby="e-title">
+      <div class="edit__copy">
+        <span class="overline" data-reveal>The edit</span>
+        <h2 class="ptitle" id="e-title" data-split>Sculptural Pieces<br>for Styled Settings</h2>
+        <p data-reveal>Considered objects with enduring appeal, from organic textures to refined materials, designed to elevate every event setting.</p>
+        <button class="btn-line" type="button" data-goto="decor" data-reveal>Explore décor <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="edit__img img-reveal"><img src="assets/img/ceramic-bowls.webp" alt="Speckled ceramic vessels on a pale shelf" loading="lazy"></div>
+    </section>
+
+    <!-- Spotlight -->
+    <section class="spotlight" aria-labelledby="s-title">
+      <div class="spotlight__copy">
+        <span class="overline" data-reveal>Collection spotlight</span>
+        <h2 class="ptitle" id="s-title" data-split>Florals</h2>
+        <p data-reveal>Thoughtfully designed floral arrangements that bring atmosphere, texture and natural beauty to every setting, from intimate gatherings to grand celebrations.</p>
+        <button class="btn-line btn-line--light" type="button" data-goto="florals" data-reveal>Explore florals <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <div class="spotlight__img"><img src="assets/img/dark-florals.webp" alt="" loading="lazy" data-parallax="0.08"></div>
+    </section>
+
+    <!-- Essentials -->
+    <section class="essentials" aria-labelledby="l-title">
+      <button class="essentials__img img-reveal" type="button" data-qv="linen-tablecloth" aria-label="Quick view: Linen Tablecloth"><img src="assets/img/table-white-sm.webp" alt="A long table dressed in white linen" loading="lazy"></button>
+      <div class="essentials__copy">
+        <span class="overline" data-reveal>A curated essential</span>
+        <h2 class="ptitle" id="l-title" data-split>Linen<br>Tablecloth</h2>
+        <p data-reveal>Premium linens that bring depth, texture and a sense of occasion to the table.</p>
+        <button class="link-arrow" type="button" data-add="linen-tablecloth" data-reveal>Add to enquiry <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <article class="mini" data-reveal>
+        <button class="mini__img" type="button" data-qv="brass-pendant" aria-label="Quick view: Brass Pendant Light"><img src="assets/img/brass-pendants-sm.webp" alt="Brass pendant lights" loading="lazy"></button>
+        <h3 class="mini__name">Brass Pendant Light</h3>
+        <button class="link-arrow" type="button" data-add="brass-pendant" data-note="Details requested">Request details <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </article>
+      <article class="mini" data-reveal style="--d:.08s">
+        <button class="mini__img" type="button" data-qv="blush-bouquet" aria-label="Quick view: Garden Bouquet"><img src="assets/img/pink-flowers-sm.webp" alt="A lush garden bouquet" loading="lazy"></button>
+        <h3 class="mini__name">Garden Bouquet</h3>
+        <button class="link-arrow" type="button" data-add="blush-bouquet" data-note="Details requested">Request details <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </article>
+    </section>
+  </div>
+
+  <!-- Full catalogue (filterable) -->
+  <section class="catalogue wrap" id="catalogue" aria-labelledby="cat-title">
+    <div class="catalogue__head">
+      <h2 class="ptitle" id="cat-title" data-cat-title>The full collection</h2>
+      <span class="catalogue__count" data-cat-count></span>
+    </div>
+    <div class="cgrid" data-cgrid></div>
+    <noscript><p>Enable JavaScript to browse and add pieces to your enquiry.</p></noscript>
+    <p class="gallery__note"><span class="tbc">Catalogue items, names and availability are placeholders</span></p>
+  </section>
+
+  <!-- @include cta-band -->
+</main>
+
+<div class="qv dialog" role="dialog" aria-modal="true" aria-labelledby="qv-title" data-qv-dialog hidden>
+  <div class="dialog__scrim" data-qv-close></div>
+  <div class="qv__panel">
+    <button class="qv__close" type="button" aria-label="Close quick view" data-qv-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+    <div class="qv__media" data-qv-media></div>
+    <div class="qv__body">
+      <span class="overline" data-qv-cat></span>
+      <h2 class="ptitle" id="qv-title" data-qv-name></h2>
+      <p data-qv-blurb></p>
+      <ul class="qv__details" data-qv-details></ul>
+      <div class="qv__actions">
+        <div class="qty" role="group" aria-label="Quantity"><button type="button" data-qv-dec aria-label="Decrease quantity">−</button><input type="number" min="1" max="999" value="1" id="qv-qty" aria-label="Quantity"><button type="button" data-qv-inc aria-label="Increase quantity">+</button></div>
+        <button class="btn-line" type="button" data-qv-add data-qty-from="#qv-qty">Add to enquiry <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+      <p class="qv__note">No online payment. The studio confirms availability, quantities and a tailored quote after your enquiry.</p>
+    </div>
+  </div>
+</div>
+
+<!-- @include footer-compact -->
+<!-- @include scripts -->
+<script src="assets/js/collection.js"></script>
+</body>
+</html>

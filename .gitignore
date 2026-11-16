@@ -1,0 +1,22 @@
+node_modules/
+dist/
+build/
+.next/
+.vercel/
+.wrangler/
+coverage/
+
+.env
+.env.*
+!.env.example
+*.log
+
+# Reference material — not production code
+references/
+The Vineyard Hotel*/
+The Vineyard Hotel*.html
+www.vineyard*
+Screen Recording*.mp4
+
+# Local editor files
+.DS_Store

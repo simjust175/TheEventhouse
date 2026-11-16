@@ -1,0 +1,17 @@
+{
+  "name": "the-event-house-prototype",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The Event House (provisional name) - premium visual prototype by ORDOO",
+  "scripts": {
+    "start": "node tools/serve.mjs --root site --port 4600",
+    "qa": "node tools/qa-shots.mjs"
+  },
+  "devDependencies": {
+    "@fontsource/cormorant-garamond": "^5.2.6",
+    "@fontsource/jost": "^5.2.6",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.11",
+    "playwright-core": "^1.56.1"
+  }
+}

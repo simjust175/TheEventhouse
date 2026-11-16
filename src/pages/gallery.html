@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery · The Event House</title>
+  <meta name="description" content="Provisional prototype: a curated gallery of weddings, private celebrations, corporate events and editorial styling.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="gallery">
+<!-- @include header -->
+
+<main id="main">
+  <section class="page-hero page-hero--left" aria-labelledby="g-title">
+    <img class="page-hero__img" src="assets/img/cat-weddings.webp" alt="" style="object-position: 70% 50%">
+    <div class="container page-hero__inner">
+      <span class="overline overline--spaced" data-reveal>The Event House</span>
+      <span class="rule" data-reveal style="--d:.05s"></span>
+      <h1 class="page-hero__title" id="g-title" data-split>Gallery</h1>
+      <p class="page-hero__lead" data-reveal style="--d:.15s">A curated look at our events: celebrations, gatherings and brand experiences, each thoughtfully designed and impeccably executed.</p>
+    </div>
+  </section>
+
+  <section class="gallery" aria-labelledby="g-filter-title">
+    <h2 class="overline overline--spaced gallery__kicker" id="g-filter-title">Explore the collection</h2>
+    <div class="filters" role="group" aria-label="Filter gallery" data-filters>
+      <button type="button" class="chip is-active" aria-pressed="true" data-filter="all">All</button>
+      <button type="button" class="chip" aria-pressed="false" data-filter="weddings">Weddings</button>
+      <button type="button" class="chip" aria-pressed="false" data-filter="private">Private celebrations</button>
+      <button type="button" class="chip" aria-pressed="false" data-filter="corporate">Corporate</button>
+      <button type="button" class="chip" aria-pressed="false" data-filter="editorial">Editorial</button>
+    </div>
+    <p class="sr-only" aria-live="polite" data-filter-status></p>
+
+    <ul class="mosaic" data-mosaic>
+      <li class="tile" style="--c:3;--r:21" data-cat="editorial"><button type="button" data-full="assets/img/vase-plinth.webp"><img src="assets/img/vase-plinth-sm.webp" alt="A pale stone vase on a plinth beside trailing greenery" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:21" data-cat="editorial"><button type="button" data-full="assets/img/dark-florals.webp"><img src="assets/img/dark-florals-sm.webp" alt="A dark, sculptural floral arrangement against shadow" loading="lazy" style="object-position:50% 80%"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:5;--r:11" data-cat="weddings"><button type="button" data-full="assets/img/cat-weddings.webp"><img src="assets/img/cat-weddings-sm.webp" alt="A long wedding table with glassware and colourful flowers" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:2;--r:10" data-cat="private"><button type="button" data-full="assets/img/candles-trio.webp"><img src="assets/img/candles-trio-sm.webp" alt="An amber glass candle glowing in a dark room" loading="lazy" style="object-position:50% 80%"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:10" data-cat="weddings"><button type="button" data-full="assets/img/hero-table.webp"><img src="assets/img/hero-table-sm.webp" alt="Banquet place settings with glassware and blush roses" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:5;--r:11" data-cat="weddings"><button type="button" data-full="assets/img/table-white.webp"><img src="assets/img/table-white-sm.webp" alt="A long white table with bud vases and blue napkins" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:11" data-cat="corporate"><button type="button" data-full="assets/img/dark-lounge.webp"><img src="assets/img/dark-lounge-sm.webp" alt="A sculpted lounge chair in a dark arched room" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:11" data-cat="editorial"><button type="button" data-full="assets/img/pink-flowers.webp"><img src="assets/img/pink-flowers-sm.webp" alt="Garden roses, thistle and eucalyptus in a lush bouquet" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:9" data-cat="private"><button type="button" data-full="assets/img/pool-resort.webp"><img src="assets/img/pool-resort-sm.webp" alt="A pool terrace with loungers at dusk" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:9" data-cat="private"><button type="button" data-full="assets/img/rose-pour.webp"><img src="assets/img/rose-pour-sm.webp" alt="Rosé poured into a crystal glass" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="corporate"><button type="button" data-full="assets/img/ballroom.webp"><img src="assets/img/ballroom-sm.webp" alt="A ballroom set with round tables beneath chandeliers" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:2;--r:9" data-cat="editorial"><button type="button" data-full="assets/img/posy.webp"><img src="assets/img/posy-sm.webp" alt="Pale blooms on a sunlit table" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="weddings"><button type="button" data-full="assets/img/cake.webp"><img src="assets/img/cake-sm.webp" alt="A white cake crowned with garden roses" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="editorial"><button type="button" data-full="assets/img/alps.webp"><img src="assets/img/alps-sm.webp" alt="An alpine valley with waterfalls and chalets" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="private"><button type="button" data-full="assets/img/candle-single.webp"><img src="assets/img/candle-single-sm.webp" alt="A smoked glass votive glowing in a dark room" loading="lazy" style="object-position:50% 85%"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:5;--r:11" data-cat="weddings"><button type="button" data-full="assets/img/aisle-florals.webp"><img src="assets/img/aisle-florals-sm.webp" alt="A ceremony aisle lined with rose arrangements" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:11" data-cat="corporate"><button type="button" data-full="assets/img/conference.webp"><img src="assets/img/conference-sm.webp" alt="A conference hall set with round tables" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:11" data-cat="weddings"><button type="button" data-full="assets/img/hero-bouquet.webp"><img src="assets/img/hero-bouquet-sm.webp" alt="A bridal bouquet held in soft evening light" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:9" data-cat="private"><button type="button" data-full="assets/img/cocktail.webp"><img src="assets/img/cocktail-sm.webp" alt="A garnished cocktail lit by candlelight" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:3;--r:9" data-cat="weddings"><button type="button" data-full="assets/img/gazebo.webp"><img src="assets/img/gazebo-sm.webp" alt="A garden pavilion dressed for a ceremony" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="private"><button type="button" data-full="assets/img/cat-celebrations.webp"><img src="assets/img/cat-celebrations-sm.webp" alt="A wooden table with eucalyptus garland, candles and plates" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:2;--r:9" data-cat="private"><button type="button" data-full="assets/img/wine-pour.webp"><img src="assets/img/wine-pour-sm.webp" alt="Red wine being poured at the table" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="weddings"><button type="button" data-full="assets/img/garden-chairs.webp"><img src="assets/img/garden-chairs-sm.webp" alt="Two garden chairs dressed with flowers on a lawn" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="weddings"><button type="button" data-full="assets/img/hero-venue.webp"><img src="assets/img/hero-venue-sm.webp" alt="A draped event barn with a crystal chandelier" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+      <li class="tile" style="--c:4;--r:9" data-cat="corporate"><button type="button" data-full="assets/img/brass-pendants.webp"><img src="assets/img/brass-pendants-sm.webp" alt="Brass pendant lights hanging at different heights" loading="lazy"><span class="tile__hover"><span class="tile__label">View image</span><svg viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></span></button></li>
+    </ul>
+    <p class="gallery__note"><span class="tbc">Placeholder photography: replace with the studio’s own events</span></p>
+  </section>
+
+  <!-- @include cta-band -->
+</main>
+
+<div class="lightbox dialog" role="dialog" aria-modal="true" aria-label="Image viewer" data-lightbox hidden>
+  <div class="dialog__scrim" data-lb-close></div>
+  <figure class="lightbox__figure">
+    <img alt="" data-lb-img>
+    <figcaption class="lightbox__caption"><span data-lb-cat></span><span data-lb-alt></span><span data-lb-count></span></figcaption>
+  </figure>
+  <button class="lightbox__btn lightbox__btn--close" type="button" aria-label="Close image viewer" data-lb-close><svg aria-hidden="true"><use href="#i-close"/></svg></button>
+  <button class="lightbox__btn lightbox__btn--prev" type="button" aria-label="Previous image" data-lb-prev><svg aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+  <button class="lightbox__btn lightbox__btn--next" type="button" aria-label="Next image" data-lb-next><svg aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+  <a class="btn-line btn-line--light lightbox__cta" href="enquiry.html" data-lb-cta>Plan something similar <svg class="arrow" viewBox="0 0 24 12" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+
+<!-- @include footer-compact -->
+<!-- @include scripts -->
+<script src="assets/js/gallery.js"></script>
+</body>
+</html>

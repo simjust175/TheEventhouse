@@ -1,0 +1,345 @@
+{
+ "checks": [
+  {
+   "name": "carousel d1440: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "BUTTON.carousel__zone carousel__zone--next",
+     "cur": "1",
+     "sy": 2176,
+     "ih": 900
+    },
+    "nb": {
+     "x": 1036.8125,
+     "y": 224.53125,
+     "width": 403.1875,
+     "height": 900
+    },
+    "beforeDy": -170,
+    "enteringDy": -170.8,
+    "afterDy": -170,
+    "after300pxDy": -124.7
+   }
+  },
+  {
+   "name": "layout d1440: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 1440,
+    "clientW": 1440,
+    "scrollW": 1440
+   }
+  },
+  {
+   "name": "console d1440: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "carousel d1920: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "BUTTON.carousel__zone carousel__zone--next",
+     "cur": "1",
+     "sy": 2721,
+     "ih": 1080
+    },
+    "nb": {
+     "x": 1382.40625,
+     "y": 269.796875,
+     "width": 537.59375,
+     "height": 1080
+    },
+    "beforeDy": -203.8,
+    "enteringDy": -204.6,
+    "afterDy": -203.8,
+    "after300pxDy": -158.5
+   }
+  },
+  {
+   "name": "layout d1920: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 1920,
+    "clientW": 1920,
+    "scrollW": 1920
+   }
+  },
+  {
+   "name": "console d1920: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "carousel t768: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "svg.[object SVGAnimatedString]",
+     "cur": "1",
+     "sy": 2778,
+     "ih": 1024
+    },
+    "nb": {
+     "x": 697.4375,
+     "y": 526.359375,
+     "width": 45.65625,
+     "height": 45.65625
+    },
+    "beforeDy": -116.9,
+    "enteringDy": -118.4,
+    "afterDy": -116.9,
+    "after300pxDy": -89.5
+   }
+  },
+  {
+   "name": "layout t768: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 768,
+    "clientW": 768,
+    "scrollW": 768
+   }
+  },
+  {
+   "name": "console t768: no errors",
+   "ok": true,
+   "detail": []
+  },
+  {
+   "name": "carousel m390: new category keeps the same parallax offset and keeps moving with scroll",
+   "ok": true,
+   "detail": {
+    "hit": {
+     "el": "svg.[object SVGAnimatedString]",
+     "cur": "1",
+     "sy": 2448,
+     "ih": 844
+    },
+    "nb": {
+     "x": 327.625,
+     "y": 412.25,
+     "width": 45.75,
+     "height": 45.75
+    },
+    "beforeDy": -96.3,
+    "enteringDy": -100.3,
+    "afterDy": -96.3,
+    "after300pxDy": -68.9
+   }
+  },
+  {
+   "name": "layout m390: no horizontal overflow",
+   "ok": true,
+   "detail": {
+    "innerW": 390,
+    "clientW": 390,
+    "scrollW": 390
+   }
+  },
+  {
+   "name": "console m390: no errors",
+   "ok": true,
+   "detail": []
+  }
+ ],
+ "parallax": {
+  "d1440": {
+   "carouselSwitch": {
+    "before": {
+     "y": 2176,
+     "dy": -170,
+     "top": 170,
+     "bottom": 102,
+     "left": 0,
+     "right": 0,
+     "fTop": 224.53125,
+     "fH": 900,
+     "fL": 0,
+     "fW": 1440,
+     "vh": 900
+    },
+    "mid": {
+     "dy": -170.8,
+     "top": 170.7882080078125,
+     "bottom": 102.7882080078125
+    },
+    "after": {
+     "y": 2176,
+     "dy": -170,
+     "top": 170,
+     "bottom": 102,
+     "left": 0,
+     "right": 0,
+     "fTop": 224.53125,
+     "fH": 900,
+     "fL": 0,
+     "fW": 1440,
+     "vh": 900
+    },
+    "moved": {
+     "y": 2476,
+     "dy": -124.7,
+     "top": 124.7,
+     "bottom": 147.3,
+     "left": 0,
+     "right": 0,
+     "fTop": -75.46875,
+     "fH": 900,
+     "fL": 0,
+     "fW": 1440,
+     "vh": 900
+    }
+   }
+  },
+  "d1920": {
+   "carouselSwitch": {
+    "before": {
+     "y": 2721,
+     "dy": -203.8,
+     "top": 203.8,
+     "bottom": 122.2,
+     "left": 0,
+     "right": 0,
+     "fTop": 269.796875,
+     "fH": 1080,
+     "fL": 0,
+     "fW": 1920,
+     "vh": 1080
+    },
+    "mid": {
+     "dy": -204.6,
+     "top": 204.649169921875,
+     "bottom": 123.0491943359375
+    },
+    "after": {
+     "y": 2721,
+     "dy": -203.8,
+     "top": 203.8,
+     "bottom": 122.2,
+     "left": 0,
+     "right": 0,
+     "fTop": 269.796875,
+     "fH": 1080,
+     "fL": 0,
+     "fW": 1920,
+     "vh": 1080
+    },
+    "moved": {
+     "y": 3021,
+     "dy": -158.5,
+     "top": 158.5,
+     "bottom": 167.5,
+     "left": 0,
+     "right": 0,
+     "fTop": -30.203125,
+     "fH": 1080,
+     "fL": 0,
+     "fW": 1920,
+     "vh": 1080
+    }
+   }
+  },
+  "t768": {
+   "carouselSwitch": {
+    "before": {
+     "y": 2778,
+     "dy": -116.9,
+     "top": 116.9,
+     "bottom": 70.1,
+     "left": 0,
+     "right": 0,
+     "fTop": 255.9375,
+     "fH": 1024,
+     "fL": 0,
+     "fW": 768,
+     "vh": 1024
+    },
+    "mid": {
+     "dy": -118.4,
+     "top": 118.41436767578125,
+     "bottom": 71.61419677734375
+    },
+    "after": {
+     "y": 2778,
+     "dy": -116.9,
+     "top": 116.9,
+     "bottom": 70.1,
+     "left": 0,
+     "right": 0,
+     "fTop": 255.9375,
+     "fH": 1024,
+     "fL": 0,
+     "fW": 768,
+     "vh": 1024
+    },
+    "moved": {
+     "y": 3078,
+     "dy": -89.5,
+     "top": 89.5,
+     "bottom": 97.5,
+     "left": 0,
+     "right": 0,
+     "fTop": -44.0625,
+     "fH": 1024,
+     "fL": 0,
+     "fW": 768,
+     "vh": 1024
+    }
+   }
+  },
+  "m390": {
+   "carouselSwitch": {
+    "before": {
+     "y": 2448,
+     "dy": -96.3,
+     "top": 96.3,
+     "bottom": 57.7,
+     "left": 0,
+     "right": 0,
+     "fTop": 210.984375,
+     "fH": 844,
+     "fL": 0,
+     "fW": 390,
+     "vh": 844
+    },
+    "mid": {
+     "dy": -100.3,
+     "top": 100.30795288085938,
+     "bottom": 61.708038330078125
+    },
+    "after": {
+     "y": 2448,
+     "dy": -96.3,
+     "top": 96.3,
+     "bottom": 57.7,
+     "left": 0,
+     "right": 0,
+     "fTop": 210.984375,
+     "fH": 844,
+     "fL": 0,
+     "fW": 390,
+     "vh": 844
+    },
+    "moved": {
+     "y": 2748,
+     "dy": -68.9,
+     "top": 68.9,
+     "bottom": 85.1,
+     "left": 0,
+     "right": 0,
+     "fTop": -89.015625,
+     "fH": 844,
+     "fL": 0,
+     "fW": 390,
+     "vh": 844
+    }
+   }
+  }
+ },
+ "oval": {},
+ "hero": {},
+ "perf": {}
+}
