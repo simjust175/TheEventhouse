@@ -24,14 +24,6 @@ window.TEH_CONFIG.heroMedia = window.TEH_CONFIG.heroMedia || {
   fade: 1800,
   items: [
     {
-      type: 'video',
-      src: { desktop: 'assets/video/hero-venue.mp4', mobile: 'assets/video/hero-venue-m.mp4' },
-      poster: { desktop: 'assets/img/hero-venue.webp', mobile: 'assets/img/hero-venue.webp' },
-      position: { desktop: '50% 40%', mobile: '50% 50%' },
-      alt: 'A draped event barn lit by a crystal chandelier and festoon lights',
-      duration: 8000
-    },
-    {
       type: 'image',
       src: 'assets/img/hero-table.webp',
       position: { desktop: '50% 55%', mobile: '58% 50%' },
@@ -50,6 +42,14 @@ window.TEH_CONFIG.heroMedia = window.TEH_CONFIG.heroMedia || {
       src: 'assets/img/pink-flowers.webp',
       position: { desktop: '50% 45%', mobile: '50% 50%' },
       alt: 'A lush garden bouquet of roses and seasonal stems'
+    },
+    {
+      type: 'video',
+      src: { desktop: 'assets/video/hero-venue.mp4', mobile: 'assets/video/hero-venue-m.mp4' },
+      poster: { desktop: 'assets/img/hero-venue.webp', mobile: 'assets/img/hero-venue.webp' },
+      position: { desktop: '50% 40%', mobile: '50% 50%' },
+      alt: 'A draped event barn lit by a crystal chandelier and festoon lights',
+      duration: 8000
     }
   ]
 };
