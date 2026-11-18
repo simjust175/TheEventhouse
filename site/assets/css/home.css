@@ -10,6 +10,9 @@
 /* media layers (built by hero-media.js from assets/js/config/hero-media.js) */
 .hero__layers { position: absolute; inset: 0; transform-origin: 50% 50%; }
 .hero__fallback, .hero__media img, .hero__media video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Match the config's first hero image crop during first paint, before JS mounts. */
+.hero__fallback { object-position: 50% 55%; }
+@media (max-width: 767.98px) { .hero__fallback { object-position: 58% 50%; } }
 .hero__media { position: absolute; inset: 0; opacity: 0; transition: opacity var(--fade, 1.6s) cubic-bezier(.45, 0, .25, 1); }
 .hero__media.is-active { opacity: 1; }
 .hero__media.is-front { z-index: 1; }
