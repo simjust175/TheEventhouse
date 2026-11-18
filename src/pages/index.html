@@ -131,12 +131,12 @@
     </div>
     <button class="carousel__zone carousel__zone--prev" type="button" data-prev aria-label="Previous event type"></button>
     <button class="carousel__zone carousel__zone--next" type="button" data-next aria-label="Next event type"></button>
-    <div class="carousel__cursor" aria-hidden="true" data-cursor><span>Next</span></div>
+    <div class="carousel__cursor" aria-hidden="true" data-cursor><svg class="carousel__ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48.5" pathLength="1"/></svg><span>Next</span></div>
     <div class="carousel__arrows">
       <button type="button" data-prev aria-label="Previous event type"><svg aria-hidden="true"><use href="#i-chev-l"/></svg></button>
       <button type="button" data-next aria-label="Next event type"><svg aria-hidden="true"><use href="#i-chev-r"/></svg></button>
     </div>
-    <div class="carousel__pager"><span class="carousel__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="carousel__count"><span data-current>1</span> / 4</span></div>
+    <div class="carousel__pager"><div class="carousel__bars" role="group" aria-label="Choose an event type"><button type="button" class="carousel__bar" data-goto="0" aria-label="Weddings"></button><button type="button" class="carousel__bar" data-goto="1" aria-label="Private celebrations"></button><button type="button" class="carousel__bar" data-goto="2" aria-label="Corporate and gala"></button><button type="button" class="carousel__bar" data-goto="3" aria-label="Florals and décor"></button></div><span class="carousel__count"><span data-current>1</span> / 4<button class="carousel__toggle" type="button" data-cz-toggle aria-label="Pause automatic slides" aria-pressed="false" hidden><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9M11 3.5v9"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5 12 8l-6.5 4.5z"/></svg></button></span></div>
   </section>
 
   <!-- 4. COLLECTION TEASER (editorial split, mirrors the reference's room list) -->
@@ -209,14 +209,16 @@
 
   <!-- 7. ROUNDED FEATURE: capsule on desktop/tablet, true circle on mobile -->
   <section class="section oval" aria-labelledby="oval-title">
+    <div class="oval__stage" data-oval-stage>
     <div class="oval__media" data-oval>
-      <img src="assets/img/hero-bouquet.webp" alt="" loading="lazy" data-oval-img data-parallax="0.10">
+      <img src="assets/img/hero-bouquet.webp" alt="" loading="lazy" data-oval-img data-parallax="0.10" data-parallax-trigger="[data-oval-stage]">
       <div class="oval__content">
         <span class="overline" data-reveal>Florals</span>
         <h2 class="title" id="oval-title" data-split>Arrangements that feel freshly gathered</h2>
         <p data-reveal>Seasonal, textural and generous.<span class="oval__more"> Our florals are composed for the room they live in, from a single posy at each place to installations that frame the whole evening.</span></p>
         <a class="btn btn--primary" href="collection.html?filter=florals" data-reveal>Explore florals</a>
       </div>
+    </div>
     </div>
   </section>
 

@@ -1,0 +1,87 @@
+PASS oval 1920x1080: morph starts only once the rectangle is ≥80% on screen  — {"vis":0.865,"R":39}
+PASS oval 1920x1080: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)  — {"p":0.501,"R":214.5,"end":389,"vis":1}
+PASS oval 1920x1080: completes to the final shape (radius = 389px) while fully visible  — {"R":389,"vis":1}
+PASS oval 1920x1080: slow, scroll-linked (960px = 0.89 viewport heights)  — {"dist":960}
+PASS oval 1920x1080: smooth, never reverses or jumps (radius ≤ 0.58px and position ≤ 1.00px per px scrolled)  — {"mono":true}
+PASS oval 1920x1080: photo always fills the frame, page height stable  — {"uncovered":0}
+PASS oval 1920x1080: no console errors  — []
+PASS oval 1440x900: morph starts only once the rectangle is ≥80% on screen  — {"vis":0.872,"R":31.9}
+PASS oval 1440x900: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)  — {"p":0.495,"R":172.1,"end":317,"vis":1}
+PASS oval 1440x900: completes to the final shape (radius = 317px) while fully visible  — {"R":317,"vis":1}
+PASS oval 1440x900: slow, scroll-linked (816px = 0.91 viewport heights)  — {"dist":816}
+PASS oval 1440x900: smooth, never reverses or jumps (radius ≤ 0.56px and position ≤ 1.00px per px scrolled)  — {"mono":true}
+PASS oval 1440x900: photo always fills the frame, page height stable  — {"uncovered":0}
+PASS oval 1440x900: no console errors  — []
+PASS oval 768x1024: morph starts only once the rectangle is ≥80% on screen  — {"vis":0.869,"R":36.2}
+PASS oval 768x1024: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)  — {"p":0.492,"R":193.6,"end":359,"vis":1}
+PASS oval 768x1024: completes to the final shape (radius = 359px) while fully visible  — {"R":359,"vis":1}
+PASS oval 768x1024: slow, scroll-linked (804px = 0.79 viewport heights)  — {"dist":804}
+PASS oval 768x1024: smooth, never reverses or jumps (radius ≤ 0.65px and position ≤ 1.00px per px scrolled)  — {"mono":true}
+PASS oval 768x1024: photo always fills the frame, page height stable  — {"uncovered":0}
+PASS oval 768x1024: no console errors  — []
+PASS oval 390x844: morph starts only once the rectangle is ≥80% on screen  — {"vis":0.873,"R":17.9}
+PASS oval 390x844: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)  — {"p":0.499,"R":97.8,"end":178.5,"vis":1}
+PASS oval 390x844: completes to the final shape (radius = 178.5px) while fully visible  — {"R":178.5,"vis":1}
+PASS oval 390x844: slow, scroll-linked (696px = 0.82 viewport heights)  — {"dist":696}
+PASS oval 390x844: smooth, never reverses or jumps (radius ≤ 0.37px and position ≤ 1.00px per px scrolled)  — {"mono":true}
+PASS oval 390x844: photo always fills the frame, page height stable  — {"uncovered":0}
+PASS oval 390x844: no console errors  — []
+PASS oval 1440x700: morph starts only once the rectangle is ≥80% on screen  — {"vis":0.858,"R":25.2}
+PASS oval 1440x700: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)  — {"p":0.49,"R":135.2,"end":252,"vis":1}
+PASS oval 1440x700: completes to the final shape (radius = 252px) while fully visible  — {"R":252,"vis":1}
+PASS oval 1440x700: slow, scroll-linked (636px = 0.91 viewport heights)  — {"dist":636}
+PASS oval 1440x700: smooth, never reverses or jumps (radius ≤ 0.58px and position ≤ 1.00px per px scrolled)  — {"mono":true}
+PASS oval 1440x700: photo always fills the frame, page height stable  — {"uncovered":0}
+PASS oval 1440x700: no console errors  — []
+PASS oval 390x640: morph starts only once the rectangle is ≥80% on screen  — {"vis":0.875,"R":18}
+PASS oval 390x640: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)  — {"p":0.503,"R":98.9,"end":178.5,"vis":1}
+PASS oval 390x640: completes to the final shape (radius = 178.5px) while fully visible  — {"R":178.5,"vis":1}
+PASS oval 390x640: slow, scroll-linked (504px = 0.79 viewport heights)  — {"dist":504}
+PASS oval 390x640: smooth, never reverses or jumps (radius ≤ 0.51px and position ≤ 1.00px per px scrolled)  — {"mono":true}
+PASS oval 390x640: photo always fills the frame, page height stable  — {"uncovered":0}
+PASS oval 390x640: no console errors  — []
+PASS footer 1920x1080: photo moves inside its frame across the whole range (236px over 777px, rate 0.30)  — [-236,-177.1,-118.2,-58.9,0]
+PASS footer 1920x1080: no blank edge at any position (min overscan 0px)
+PASS footer 1920x1080: button stays centred in the band  — [0,0,0,0,0]
+PASS footer 1920x1080: no console errors  — []
+PASS footer 1440x900: photo moves inside its frame across the whole range (197px over 648px, rate 0.30)  — [-197,-147.8,-98.5,-49.2,0]
+PASS footer 1440x900: no blank edge at any position (min overscan 0px)
+PASS footer 1440x900: button stays centred in the band  — [0,0,0,0,0]
+PASS footer 1440x900: no console errors  — []
+PASS footer 768x1024: photo moves inside its frame across the whole range (106px over 574px, rate 0.18)  — [-106,-79.4,-53,-26.4,0]
+PASS footer 768x1024: no blank edge at any position (min overscan 0px)
+PASS footer 768x1024: button stays centred in the band  — [0,0,0,0,0]
+PASS footer 768x1024: no console errors  — []
+PASS footer 390x844: photo moves inside its frame across the whole range (88px over 473px, rate 0.19)  — [-88,-66,-44.1,-22,0]
+PASS footer 390x844: no blank edge at any position (min overscan 0px)
+PASS footer 390x844: button stays centred in the band  — [0,0,0,0,0]
+PASS footer 390x844: no console errors  — []
+PASS footer 1440x700: photo moves inside its frame across the whole range (154px over 504px, rate 0.31)  — [-154,-115.5,-77,-38.5,0]
+PASS footer 1440x700: no blank edge at any position (min overscan 0px)
+PASS footer 1440x700: button stays centred in the band  — [0,0,0,0,0]
+PASS footer 1440x700: no console errors  — []
+PASS footer 390x640: photo moves inside its frame across the whole range (81px over 437px, rate 0.19)  — [-81,-60.8,-40.6,-20.2,0]
+PASS footer 390x640: no blank edge at any position (min overscan 0px)
+PASS footer 390x640: button stays centred in the band  — [0,0,0,0,0]
+PASS footer 390x640: no console errors  — []
+PASS hover 1440x900: resting on NEXT advances after ~2s (2039ms), cursor ring shows the wait  — [2039,4045,6055]
+PASS hover 1440x900: keeps advancing every ~2s while the pointer stays (no autoplay in between, no doubles)  — {"seq":[2,3,4],"gaps":[2006,2010]}
+PASS hover 1440x900: leaving before 2s cancels the pending step; autoplay then resumes after its full 2.9s hold  — [2922]
+PASS hover 1440x900: resting on PREV goes back one after ~2s  — [[4,2028]]
+PASS hover 1440x900: click acts instantly and restarts the 2s wait (next hover step ~2s after the click, not 0.7s)  — [23,2028]
+PASS hover 1440x900: rapid clicks → one change, then hover steps resume ~2s apart (no overlapping transitions)  — {"rt":[6,2214,4220],"rg":[2208,2006]}
+PASS hover 1440x900: no console errors  — []
+PASS hover 1920x1080: resting on NEXT advances after ~2s (2032ms), cursor ring shows the wait  — [2032,4042,6050]
+PASS hover 1920x1080: keeps advancing every ~2s while the pointer stays (no autoplay in between, no doubles)  — {"seq":[2,3,4],"gaps":[2010,2008]}
+PASS hover 1920x1080: leaving before 2s cancels the pending step; autoplay then resumes after its full 2.9s hold  — [2911]
+PASS hover 1920x1080: resting on PREV goes back one after ~2s  — [[4,2026]]
+PASS hover 1920x1080: click acts instantly and restarts the 2s wait (next hover step ~2s after the click, not 0.7s)  — [8,2017]
+PASS hover 1920x1080: rapid clicks → one change, then hover steps resume ~2s apart (no overlapping transitions)  — {"rt":[6,2221,4230],"rg":[2215,2009]}
+PASS hover 1920x1080: no console errors  — []
+PASS hover 390x844: touch keeps tap navigation, no hover behaviour (zones none)  — {"ch":[2]}
+PASS reduced 1440x900: no morph hold, final shape shown directly, no footer parallax  — {"morph":false,"extra":0,"R":9999,"w":1400,"h":634,"footerPx":false}
+PASS reduced 1440x900: no console errors  — []
+PASS reduced 390x844: no morph hold, final shape shown directly, no footer parallax  — {"morph":false,"extra":0,"R":178.5,"w":357,"h":357,"footerPx":false}
+PASS reduced 390x844: no console errors  — []
+
+85/85 passed

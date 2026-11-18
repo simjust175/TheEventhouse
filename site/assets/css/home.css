@@ -56,26 +56,50 @@
 .carousel__slide.is-entering { z-index: 2; }
 .carousel__slide img { width: 100%; height: 100%; object-fit: cover; }
 .carousel__shade { position: absolute; inset: 0; z-index: 3; pointer-events: none; background: radial-gradient(ellipse 60% 55% at 50% 48%, rgba(20, 16, 13, .42), rgba(20, 16, 13, .12) 70%), linear-gradient(180deg, rgba(20, 16, 13, .25), rgba(20, 16, 13, 0) 30%, rgba(20, 16, 13, 0) 70%, rgba(20, 16, 13, .35)); }
-.carousel__titles { position: absolute; left: 0; right: 0; top: 19%; z-index: 4; height: var(--fs-mega); pointer-events: none; }
-.carousel__title { position: absolute; left: 50%; top: 0; font-family: var(--f-display); font-size: var(--fs-mega); line-height: 1; letter-spacing: -.02em; white-space: nowrap; transform: translateX(-50%); will-change: transform, opacity; }
-.carousel__content { position: absolute; left: 50%; top: calc(19% + var(--fs-mega) + 3.2rem); z-index: 5; width: min(56rem, 100% - 2 * var(--gutter)); transform: translateX(-50%); text-align: center; }
-.carousel__copy { position: absolute; inset: 0 0 auto; opacity: 0; visibility: hidden; transform: translateY(2rem); transition: opacity .8s var(--ease), transform 1s var(--ease), visibility 0s .8s; }
-.carousel__copy.is-active { position: relative; opacity: 1; visibility: visible; transform: none; transition-delay: .45s, .45s, 0s; }
-.carousel__tagline { font-family: var(--f-display); font-size: 2.4rem; line-height: 1.2; margin-bottom: 1.2rem; }
+/* Vertical composition measured on the reference at 1440/1920 (docs/03 §6). Desktop: the tagline
+   starts at the section's vertical centre, the title sits one gap above it, the CTAs one gap below
+   the copy and the pager one gap from the bottom. Gap = reference 5rem (8rem here), eased on short screens. */
+.carousel { --cz-gap: max(4rem, min(8rem, 9svh)); --cz-bottom: var(--cz-gap); --cz-top: calc(50% - var(--fs-mega) - var(--cz-gap)); --cz-copy: 50%; }
+.carousel__titles { position: absolute; left: 0; right: 0; top: var(--cz-top); z-index: 4; height: var(--fs-mega); pointer-events: none; }
+.carousel__title { position: absolute; left: 50%; bottom: 0; font-family: var(--f-display); font-size: var(--fs-mega); line-height: 1; letter-spacing: -.02em; white-space: nowrap; transform: translateX(-50%); will-change: transform, opacity; }
+.carousel__content { position: absolute; left: 50%; top: var(--cz-copy); z-index: 5; display: grid; width: min(56rem, 100% - 2 * var(--gutter)); transform: translateX(-50%); text-align: center; }
+/* all copies share one grid cell, so the block is as tall as the longest copy and the CTAs sit at the same height on every slide */
+.carousel__copy { grid-area: 1 / 1; display: flex; flex-direction: column; opacity: 0; visibility: hidden; transform: translateY(2rem); transition: opacity .8s var(--ease), transform 1s var(--ease), visibility 0s .8s; }
+.carousel__copy.is-active { opacity: 1; visibility: visible; transform: none; transition-delay: .45s, .45s, 0s; }
+.carousel__tagline { font-family: var(--f-display); font-size: 2.4rem; line-height: 1.2; margin-bottom: 1.6rem; }
 .carousel__text { font-size: 1.6rem; line-height: 1.5; max-width: 44rem; margin: 0 auto; opacity: .92; }
-.carousel__ctas { display: flex; justify-content: center; gap: 1.2rem; margin-top: 3.2rem; flex-wrap: wrap; }
+.carousel__ctas { display: flex; justify-content: center; gap: 1.2rem; margin-top: auto; padding-top: var(--cz-gap); flex-wrap: wrap; }
 .carousel__zone { position: absolute; top: 0; bottom: 0; z-index: 4; width: 28%; cursor: none; }
 .carousel__zone--prev { left: 0; } .carousel__zone--next { right: 0; }
 .carousel__zone:focus-visible { outline: 1px solid rgba(255, 255, 255, .7); outline-offset: -1.2rem; }
 .carousel__cursor { position: absolute; left: 0; top: 0; z-index: 6; width: 9.6rem; height: 9.6rem; margin: -4.8rem 0 0 -4.8rem; border-radius: 50%; background: rgba(251, 248, 244, .92); color: var(--c-ink); display: grid; place-items: center; font-size: 1.4rem; pointer-events: none; transform: translate3d(var(--cx, 50vw), var(--cy, 50vh), 0) scale(0); transition: transform .5s var(--ease); }
 .carousel__cursor.is-on { transform: translate3d(var(--cx), var(--cy), 0) scale(1); }
 .carousel__cursor.is-down { transform: translate3d(var(--cx), var(--cy), 0) scale(.85); }
+/* hover-to-navigate: a hairline ring traces the 2s dwell before the slide changes */
+.carousel__ring { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); fill: none; stroke: var(--c-ink); stroke-width: 1.5; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: 0; transition: opacity .3s var(--ease); }
+.carousel__cursor.is-dwell .carousel__ring { opacity: .55; animation: czDwell var(--cz-dwell, 2000ms) linear both; }
+@keyframes czDwell { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
 .carousel__arrows { display: none; }
-.carousel__pager { position: absolute; left: 50%; bottom: 4rem; z-index: 5; transform: translateX(-50%); display: grid; justify-items: center; gap: 1.2rem; font-size: 1.3rem; letter-spacing: .08em; }
-.carousel__bars { display: flex; gap: .8rem; }
-.carousel__bars i { display: block; width: 4.8rem; height: 1px; background: rgba(255, 255, 255, .35); position: relative; overflow: hidden; }
-.carousel__bars i::after { content: ""; position: absolute; inset: 0; background: #fff; transform: scaleX(0); transform-origin: left; transition: transform .9s var(--ease); }
-.carousel__bars i.is-active::after { transform: scaleX(1); }
+.carousel__pager { position: absolute; left: 50%; bottom: var(--cz-bottom); z-index: 6; transform: translateX(-50%); display: grid; justify-items: center; gap: .8rem; font-size: 1.3rem; letter-spacing: .08em; }
+.carousel__bars { display: flex; gap: .4rem; }
+.carousel__bar { position: relative; display: block; width: 8rem; height: 2.4rem; padding: 0; border: 0; background: none; cursor: pointer; }
+.carousel__bar::before, .carousel__bar::after { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 1px; }
+.carousel__bar::before { background: rgba(255, 255, 255, .4); transition: background-color .3s; }
+.carousel__bar::after { background: #fff; transform: scaleX(0); transform-origin: left; transition: transform .9s var(--ease); }
+.carousel__bar:hover::before { background: rgba(255, 255, 255, .75); }
+.carousel__bar:focus-visible { outline: 1px solid #fff; outline-offset: 2px; }
+.carousel__bar.is-active::after { transform: scaleX(1); }
+/* while autoplay is timing a slide, the active line fills over the hold time */
+.carousel.is-timing .carousel__bar.is-active::after { transition: none; animation: czFill var(--cz-hold, 5300ms) linear both; }
+@keyframes czFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.carousel__count { position: relative; }
+.carousel__toggle { position: absolute; left: 100%; top: 50%; margin-left: 1rem; width: 3rem; height: 3rem; transform: translateY(-50%); display: grid; place-items: center; border-radius: 50%; color: #fff; opacity: .7; transition: opacity .3s; }
+.carousel__toggle:hover, .carousel__toggle:focus-visible { opacity: 1; }
+.carousel__toggle[hidden] { display: none; }
+.carousel__toggle svg { grid-area: 1 / 1; width: 1.2rem; height: 1.2rem; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+.carousel__toggle .i-play { fill: currentColor; stroke: none; }
+.carousel__toggle .i-play, .carousel__toggle.is-paused .i-pause { display: none; }
+.carousel__toggle.is-paused .i-play { display: block; }
 
 /* ---------- 4. Collection teaser ---------- */
 .teaser__grid { display: grid; grid-template-columns: 30rem 1fr; gap: 10rem; align-items: start; }
@@ -110,7 +134,13 @@
    The radius is ONE length (never "rx / ry"), so the ends stay semicircular however wide the frame is.
    home.js scrubs --oval-r from a soft rectangle to the final shape; without JS / reduced motion
    the final shape applies directly (9999px clamps to half the height = capsule). */
-.oval { padding-inline: 2.4rem; }
+.oval { --oval-hold: 75svh; padding-inline: 2.4rem; }
+/* Scroll-linked morph (home.js adds .oval--morph): the frame holds still, centred, for --oval-hold of
+   scroll (CSS sticky, so no pin spacer and no layout shift) while the corners round off. The stage's
+   ::after supplies that scroll distance; reduced motion / no JS get neither, just the final shape. */
+.oval__stage { position: relative; }
+.oval--morph .oval__media { position: sticky; top: max(var(--header-h-scrolled, 0px), calc(50svh - var(--oval-h, 60svh) / 2)); }
+.oval--morph .oval__stage::after { content: ""; display: block; height: var(--oval-hold); }
 .oval__media { position: relative; height: min(72vh, 44vw); min-height: 36rem; max-height: 92rem; overflow: hidden; border-radius: var(--oval-r, 9999px); display: grid; place-items: center; color: #fff; isolation: isolate; transform: translateZ(0); }
 .oval__media > img, .oval__media > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; z-index: -2; }
 .oval__media::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(ellipse 42% 50% at 50% 50%, rgba(20, 16, 13, .55), rgba(20, 16, 13, .18)); }
@@ -222,12 +252,11 @@
   .strip__side, .strip__side:last-child { text-align: center; }
   .strip__mid { flex-direction: column; gap: 2rem; }
   .carousel { height: 100svh; min-height: 56rem; }
-  .carousel__titles { top: 22%; }
+  .carousel { --cz-gap: 4rem; --cz-top: min(16rem, 19.7svh); --cz-bottom: min(8rem, 9.8svh); --cz-copy: calc(var(--cz-top) + var(--fs-mega) + var(--cz-gap)); }
   .carousel__zone, .carousel__cursor { display: none; }
-  .carousel__arrows { display: flex; justify-content: space-between; position: absolute; left: var(--gutter); right: var(--gutter); top: calc(22% + var(--fs-mega) / 2 - 2.2rem); z-index: 6; pointer-events: none; }
+  .carousel__arrows { display: flex; justify-content: space-between; position: absolute; left: var(--gutter); right: var(--gutter); top: calc(var(--cz-top) + var(--fs-mega) / 2 - 2.2rem); z-index: 6; pointer-events: none; }
   .carousel__arrows button { pointer-events: auto; width: 4.4rem; height: 4.4rem; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .7); display: grid; place-items: center; background: rgba(20, 16, 13, .15); }
   .carousel__arrows svg { width: 2rem; height: 2rem; }
-  .carousel__content { top: calc(22% + var(--fs-mega) + 2.4rem); }
   .carousel__ctas { flex-direction: column; align-items: stretch; width: min(32rem, 100%); margin-inline: auto; }
   .teaser__grid { grid-template-columns: 1fr; gap: 4.8rem; }
   .teaser__intro { position: static; }
@@ -240,7 +269,7 @@
   .trio__item--r, .trio__item--c { aspect-ratio: 3 / 4; margin-top: 0; }
   .trio__item--r { margin-top: 8rem; }
   .process__list { grid-template-columns: 1fr; gap: 3.2rem; margin-top: 4rem; }
-  .oval { padding-inline: var(--gutter); }
+  .oval { --oval-hold: 60svh; padding-inline: var(--gutter); }
   .anatomy__grid { grid-template-columns: 1fr; gap: 2.4rem; }
   .anatomy__legend { order: 2; }
   .spot-card { position: fixed; left: var(--gutter) !important; right: var(--gutter); top: auto !important; bottom: 2.4rem; width: auto; grid-template-columns: 10rem 1fr; align-items: center; }
@@ -263,8 +292,16 @@
   .features { grid-template-columns: repeat(3, 1fr); }
   .features li { font-size: 1.3rem; }
   .carousel__tagline { font-size: 2rem; }
+  .oval { --oval-hold: 55svh; }
 }
 @media (prefers-reduced-motion: reduce) {
   .spot::before { animation: none; }
   .hero__media img { animation: none !important; }
+}
+
+/* Phones and tablets: round controls keep a 44px touch target where the rem is small (≈8px at 600px). */
+@media (max-width: 1099px) {
+  .carousel__arrows button, .slider-nav button { width: max(4.4rem, 44px); height: max(4.4rem, 44px); }
+  .spot { width: max(4.4rem, 44px); height: max(4.4rem, 44px); margin: calc(-1 * max(2.2rem, 22px)) 0 0 calc(-1 * max(2.2rem, 22px)); }
+  .anatomy__legend button { min-height: 44px; }
 }

@@ -117,6 +117,15 @@ html.lenis, html.lenis body { height: auto; }
 .btn--on-dark { --fg: var(--c-on-dark); --bd: rgba(244, 237, 228, .5); --hover-bg: var(--c-on-dark); --hover-fg: var(--c-night); }
 .btn--s { height: 4rem; padding: 0 1.8rem; font-size: 1.4rem; }
 .btn svg { width: 1.6rem; height: 1.6rem; flex: none; }
+/* Phones and tablets: the rem shrinks with the viewport (it is only ~8px at 600px wide), which made
+   the small buttons 32–41px tall. Pixel floors keep them comfortably tappable (≥46px, 44px minimum for
+   any control) with slightly larger type and padding. max() never shrinks a button, so large tablets
+   and desktop are unchanged. */
+@media (max-width: 1099px) {
+  .btn { height: max(4.8rem, 50px); padding: 0 max(2.4rem, 26px); font-size: max(1.5rem, 16px); }
+  .btn--s, .footer__contact a.btn--s { height: max(4rem, 46px); padding: 0 max(1.8rem, 22px); font-size: max(1.4rem, 15px); }
+  .btn-line { height: max(4.4rem, 46px); padding: 0 max(2.6rem, 24px); font-size: max(1.2rem, 12.5px); }
+}
 /* rectangular line button used by the approved Gallery / Collection mockups */
 .btn-line { --fg: var(--c-ink); --bd: var(--c-ink); position: relative; display: inline-flex; align-items: center; gap: 2.4rem; height: 4.4rem; padding: 0 2.6rem; border: 1px solid var(--bd); color: var(--fg); font-size: 1.2rem; font-weight: 500; letter-spacing: .26em; text-transform: uppercase; overflow: hidden; isolation: isolate; transition: color .5s var(--ease), border-color .5s var(--ease); }
 .btn-line::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--hover-bg, var(--c-ink)); transform: scaleX(0); transform-origin: right; transition: transform .7s var(--ease); }
@@ -343,4 +352,13 @@ html.lenis, html.lenis body { height: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
   .js .img-reveal > img { transform: none; }
+}
+
+/* Phones and tablets: header controls and the Enquire pill keep a 44px touch target even where the
+   viewport-based rem is small (≈8px at 600px wide). */
+@media (max-width: 1099px) {
+  :root { --header-h: max(5.6rem, 60px); --header-h-scrolled: max(5.6rem, 60px); }
+  .burger { width: max(4rem, 44px); height: max(4rem, 44px); }
+  .basket-btn { height: max(4rem, 44px); }
+  .header .btn--primary { height: max(3.6rem, 44px); padding: 0 max(1.6rem, 18px); font-size: max(1.3rem, 14.5px); }
 }

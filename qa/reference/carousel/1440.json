@@ -1,0 +1,248 @@
+{
+  "measured": {
+    "vp": [
+      1440,
+      900
+    ],
+    "section": {
+      "h": 900,
+      "top": -220.640625
+    },
+    "item": {
+      "top": 274.3,
+      "bottom": 625.7,
+      "h": 351.5,
+      "left": 396,
+      "w": 648,
+      "topPct": 30.47,
+      "centerPct": 50,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "static",
+      "display": "flex",
+      "flexDir": "column",
+      "justify": "normal",
+      "gridRows": "none",
+      "height": "351.469px"
+    },
+    "slide": {
+      "top": 274.3,
+      "bottom": 625.7,
+      "h": 351.5,
+      "left": 396,
+      "w": 648,
+      "topPct": 30.47,
+      "centerPct": 50,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "relative"
+    },
+    "title": {
+      "top": 274.3,
+      "bottom": 383.4,
+      "h": 109.2,
+      "left": 598.1,
+      "w": 243.9,
+      "topPct": 30.47,
+      "centerPct": 36.54,
+      "fs": "109.167px",
+      "lh": "109.167px",
+      "mt": "0px",
+      "mb": "66.6667px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "tagline": {
+      "top": 450.1,
+      "bottom": 471.1,
+      "h": 21,
+      "left": 595,
+      "w": 250,
+      "topPct": 50.01,
+      "centerPct": 51.18,
+      "fs": "17.5px",
+      "lh": "21px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "text": {
+      "top": 484.4,
+      "bottom": 519.1,
+      "h": 34.7,
+      "left": 555.2,
+      "w": 329.7,
+      "topPct": 53.82,
+      "centerPct": 55.75,
+      "fs": "13.3333px",
+      "lh": "17.3333px",
+      "mt": "13.3333px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "buttons": {
+      "top": 519.1,
+      "bottom": 625.7,
+      "h": 106.7,
+      "left": 396,
+      "w": 648,
+      "topPct": 57.68,
+      "centerPct": 63.6,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "66.6667px",
+      "pos": "static"
+    },
+    "prevTitle": {
+      "top": 274.3,
+      "bottom": 383.4,
+      "h": 109.2,
+      "left": -41.9,
+      "w": 227.8,
+      "topPct": 30.47,
+      "centerPct": 36.54,
+      "fs": "109.167px",
+      "lh": "109.167px",
+      "mt": "0px",
+      "mb": "66.6667px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "nextTitle": {
+      "top": 274.3,
+      "bottom": 383.4,
+      "h": 109.2,
+      "left": 1301.5,
+      "w": 133,
+      "topPct": 30.47,
+      "centerPct": 36.54,
+      "fs": "109.167px",
+      "lh": "109.167px",
+      "mt": "0px",
+      "mb": "66.6667px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "pager": {
+      "top": 787,
+      "bottom": 833.3,
+      "h": 46.3,
+      "left": 580.1,
+      "w": 279.9,
+      "topPct": 87.45,
+      "centerPct": 90.02,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "absolute"
+    },
+    "bullets": {
+      "top": 787,
+      "bottom": 803.7,
+      "h": 16.7,
+      "left": 580.1,
+      "w": 279.9,
+      "topPct": 87.45,
+      "centerPct": 88.37,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "numbers": {
+      "top": 812,
+      "bottom": 833.3,
+      "h": 21.3,
+      "left": 708,
+      "w": 24,
+      "topPct": 90.22,
+      "centerPct": 91.41,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "8.33333px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "static"
+    },
+    "bullet": {
+      "top": 787,
+      "bottom": 803.7,
+      "h": 16.7,
+      "left": 581.7,
+      "w": 66.7,
+      "topPct": 87.45,
+      "centerPct": 88.37,
+      "fs": "13.3333px",
+      "lh": "21.3333px",
+      "mt": "0px",
+      "mb": "0px",
+      "pt": "0px",
+      "pos": "relative"
+    },
+    "current": "1",
+    "swiper": {
+      "autoplay": {
+        "enabled": true,
+        "delay": 5000,
+        "waitForTransition": true,
+        "disableOnInteraction": false,
+        "stopOnLastSlide": false,
+        "reverseDirection": false,
+        "pauseOnMouseEnter": false
+      },
+      "speed": 1400,
+      "loop": true,
+      "effect": "slide",
+      "running": true
+    },
+    "overlayAnim": [
+      {
+        "transform": "matrix(0.5506, 0, 0, 1, 0, 0)",
+        "width": "66.6562px",
+        "anim": "none",
+        "trans": "all"
+      }
+    ]
+  },
+  "inView": [
+    {
+      "t": 2082,
+      "to": "2"
+    },
+    {
+      "t": 8495,
+      "to": "3"
+    },
+    {
+      "t": 14835,
+      "to": "4"
+    },
+    {
+      "t": 21258,
+      "to": "1"
+    },
+    {
+      "t": 27705,
+      "to": "2"
+    }
+  ],
+  "offscreen": {
+    "before": "2",
+    "after": "4",
+    "seconds": 15
+  }
+}

@@ -142,6 +142,10 @@ if (want('parallax') || want('carousel')) {
     if (want('carousel')) {
       const abs = await page.evaluate(() => { const r = document.querySelector('[data-carousel]').getBoundingClientRect(); return { T: r.top + scrollY, H: r.height }; });
       await scrollTo(page, Math.round(abs.T - VPS[vpKey].height * 0.25)); await page.waitForTimeout(250);
+      await page.evaluate(() => TEH.carousel && TEH.carousel.pause()); // autoplay off: this check isolates the click
+      const busyAtPause = await page.evaluate(() => TEH.carousel && TEH.carousel.busy());
+      await page.waitForFunction(() => !TEH.carousel || !TEH.carousel.busy(), null, { timeout: 3000 }); // let an in-flight automatic change finish
+      if (busyAtPause) console.log('  (an automatic change was in flight at pause; waited for it)');
       const before = await measure(page, '[data-carousel] .carousel__slide.is-active img');
       // click where a visitor would (Playwright's element click scrolls the tall zone into view first)
       const nb = await page.locator('[data-carousel] [data-next]').locator('visible=true').first().boundingBox();
@@ -150,8 +154,8 @@ if (want('parallax') || want('carousel')) {
       const hitInfo = await page.evaluate(([x, y]) => { const e = document.elementFromPoint(x, y); return { el: e && e.tagName + '.' + e.className, cur: document.querySelector('[data-current]').textContent, sy: scrollY, ih: innerHeight }; }, [cx, cy]);
       await page.mouse.click(cx, cy);
       await page.waitForTimeout(520);
-      await page.screenshot({ path: `${dir}/carousel_switch_mid.png` });
       const mid = await page.evaluate(() => { const e = document.querySelector('.carousel__slide.is-entering img'); if (!e) return null; const r = e.getBoundingClientRect(), f = e.parentElement.getBoundingClientRect(); return { dy: +(r.top - f.top).toFixed(1), top: f.top - r.top, bottom: r.bottom - f.bottom }; });
+      await page.screenshot({ path: `${dir}/carousel_switch_mid.png` });  // after measuring: a 1920px screenshot can outlast the 1.1s transition
       await page.waitForTimeout(1300);
       const after = await measure(page, '[data-carousel] .carousel__slide.is-active img');
       await scrollTo(page, Math.round(abs.T - VPS[vpKey].height * 0.25) + 300); await page.waitForTimeout(200);
@@ -185,10 +189,12 @@ if (want('oval')) {
     const { ctx, page } = await open(vpKey);
     const docH = await page.evaluate(() => document.documentElement.scrollHeight);
     for (let y = 0; y < docH * 0.6; y += 600) await scrollTo(page, y);
-    const T = await page.evaluate(() => { const r = document.querySelector('[data-oval]').getBoundingClientRect(); return { T: r.top + scrollY, H: r.height }; });
+    // the frame is sticky inside [data-oval-stage]: measure the stage, never the (possibly stuck) frame
+    const T = await page.evaluate(() => { const s = document.querySelector('[data-oval-stage]'), m = document.querySelector('[data-oval]'); const r = s.getBoundingClientRect(); return { T: r.top + scrollY, H: m.offsetHeight, hold: s.offsetHeight - m.offsetHeight, top: parseFloat(getComputedStyle(m).top) || 0 }; });
     const vh = VPS[vpKey].height; const frames = [];
     const dir = `qa/motion/${vpKey}`; mkdirSync(dir, { recursive: true });
-    for (const [k, y] of [['enter', T.T - vh * 0.75], ['mid', T.T - vh * 0.4], ['settled', T.T + T.H / 2 - vh * 0.5]]) {
+    // enter: rectangle arriving · mid: the moment the frame settles centred · settled: end of the hold (morph complete)
+    for (const [k, y] of [['enter', T.T - vh * 0.75], ['mid', T.T - T.top], ['settled', T.T - T.top + T.hold]]) {
       await scrollTo(page, Math.round(y)); await page.waitForTimeout(500);
       const s = await shape(page); frames.push([k, s]);
       await page.screenshot({ path: `${dir}/shape_${k}.png` });
@@ -203,10 +209,10 @@ if (want('oval')) {
     if (vpKey === 'd1440') {
       // live resize across the breakpoint and back
       await page.setViewportSize({ width: 700, height: 900 }); await page.waitForTimeout(900);
-      await scrollTo(page, await page.evaluate(() => { const r = document.querySelector('[data-oval]').getBoundingClientRect(); return Math.round(r.top + scrollY + r.height / 2 - innerHeight / 2); })); await page.waitForTimeout(500);
+      await scrollTo(page, await page.evaluate(() => { const s = document.querySelector('[data-oval-stage]'), m = document.querySelector('[data-oval]'); return Math.round(s.getBoundingClientRect().top + scrollY - (parseFloat(getComputedStyle(m).top) || 0) + s.offsetHeight - m.offsetHeight); })); await page.waitForTimeout(500);
       const a = await shape(page);
       await page.setViewportSize({ width: 1440, height: 900 }); await page.waitForTimeout(900);
-      await scrollTo(page, await page.evaluate(() => { const r = document.querySelector('[data-oval]').getBoundingClientRect(); return Math.round(r.top + scrollY + r.height / 2 - innerHeight / 2); })); await page.waitForTimeout(500);
+      await scrollTo(page, await page.evaluate(() => { const s = document.querySelector('[data-oval-stage]'), m = document.querySelector('[data-oval]'); return Math.round(s.getBoundingClientRect().top + scrollY - (parseFloat(getComputedStyle(m).top) || 0) + s.offsetHeight - m.offsetHeight); })); await page.waitForTimeout(500);
       const b = await shape(page);
       check('shape: live resize 1440→700→1440 switches capsule→circle→capsule cleanly', Math.abs(a.w - a.h) <= 1 && Math.abs(a.R - a.w / 2) <= 1 && Math.abs(b.R - b.h / 2) <= 1 && b.ratio > 1.4 && a.kids.every((k) => k.ok) && b.kids.every((k) => k.ok), { at700: [a.w, a.h, a.radius], back1440: [b.w, b.h, b.radius] });
     }

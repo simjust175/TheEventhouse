@@ -1,0 +1,40 @@
+PASS home: first Tab = visible skip link  — {"cls":"skip-link","vis":true}
+PASS home: Tab stops have a visible focus ring  — Open menu | The Event House, home | Enquiry 0 Enquiry basket, 0  | EnquireEnquire | Pause hero motion | Begin an enquiryBegin an enq | Plan a weddingPlan a wedding | See weddingsSee weddings | Previous event type | Next event type
+PASS home: menu opens, focus moves inside, aria-expanded  — {"open":true,"focusIn":true,"exp":"true"}
+PASS home: focus trapped in menu after 14 Tabs
+PASS home: Esc closes menu and returns focus to burger  — {"open":false,"back":true}
+PASS home: carousel Next advances slide + copy  — 1 → 2 (Private celebrations)
+PASS home: carousel Prev returns
+PASS home: hotspot opens product card within viewport  — {"open":true,"inView":true,"name":"Stoneware Dinner Plate"}
+PASS home: add from hotspot card increments basket  — 0 → 1
+PASS home: toast + header badge update  — {"vis":true,"txt":"Stoneware Dinner Plate added to your enquiry","badge":"1"}
+PASS home: basket drawer opens with item + focus inside  — {"open":true,"items":1,"focusIn":true}
+PASS home: drawer + increments qty and keeps keyboard focus on +  — count=2
+PASS home: drawer remove empties basket
+PASS home: Esc closes drawer
+PASS home: services slider Next scrolls track  — 0 → 337
+PASS home: FAQ toggles aria-expanded and opens panel  — {"exp":"true","h":135.578125}
+PASS home: Services nav link scrolls to #services  — top=60
+PASS collection: catalogue renders 18 cards  — cards=18
+PASS collection: Candles tab filters grid + updates title/aria/live region  — {"filtered":true,"vis":3,"title":"Candles","pressed":"true","status":"Showing 3 pieces in Candles"}
+PASS collection: All restores editorial
+PASS collection: featured Add to enquiry
+PASS collection: quick view opens with focus inside  — {"open":true,"name":"Limestone Urn Vase","focusIn":true}
+PASS collection: quick view qty 3 adds to existing line (1+3=4)  — count=4
+PASS collection: Esc closes quick view
+PASS collection: "Explore décor" jumps to Décor filter  — {"filtered":true,"pressed":"true"}
+PASS collection: #p-<id> deep link opens quick view
+PASS gallery: Weddings chip filters tiles  — 9/25
+PASS gallery: lightbox opens with focus inside  — {"open":true,"count":"1 / 25","src":"assets/img/vase-plinth.webp","focusIn":true}
+PASS gallery: ArrowRight goes to next image  — 1 / 25 → 2 / 25
+PASS gallery: Esc closes lightbox and restores focus to tile
+PASS gallery: ?filter=corporate preselects chip
+PASS enquiry: URL params prefill + basket carried over from collection (persisted)  — {"type":"corporate","guests":"80-150","items":1}
+PASS enquiry: empty submit shows errors, focuses first invalid field  — {"name":"Please tell us your name.","email":"Please enter a valid email address.","consent":"Please confirm we may reply to you.","focus":"f-name","inv":"true"}
+PASS enquiry: invalid email rejected
+PASS enquiry: valid submit shows confirmation (no network)  — {"text":"Enquiry preparedThank you, TestIn the live site, the studio would now receive your enquiry and reply personally. This prototype has not sent anything.ReferenceD","focus":"DIV#"}
+PASS enquiry: "Start a new enquiry" clears basket
+
+JS errors: none
+
+36/36 passed (mobile 390)

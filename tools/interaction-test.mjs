@@ -63,11 +63,13 @@ const count = (p) => p.evaluate(() => TEH.basket.count());
   // carousel
   await goTo(p, '[data-carousel]'); await wait(p, 900);
   const cur0 = await p.evaluate(() => document.querySelector('[data-current]')?.textContent.trim());
-  await p.locator('[data-next]').locator('visible=true').first().click({ force: true }); await wait(p, 1500);
+  // after each click the pointer moves off the NEXT / PREV zone: resting there for 2s is hover navigation (another step)
+  const park = async () => { const v = p.viewportSize(); await p.mouse.move(v.width / 2, v.height / 2); };
+  await p.locator('[data-next]').locator('visible=true').first().click({ force: true }); await park(); await wait(p, 1500);
   const cur1 = await p.evaluate(() => ({ n: document.querySelector('[data-current]')?.textContent.trim(), title: document.querySelector('[data-copy].is-active h3, [data-copy].is-active h2, [data-copy].is-active .h-title')?.textContent.trim() }));
   check('home: carousel Next advances slide + copy', cur1.n !== cur0, `${cur0} → ${cur1.n} (${cur1.title || ''})`);
   await shot(p, 'home-carousel-next');
-  await p.locator('[data-prev]').locator('visible=true').first().click({ force: true }); await wait(p, 1500);
+  await p.locator('[data-prev]').locator('visible=true').first().click({ force: true }); await park(); await wait(p, 1500);
   check('home: carousel Prev returns', (await p.evaluate(() => document.querySelector('[data-current]')?.textContent.trim())) === cur0);
 
   // anatomy hotspot → card → add

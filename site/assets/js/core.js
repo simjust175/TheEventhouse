@@ -276,25 +276,30 @@
      it travels (`--px-t`) and offset by half of that, so no edge can ever show. Movement uses the CSS
      `translate` property via `--px-y`, independent of `transform`, so it composes with reveal scales
      and GSAP tweens on the same element. Optional: data-parallax-trigger="<selector>" to share a
-     scroll range (e.g. all carousel slides). Mobile uses 60% of the rate; reduced motion disables it. */
+     scroll range (e.g. all carousel slides). Optional: data-parallax-end="bottom bottom" for an image
+     that ends the page (the footer band can never reach "bottom top", so with the default range only
+     ~40% of its movement ever played and it looked static). Travel = rate × the real scroll range.
+     Mobile uses 60% of the rate; reduced motion disables it. */
   TEH.parallax = function (el) {
     var rate = parseFloat(el.getAttribute('data-parallax')) || 0.1;
     var frame = el.parentElement;
     var trig = el.getAttribute('data-parallax-trigger'); trig = (trig && el.closest(trig)) || frame;
+    var end = el.getAttribute('data-parallax-end') || 'bottom top';
     if (getComputedStyle(frame).position === 'static') frame.style.position = 'relative';
     frame.classList.add('px-frame'); el.classList.add('px-media');
     var travel = 0, prog = 0.5;
     var apply = function (p) { prog = p; el.style.setProperty('--px-y', ((p - 0.5) * travel).toFixed(1) + 'px'); };
-    var measure = function () {
+    var measure = function (range) {
       var k = TEH.isDesktop() ? 1 : 0.6;
-      travel = Math.ceil(rate * k * (window.innerHeight + trig.offsetHeight)) + 2;
+      if (!range) range = end === 'bottom bottom' ? trig.offsetHeight : window.innerHeight + trig.offsetHeight;
+      travel = Math.ceil(rate * k * range) + 2;
       el.style.setProperty('--px-t', travel + 'px');
       apply(prog);
     };
     measure();
-    ScrollTrigger.addEventListener('refreshInit', measure);
+    ScrollTrigger.addEventListener('refreshInit', function () { measure(); });
     // refreshPriority -1: computed after page pins (the hero pin is created later, in home.js)
-    ScrollTrigger.create({ trigger: trig, start: 'top bottom', end: 'bottom top', refreshPriority: -1, onUpdate: function (st) { apply(st.progress); }, onRefresh: function (st) { apply(st.progress); } });
+    ScrollTrigger.create({ trigger: trig, start: 'top bottom', end: end, refreshPriority: -1, onUpdate: function (st) { apply(st.progress); }, onRefresh: function (st) { if (end !== 'bottom top' && st.end > st.start) measure(st.end - st.start); apply(st.progress); } });
   };
   if (hasGsap && !RM) $$('[data-parallax]').forEach(TEH.parallax);
 

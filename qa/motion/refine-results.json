@@ -1,0 +1,1175 @@
+{
+  "checks": [
+    {
+      "name": "oval 1920x1080: morph starts only once the rectangle is ≥80% on screen",
+      "ok": true,
+      "info": {
+        "vis": 0.865,
+        "R": 39
+      }
+    },
+    {
+      "name": "oval 1920x1080: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)",
+      "ok": true,
+      "info": {
+        "p": 0.501,
+        "R": 214.5,
+        "end": 389,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 1920x1080: completes to the final shape (radius = 389px) while fully visible",
+      "ok": true,
+      "info": {
+        "R": 389,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 1920x1080: slow, scroll-linked (960px = 0.89 viewport heights)",
+      "ok": true,
+      "info": {
+        "dist": 960
+      }
+    },
+    {
+      "name": "oval 1920x1080: smooth, never reverses or jumps (radius ≤ 0.58px and position ≤ 1.00px per px scrolled)",
+      "ok": true,
+      "info": {
+        "mono": true
+      }
+    },
+    {
+      "name": "oval 1920x1080: photo always fills the frame, page height stable",
+      "ok": true,
+      "info": {
+        "uncovered": 0
+      }
+    },
+    {
+      "name": "oval 1920x1080: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "oval 1440x900: morph starts only once the rectangle is ≥80% on screen",
+      "ok": true,
+      "info": {
+        "vis": 0.872,
+        "R": 31.9
+      }
+    },
+    {
+      "name": "oval 1440x900: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)",
+      "ok": true,
+      "info": {
+        "p": 0.495,
+        "R": 172.1,
+        "end": 317,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 1440x900: completes to the final shape (radius = 317px) while fully visible",
+      "ok": true,
+      "info": {
+        "R": 317,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 1440x900: slow, scroll-linked (816px = 0.91 viewport heights)",
+      "ok": true,
+      "info": {
+        "dist": 816
+      }
+    },
+    {
+      "name": "oval 1440x900: smooth, never reverses or jumps (radius ≤ 0.56px and position ≤ 1.00px per px scrolled)",
+      "ok": true,
+      "info": {
+        "mono": true
+      }
+    },
+    {
+      "name": "oval 1440x900: photo always fills the frame, page height stable",
+      "ok": true,
+      "info": {
+        "uncovered": 0
+      }
+    },
+    {
+      "name": "oval 1440x900: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "oval 768x1024: morph starts only once the rectangle is ≥80% on screen",
+      "ok": true,
+      "info": {
+        "vis": 0.869,
+        "R": 36.2
+      }
+    },
+    {
+      "name": "oval 768x1024: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)",
+      "ok": true,
+      "info": {
+        "p": 0.492,
+        "R": 193.6,
+        "end": 359,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 768x1024: completes to the final shape (radius = 359px) while fully visible",
+      "ok": true,
+      "info": {
+        "R": 359,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 768x1024: slow, scroll-linked (804px = 0.79 viewport heights)",
+      "ok": true,
+      "info": {
+        "dist": 804
+      }
+    },
+    {
+      "name": "oval 768x1024: smooth, never reverses or jumps (radius ≤ 0.65px and position ≤ 1.00px per px scrolled)",
+      "ok": true,
+      "info": {
+        "mono": true
+      }
+    },
+    {
+      "name": "oval 768x1024: photo always fills the frame, page height stable",
+      "ok": true,
+      "info": {
+        "uncovered": 0
+      }
+    },
+    {
+      "name": "oval 768x1024: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "oval 390x844: morph starts only once the rectangle is ≥80% on screen",
+      "ok": true,
+      "info": {
+        "vis": 0.873,
+        "R": 17.9
+      }
+    },
+    {
+      "name": "oval 390x844: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)",
+      "ok": true,
+      "info": {
+        "p": 0.499,
+        "R": 97.8,
+        "end": 178.5,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 390x844: completes to the final shape (radius = 178.5px) while fully visible",
+      "ok": true,
+      "info": {
+        "R": 178.5,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 390x844: slow, scroll-linked (696px = 0.82 viewport heights)",
+      "ok": true,
+      "info": {
+        "dist": 696
+      }
+    },
+    {
+      "name": "oval 390x844: smooth, never reverses or jumps (radius ≤ 0.37px and position ≤ 1.00px per px scrolled)",
+      "ok": true,
+      "info": {
+        "mono": true
+      }
+    },
+    {
+      "name": "oval 390x844: photo always fills the frame, page height stable",
+      "ok": true,
+      "info": {
+        "uncovered": 0
+      }
+    },
+    {
+      "name": "oval 390x844: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "oval 1440x700: morph starts only once the rectangle is ≥80% on screen",
+      "ok": true,
+      "info": {
+        "vis": 0.858,
+        "R": 25.2
+      }
+    },
+    {
+      "name": "oval 1440x700: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)",
+      "ok": true,
+      "info": {
+        "p": 0.49,
+        "R": 135.2,
+        "end": 252,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 1440x700: completes to the final shape (radius = 252px) while fully visible",
+      "ok": true,
+      "info": {
+        "R": 252,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 1440x700: slow, scroll-linked (636px = 0.91 viewport heights)",
+      "ok": true,
+      "info": {
+        "dist": 636
+      }
+    },
+    {
+      "name": "oval 1440x700: smooth, never reverses or jumps (radius ≤ 0.58px and position ≤ 1.00px per px scrolled)",
+      "ok": true,
+      "info": {
+        "mono": true
+      }
+    },
+    {
+      "name": "oval 1440x700: photo always fills the frame, page height stable",
+      "ok": true,
+      "info": {
+        "uncovered": 0
+      }
+    },
+    {
+      "name": "oval 1440x700: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "oval 390x640: morph starts only once the rectangle is ≥80% on screen",
+      "ok": true,
+      "info": {
+        "vis": 0.875,
+        "R": 18
+      }
+    },
+    {
+      "name": "oval 390x640: halfway state seen with the whole shape on screen (p≈0.5, radius between start and end)",
+      "ok": true,
+      "info": {
+        "p": 0.503,
+        "R": 98.9,
+        "end": 178.5,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 390x640: completes to the final shape (radius = 178.5px) while fully visible",
+      "ok": true,
+      "info": {
+        "R": 178.5,
+        "vis": 1
+      }
+    },
+    {
+      "name": "oval 390x640: slow, scroll-linked (504px = 0.79 viewport heights)",
+      "ok": true,
+      "info": {
+        "dist": 504
+      }
+    },
+    {
+      "name": "oval 390x640: smooth, never reverses or jumps (radius ≤ 0.51px and position ≤ 1.00px per px scrolled)",
+      "ok": true,
+      "info": {
+        "mono": true
+      }
+    },
+    {
+      "name": "oval 390x640: photo always fills the frame, page height stable",
+      "ok": true,
+      "info": {
+        "uncovered": 0
+      }
+    },
+    {
+      "name": "oval 390x640: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "footer 1920x1080: photo moves inside its frame across the whole range (236px over 777px, rate 0.30)",
+      "ok": true,
+      "info": [
+        -236,
+        -177.1,
+        -118.2,
+        -58.9,
+        0
+      ]
+    },
+    {
+      "name": "footer 1920x1080: no blank edge at any position (min overscan 0px)",
+      "ok": true
+    },
+    {
+      "name": "footer 1920x1080: button stays centred in the band",
+      "ok": true,
+      "info": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "footer 1920x1080: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "footer 1440x900: photo moves inside its frame across the whole range (197px over 648px, rate 0.30)",
+      "ok": true,
+      "info": [
+        -197,
+        -147.8,
+        -98.5,
+        -49.2,
+        0
+      ]
+    },
+    {
+      "name": "footer 1440x900: no blank edge at any position (min overscan 0px)",
+      "ok": true
+    },
+    {
+      "name": "footer 1440x900: button stays centred in the band",
+      "ok": true,
+      "info": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "footer 1440x900: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "footer 768x1024: photo moves inside its frame across the whole range (106px over 574px, rate 0.18)",
+      "ok": true,
+      "info": [
+        -106,
+        -79.4,
+        -53,
+        -26.4,
+        0
+      ]
+    },
+    {
+      "name": "footer 768x1024: no blank edge at any position (min overscan 0px)",
+      "ok": true
+    },
+    {
+      "name": "footer 768x1024: button stays centred in the band",
+      "ok": true,
+      "info": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "footer 768x1024: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "footer 390x844: photo moves inside its frame across the whole range (88px over 473px, rate 0.19)",
+      "ok": true,
+      "info": [
+        -88,
+        -66,
+        -44.1,
+        -22,
+        0
+      ]
+    },
+    {
+      "name": "footer 390x844: no blank edge at any position (min overscan 0px)",
+      "ok": true
+    },
+    {
+      "name": "footer 390x844: button stays centred in the band",
+      "ok": true,
+      "info": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "footer 390x844: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "footer 1440x700: photo moves inside its frame across the whole range (154px over 504px, rate 0.31)",
+      "ok": true,
+      "info": [
+        -154,
+        -115.5,
+        -77,
+        -38.5,
+        0
+      ]
+    },
+    {
+      "name": "footer 1440x700: no blank edge at any position (min overscan 0px)",
+      "ok": true
+    },
+    {
+      "name": "footer 1440x700: button stays centred in the band",
+      "ok": true,
+      "info": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "footer 1440x700: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "footer 390x640: photo moves inside its frame across the whole range (81px over 437px, rate 0.19)",
+      "ok": true,
+      "info": [
+        -81,
+        -60.8,
+        -40.6,
+        -20.2,
+        0
+      ]
+    },
+    {
+      "name": "footer 390x640: no blank edge at any position (min overscan 0px)",
+      "ok": true
+    },
+    {
+      "name": "footer 390x640: button stays centred in the band",
+      "ok": true,
+      "info": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "footer 390x640: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "hover 1440x900: resting on NEXT advances after ~2s (2039ms), cursor ring shows the wait",
+      "ok": true,
+      "info": [
+        2039,
+        4045,
+        6055
+      ]
+    },
+    {
+      "name": "hover 1440x900: keeps advancing every ~2s while the pointer stays (no autoplay in between, no doubles)",
+      "ok": true,
+      "info": {
+        "seq": [
+          2,
+          3,
+          4
+        ],
+        "gaps": [
+          2006,
+          2010
+        ]
+      }
+    },
+    {
+      "name": "hover 1440x900: leaving before 2s cancels the pending step; autoplay then resumes after its full 2.9s hold",
+      "ok": true,
+      "info": [
+        2922
+      ]
+    },
+    {
+      "name": "hover 1440x900: resting on PREV goes back one after ~2s",
+      "ok": true,
+      "info": [
+        [
+          4,
+          2028
+        ]
+      ]
+    },
+    {
+      "name": "hover 1440x900: click acts instantly and restarts the 2s wait (next hover step ~2s after the click, not 0.7s)",
+      "ok": true,
+      "info": [
+        23,
+        2028
+      ]
+    },
+    {
+      "name": "hover 1440x900: rapid clicks → one change, then hover steps resume ~2s apart (no overlapping transitions)",
+      "ok": true,
+      "info": {
+        "rt": [
+          6,
+          2214,
+          4220
+        ],
+        "rg": [
+          2208,
+          2006
+        ]
+      }
+    },
+    {
+      "name": "hover 1440x900: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "hover 1920x1080: resting on NEXT advances after ~2s (2032ms), cursor ring shows the wait",
+      "ok": true,
+      "info": [
+        2032,
+        4042,
+        6050
+      ]
+    },
+    {
+      "name": "hover 1920x1080: keeps advancing every ~2s while the pointer stays (no autoplay in between, no doubles)",
+      "ok": true,
+      "info": {
+        "seq": [
+          2,
+          3,
+          4
+        ],
+        "gaps": [
+          2010,
+          2008
+        ]
+      }
+    },
+    {
+      "name": "hover 1920x1080: leaving before 2s cancels the pending step; autoplay then resumes after its full 2.9s hold",
+      "ok": true,
+      "info": [
+        2911
+      ]
+    },
+    {
+      "name": "hover 1920x1080: resting on PREV goes back one after ~2s",
+      "ok": true,
+      "info": [
+        [
+          4,
+          2026
+        ]
+      ]
+    },
+    {
+      "name": "hover 1920x1080: click acts instantly and restarts the 2s wait (next hover step ~2s after the click, not 0.7s)",
+      "ok": true,
+      "info": [
+        8,
+        2017
+      ]
+    },
+    {
+      "name": "hover 1920x1080: rapid clicks → one change, then hover steps resume ~2s apart (no overlapping transitions)",
+      "ok": true,
+      "info": {
+        "rt": [
+          6,
+          2221,
+          4230
+        ],
+        "rg": [
+          2215,
+          2009
+        ]
+      }
+    },
+    {
+      "name": "hover 1920x1080: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "hover 390x844: touch keeps tap navigation, no hover behaviour (zones none)",
+      "ok": true,
+      "info": {
+        "ch": [
+          2
+        ]
+      }
+    },
+    {
+      "name": "reduced 1440x900: no morph hold, final shape shown directly, no footer parallax",
+      "ok": true,
+      "info": {
+        "morph": false,
+        "extra": 0,
+        "R": 9999,
+        "w": 1400,
+        "h": 634,
+        "footerPx": false
+      }
+    },
+    {
+      "name": "reduced 1440x900: no console errors",
+      "ok": true,
+      "info": []
+    },
+    {
+      "name": "reduced 390x844: no morph hold, final shape shown directly, no footer parallax",
+      "ok": true,
+      "info": {
+        "morph": false,
+        "extra": 0,
+        "R": 178.5,
+        "w": 357,
+        "h": 357,
+        "footerPx": false
+      }
+    },
+    {
+      "name": "reduced 390x844: no console errors",
+      "ok": true,
+      "info": []
+    }
+  ],
+  "oval": {
+    "1920x1080": {
+      "w": 1867,
+      "h": 778,
+      "hold": 810,
+      "endRadius": 389,
+      "morphDistancePx": 960,
+      "morphDistanceVh": 0.89,
+      "visibleAtStart": 0.865,
+      "visibleAtMid": 1,
+      "radiusAtMid": 214.5,
+      "maxRadiusPxPerScrollPx": 0.575,
+      "maxTopPxPerScrollPx": 1,
+      "1-start": {
+        "p": 0.124,
+        "R": "52.1px"
+      },
+      "2-halfway": {
+        "p": 0.501,
+        "R": "214.5px"
+      },
+      "3-final": {
+        "p": 1,
+        "R": "389px"
+      }
+    },
+    "1440x900": {
+      "w": 1400,
+      "h": 634,
+      "hold": 675,
+      "endRadius": 317,
+      "morphDistancePx": 816,
+      "morphDistanceVh": 0.91,
+      "visibleAtStart": 0.872,
+      "visibleAtMid": 1,
+      "radiusAtMid": 172.1,
+      "maxRadiusPxPerScrollPx": 0.558,
+      "maxTopPxPerScrollPx": 1,
+      "1-start": {
+        "p": 0.121,
+        "R": "41.9px"
+      },
+      "2-halfway": {
+        "p": 0.495,
+        "R": "172.1px"
+      },
+      "3-final": {
+        "p": 1,
+        "R": "317px"
+      }
+    },
+    "768x1024": {
+      "w": 718,
+      "h": 718,
+      "hold": 615,
+      "endRadius": 359,
+      "morphDistancePx": 804,
+      "morphDistanceVh": 0.79,
+      "visibleAtStart": 0.869,
+      "visibleAtMid": 1,
+      "radiusAtMid": 193.6,
+      "maxRadiusPxPerScrollPx": 0.65,
+      "maxTopPxPerScrollPx": 1,
+      "1-start": {
+        "p": 0.14,
+        "R": "51.3px"
+      },
+      "2-halfway": {
+        "p": 0.492,
+        "R": "193.6px"
+      },
+      "3-final": {
+        "p": 1,
+        "R": "359px"
+      }
+    },
+    "390x844": {
+      "w": 357,
+      "h": 357,
+      "hold": 464,
+      "endRadius": 178.5,
+      "morphDistancePx": 696,
+      "morphDistanceVh": 0.82,
+      "visibleAtStart": 0.873,
+      "visibleAtMid": 1,
+      "radiusAtMid": 97.8,
+      "maxRadiusPxPerScrollPx": 0.367,
+      "maxTopPxPerScrollPx": 1,
+      "1-start": {
+        "p": 0.082,
+        "R": "20.5px"
+      },
+      "2-halfway": {
+        "p": 0.499,
+        "R": "97.8px"
+      },
+      "3-final": {
+        "p": 1,
+        "R": "178.5px"
+      }
+    },
+    "1440x700": {
+      "w": 1400,
+      "h": 504,
+      "hold": 525,
+      "endRadius": 252,
+      "morphDistancePx": 636,
+      "morphDistanceVh": 0.91,
+      "visibleAtStart": 0.858,
+      "visibleAtMid": 1,
+      "radiusAtMid": 135.2,
+      "maxRadiusPxPerScrollPx": 0.575,
+      "maxTopPxPerScrollPx": 1,
+      "1-start": {
+        "p": 0.123,
+        "R": "33.5px"
+      },
+      "2-halfway": {
+        "p": 0.49,
+        "R": "135.2px"
+      },
+      "3-final": {
+        "p": 1,
+        "R": "252px"
+      }
+    },
+    "390x640": {
+      "w": 357,
+      "h": 357,
+      "hold": 352,
+      "endRadius": 178.5,
+      "morphDistancePx": 504,
+      "morphDistanceVh": 0.79,
+      "visibleAtStart": 0.875,
+      "visibleAtMid": 1,
+      "radiusAtMid": 98.9,
+      "maxRadiusPxPerScrollPx": 0.508,
+      "maxTopPxPerScrollPx": 1,
+      "1-start": {
+        "p": 0.115,
+        "R": "23px"
+      },
+      "2-halfway": {
+        "p": 0.503,
+        "R": "98.9px"
+      },
+      "3-final": {
+        "p": 1,
+        "R": "178.5px"
+      }
+    }
+  },
+  "footer": {
+    "1920x1080": {
+      "samples": [
+        {
+          "y": 12862,
+          "frameTop": 1079.7,
+          "imgOff": -236,
+          "gapTop": 236,
+          "gapBot": 0,
+          "btnOff": 0,
+          "vis": 0.3125
+        },
+        {
+          "y": 13056,
+          "frameTop": 885.7,
+          "imgOff": -177.1,
+          "gapTop": 177.1,
+          "gapBot": 58.9,
+          "btnOff": 0,
+          "vis": 194.3125
+        },
+        {
+          "y": 13250,
+          "frameTop": 691.7,
+          "imgOff": -118.2,
+          "gapTop": 118.2,
+          "gapBot": 117.8,
+          "btnOff": 0,
+          "vis": 388.3125
+        },
+        {
+          "y": 13445,
+          "frameTop": 496.7,
+          "imgOff": -58.9,
+          "gapTop": 58.9,
+          "gapBot": 177.1,
+          "btnOff": 0,
+          "vis": 583.3125
+        },
+        {
+          "y": 13639,
+          "frameTop": 302.7,
+          "imgOff": 0,
+          "gapTop": 0,
+          "gapBot": 236,
+          "btnOff": 0,
+          "vis": 777.3125
+        }
+      ],
+      "movedPx": 236,
+      "scrollPx": 777,
+      "rate": 0.304
+    },
+    "1440x900": {
+      "samples": [
+        {
+          "y": 9929,
+          "frameTop": 900,
+          "imgOff": -197,
+          "gapTop": 197,
+          "gapBot": 0,
+          "btnOff": 0,
+          "vis": 0.046875
+        },
+        {
+          "y": 10091,
+          "frameTop": 738,
+          "imgOff": -147.8,
+          "gapTop": 147.8,
+          "gapBot": 49.2,
+          "btnOff": 0,
+          "vis": 162.046875
+        },
+        {
+          "y": 10253,
+          "frameTop": 576,
+          "imgOff": -98.5,
+          "gapTop": 98.5,
+          "gapBot": 98.5,
+          "btnOff": 0,
+          "vis": 324.046875
+        },
+        {
+          "y": 10415,
+          "frameTop": 414,
+          "imgOff": -49.2,
+          "gapTop": 49.2,
+          "gapBot": 147.8,
+          "btnOff": 0,
+          "vis": 486.046875
+        },
+        {
+          "y": 10577,
+          "frameTop": 252,
+          "imgOff": 0,
+          "gapTop": 0,
+          "gapBot": 197,
+          "btnOff": 0,
+          "vis": 648
+        }
+      ],
+      "movedPx": 197,
+      "scrollPx": 648,
+      "rate": 0.304
+    },
+    "768x1024": {
+      "samples": [
+        {
+          "y": 14283,
+          "frameTop": 1024.4,
+          "imgOff": -106,
+          "gapTop": 106,
+          "gapBot": 0,
+          "btnOff": 0,
+          "vis": 0
+        },
+        {
+          "y": 14427,
+          "frameTop": 880.4,
+          "imgOff": -79.4,
+          "gapTop": 79.4,
+          "gapBot": 26.6,
+          "btnOff": 0,
+          "vis": 143.578125
+        },
+        {
+          "y": 14570,
+          "frameTop": 737.4,
+          "imgOff": -53,
+          "gapTop": 53,
+          "gapBot": 53,
+          "btnOff": 0,
+          "vis": 286.578125
+        },
+        {
+          "y": 14714,
+          "frameTop": 593.4,
+          "imgOff": -26.4,
+          "gapTop": 26.4,
+          "gapBot": 79.6,
+          "btnOff": 0,
+          "vis": 430.578125
+        },
+        {
+          "y": 14857,
+          "frameTop": 450.4,
+          "imgOff": 0,
+          "gapTop": 0,
+          "gapBot": 106,
+          "btnOff": 0,
+          "vis": 573.4375
+        }
+      ],
+      "movedPx": 106,
+      "scrollPx": 574,
+      "rate": 0.185
+    },
+    "390x844": {
+      "samples": [
+        {
+          "y": 12091,
+          "frameTop": 843.9,
+          "imgOff": -88,
+          "gapTop": 88,
+          "gapBot": 0,
+          "btnOff": 0,
+          "vis": 0.078125
+        },
+        {
+          "y": 12209,
+          "frameTop": 725.9,
+          "imgOff": -66,
+          "gapTop": 66,
+          "gapBot": 22,
+          "btnOff": 0,
+          "vis": 118.078125
+        },
+        {
+          "y": 12327,
+          "frameTop": 607.9,
+          "imgOff": -44.1,
+          "gapTop": 44.1,
+          "gapBot": 43.9,
+          "btnOff": 0,
+          "vis": 236.078125
+        },
+        {
+          "y": 12446,
+          "frameTop": 488.9,
+          "imgOff": -22,
+          "gapTop": 22,
+          "gapBot": 66,
+          "btnOff": 0,
+          "vis": 355.078125
+        },
+        {
+          "y": 12564,
+          "frameTop": 370.9,
+          "imgOff": 0,
+          "gapTop": 0,
+          "gapBot": 88,
+          "btnOff": 0,
+          "vis": 472.625
+        }
+      ],
+      "movedPx": 88,
+      "scrollPx": 473,
+      "rate": 0.186
+    },
+    "1440x700": {
+      "samples": [
+        {
+          "y": 9299,
+          "frameTop": 700.4,
+          "imgOff": -154,
+          "gapTop": 154,
+          "gapBot": 0,
+          "btnOff": 0,
+          "vis": 0
+        },
+        {
+          "y": 9425,
+          "frameTop": 574.4,
+          "imgOff": -115.5,
+          "gapTop": 115.5,
+          "gapBot": 38.5,
+          "btnOff": 0,
+          "vis": 125.640625
+        },
+        {
+          "y": 9551,
+          "frameTop": 448.4,
+          "imgOff": -77,
+          "gapTop": 77,
+          "gapBot": 77,
+          "btnOff": 0,
+          "vis": 251.640625
+        },
+        {
+          "y": 9677,
+          "frameTop": 322.4,
+          "imgOff": -38.5,
+          "gapTop": 38.5,
+          "gapBot": 115.5,
+          "btnOff": 0,
+          "vis": 377.640625
+        },
+        {
+          "y": 9803,
+          "frameTop": 196.4,
+          "imgOff": 0,
+          "gapTop": 0,
+          "gapBot": 154,
+          "btnOff": 0,
+          "vis": 503.640625
+        }
+      ],
+      "movedPx": 154,
+      "scrollPx": 504,
+      "rate": 0.306
+    },
+    "390x640": {
+      "samples": [
+        {
+          "y": 11642,
+          "frameTop": 639.9,
+          "imgOff": -81,
+          "gapTop": 81,
+          "gapBot": 0,
+          "btnOff": 0,
+          "vis": 0.0625
+        },
+        {
+          "y": 11751,
+          "frameTop": 530.9,
+          "imgOff": -60.8,
+          "gapTop": 60.8,
+          "gapBot": 20.2,
+          "btnOff": 0,
+          "vis": 109.0625
+        },
+        {
+          "y": 11860,
+          "frameTop": 421.9,
+          "imgOff": -40.6,
+          "gapTop": 40.6,
+          "gapBot": 40.4,
+          "btnOff": 0,
+          "vis": 218.0625
+        },
+        {
+          "y": 11970,
+          "frameTop": 311.9,
+          "imgOff": -20.2,
+          "gapTop": 20.2,
+          "gapBot": 60.8,
+          "btnOff": 0,
+          "vis": 328.0625
+        },
+        {
+          "y": 12079,
+          "frameTop": 202.9,
+          "imgOff": 0,
+          "gapTop": 0,
+          "gapBot": 81,
+          "btnOff": 0,
+          "vis": 436.796875
+        }
+      ],
+      "movedPx": 81,
+      "scrollPx": 437,
+      "rate": 0.185
+    }
+  },
+  "hover": {
+    "1440x900": {
+      "nextSeq": [
+        2,
+        3,
+        4
+      ],
+      "nextAtMs": [
+        2039,
+        4045,
+        6055
+      ]
+    },
+    "1920x1080": {
+      "nextSeq": [
+        2,
+        3,
+        4
+      ],
+      "nextAtMs": [
+        2032,
+        4042,
+        6050
+      ]
+    }
+  }
+}

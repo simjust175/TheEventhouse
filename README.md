@@ -29,7 +29,7 @@ Pages: `/` (home) · `/gallery.html` · `/collection.html` · `/enquiry.html`
 | `tools/` | Build, server, reference capture, QA and test scripts |
 | `site/assets/js/config/hero-media.js` | Homepage hero photos/videos (see below) |
 | `site/assets/video/` | Hero clips (placeholder, rendered from our stills by `tools/make-hero-clips.sh`) |
-| `docs/` | `01_REFERENCE_ANALYSIS.md` (Phase 1) · `02_IMPLEMENTATION_AND_QA.md` (summary, QA, limitations, missing materials) · `03_MOTION_REFINEMENT.md` (hero media, parallax, capsule/circle, motion QA) |
+| `docs/` | `01_REFERENCE_ANALYSIS.md` (Phase 1) · `02_IMPLEMENTATION_AND_QA.md` (summary, QA, limitations, missing materials) · `03_MOTION_REFINEMENT.md` (hero media, parallax, capsule/circle, carousel, final refinements, motion QA) |
 | `qa/` | Screenshot evidence (`compare/` holds the side-by-side sheets) |
 
 ## Re-running QA
@@ -45,6 +45,11 @@ python tools/pair_sheets.py qa/reference/desktop qa/build/index-desktop qa/compa
 node tools/verify-motion.mjs               # hero media, parallax, carousel+parallax, capsule/circle, perf at 1440/1920/768/390
 node tools/verify-motion.mjs --only oval   # one suite: hero | parallax | carousel | oval | perf
 node tools/parallax-gif.mjs 1440 && python tools/make_gifs.py   # frame-locked parallax GIFs → qa/motion/
+node tools/verify-carousel.mjs            # category carousel: autoplay, timer reset, pausing, layout stability (4 viewports)
+node tools/compare-carousel.mjs           # carousel composition vs vineyard.co.za at identical viewports → qa/compare/carousel/
+node tools/verify-refine.mjs              # rounded-feature morph, footer parallax, hover navigation, reduced motion (6 viewports)
+python tools/oval_sheet.py               # start / halfway / final morph frames side by side → qa/motion/oval/
+node tools/audit-targets.mjs              # touch targets ≥ 44px and button labels at 390–1440px
 ```
 
 All QA scripts expect the preview server on port 4600 and Google Chrome at its default Windows path (override with `CHROME_PATH`).

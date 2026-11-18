@@ -60,35 +60,50 @@
   (function carousel() {
     var root = $('[data-carousel]'); if (!root) return;
     var slides = $$('[data-slide]', root), titles = $$('[data-title]', root), copies = $$('[data-copy]', root);
-    var bars = $$('.carousel__bars i', root), current = $('[data-current]', root), cursor = $('[data-cursor]', root);
+    var bars = $$('[data-goto]', root), current = $('[data-current]', root), cursor = $('[data-cursor]', root);
+    var live = $('.carousel__content', root), toggle = $('[data-cz-toggle]', root);
     var n = slides.length, idx = 0, busy = false, ks = titles.map(function (_, j) { return j; });
+    var DUR = 1.1, arrowsShown = false; // circle reveal + title slide, seconds
 
     function dist(j, i) { var d = (j - i + n) % n; if (d > n / 2) d -= n; return d; }
-    function layout(animate) {
+    function layout(animate, dir) {
       var vw = root.clientWidth, w = titles.map(function (t) { return t.offsetWidth; });
       var gap = vw * (TEH.isDesktop() ? 0.1 : 0.14);
       titles.forEach(function (t, j) {
         var k = dist(j, idx);
         var off = 0;
-        if (k === 1 || k === -1) off = k * Math.max(vw * (TEH.isDesktop() ? 0.42 : 0.62), w[idx] / 2 + w[j] / 2 + gap);
+        // desktop: neighbours sit as partial ghosts at the edges; with arrows (phones/tablets) they wait
+        // just off screen, as the reference, so no sliver shows behind the arrow buttons
+        if (k === 1 || k === -1) off = k * (arrowsShown ? vw / 2 + w[j] / 2 + 4 : Math.max(vw * (TEH.isDesktop() ? 0.42 : 0.62), w[idx] / 2 + w[j] / 2 + gap));
         if (Math.abs(k) >= 2) off = Math.sign(k || 1) * vw;
         var o = k === 0 ? 1 : Math.abs(k) === 1 ? 0.42 : 0;
-        var jump = Math.abs(k - ks[j]) > 1; // wrapping around the far side
+        var was = ks[j], jump = Math.abs(k - was) > 1; // wrapping around the far side, or a two-step jump
         ks[j] = k;
-        if (!animate || !hasGsap || RM || jump) { if (hasGsap) gsap.set(t, { x: off, xPercent: -50, opacity: o }); else { t.style.transform = 'translateX(calc(-50% + ' + off + 'px))'; t.style.opacity = o; } }
-        else gsap.to(t, { x: off, xPercent: -50, opacity: o, duration: 1.1, ease: 'power3.inOut' });
+        if (!animate || !hasGsap || RM) { if (hasGsap) gsap.set(t, { x: off, xPercent: -50, opacity: o }); else { t.style.transform = 'translateX(calc(-50% + ' + off + 'px))'; t.style.opacity = o; } return; }
+        gsap.killTweensOf(t);
+        if (!jump) { gsap.to(t, { x: off, xPercent: -50, opacity: o, duration: DUR, ease: 'power3.inOut' }); return; }
+        // a jump would teleport across the screen: leave or enter from the side the strip is travelling
+        var d = dir || 1;
+        if (Math.abs(was) <= 1) gsap.to(t, { x: -d * vw, opacity: 0, duration: DUR, ease: 'power3.inOut', onComplete: function () { gsap.set(t, { x: off, opacity: o }); } });
+        else if (Math.abs(k) <= 1) gsap.fromTo(t, { x: d * vw, xPercent: -50, opacity: 0 }, { x: off, opacity: o, duration: DUR, ease: 'power3.inOut' });
+        else gsap.set(t, { x: off, xPercent: -50, opacity: o });
       });
     }
     function sync() {
       copies.forEach(function (c, j) { c.classList.toggle('is-active', j === idx); c.setAttribute('aria-hidden', j === idx ? 'false' : 'true'); $$('a,button', c).forEach(function (a) { a.tabIndex = j === idx ? 0 : -1; }); });
-      bars.forEach(function (b, j) { b.classList.toggle('is-active', j === idx); });
+      bars.forEach(function (b, j) { b.classList.toggle('is-active', j === idx); if (j === idx) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
       if (current) current.textContent = idx + 1;
     }
-    function go(dir, cx, cy) {
-      if (busy) return;
-      var from = idx; idx = (idx + dir + n) % n;
+    function goTo(to, dir, cx, cy, auto) {
+      to = (to + n) % n;
+      if (busy || to === idx) return;
+      dir = dir || (dist(to, idx) < 0 ? -1 : 1);
+      stopTimer();
+      // announce manual changes only; automatic ones would interrupt screen readers every few seconds
+      if (live) live.setAttribute('aria-live', auto ? 'off' : 'polite');
+      var from = idx; idx = to;
       var inS = slides[idx], outS = slides[from];
-      layout(true); sync();
+      layout(true, dir); sync();
       if (RM || !hasGsap) { outS.classList.remove('is-active'); inS.classList.add('is-active'); return; }
       busy = true;
       var r = root.getBoundingClientRect();
@@ -99,12 +114,84 @@
       // zoom via --zoom (CSS `scale`), not GSAP transforms, so the image's scroll parallax keeps running
       gsap.fromTo(img, { '--zoom': 1.18 }, { '--zoom': 1, duration: 1.6, ease: 'expo.out' });
       gsap.fromTo(inS, { clipPath: 'circle(0px at ' + cx + 'px ' + cy + 'px)' }, {
-        clipPath: 'circle(' + R + 'px at ' + cx + 'px ' + cy + 'px)', duration: 1.1, ease: 'power3.inOut',
-        onComplete: function () { outS.classList.remove('is-active'); inS.classList.add('is-active'); inS.classList.remove('is-entering'); gsap.set(inS, { clearProps: 'clipPath' }); busy = false; }
+        clipPath: 'circle(' + R + 'px at ' + cx + 'px ' + cy + 'px)', duration: DUR, ease: 'power3.inOut',
+        onComplete: function () { outS.classList.remove('is-active'); inS.classList.add('is-active'); inS.classList.remove('is-entering'); gsap.set(inS, { clearProps: 'clipPath' }); busy = false; startTimer(); }
       });
     }
-    $$('[data-next]', root).forEach(function (b) { b.addEventListener('click', function (e) { var r = root.getBoundingClientRect(); go(1, e.detail ? e.clientX - r.left : null, e.detail ? e.clientY - r.top : null); }); });
-    $$('[data-prev]', root).forEach(function (b) { b.addEventListener('click', function (e) { var r = root.getBoundingClientRect(); go(-1, e.detail ? e.clientX - r.left : null, e.detail ? e.clientY - r.top : null); }); });
+    function go(dir, cx, cy) { goTo(idx + dir, dir, cx, cy); }
+
+    /* Autoplay: each slide holds for HOLD after its transition has finished, so one change every
+       ~4s (2.9s hold + the unchanged 1.1s transition). Only the waiting time was shortened.
+       One timer only: every change, manual or automatic, cancels it and it restarts once the new
+       slide has fully arrived, so a chosen slide always gets the full hold. Pauses when the carousel
+       is off screen, the tab is hidden, keyboard focus is inside it, the pointer is dwelling on a
+       NEXT / PREV zone (hover navigation takes over), or via the pause button. */
+    var HOLD = 2900, timer = 0, inView = false, focusHold = false, userPaused = false, hoverHold = false;
+    var canAuto = hasGsap && !RM && n > 1;
+    root.style.setProperty('--cz-hold', HOLD + 'ms');
+    function shouldRun() { return canAuto && inView && !document.hidden && !focusHold && !userPaused && !hoverHold; }
+    function stopTimer() { clearTimeout(timer); timer = 0; root.classList.remove('is-timing'); }
+    function startTimer() {
+      stopTimer();
+      if (!shouldRun() || busy) return;
+      void root.offsetWidth; // restart the progress-line animation from zero
+      root.classList.add('is-timing');
+      timer = setTimeout(function () { timer = 0; goTo(idx + 1, 1, null, null, true); }, HOLD);
+    }
+    function refresh() { if (shouldRun()) { if (!timer && !busy) startTimer(); } else stopTimer(); }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { inView = es[0].isIntersecting; if (!inView) dwellStop(); refresh(); }, { threshold: 0.35 }).observe(root);
+    else inView = true;
+    // hidden tab / scrolled away: drop any pending hover step (the next pointer move re-arms it)
+    document.addEventListener('visibilitychange', function () { if (document.hidden) dwellStop(); refresh(); });
+    if (canAuto) {
+      root.addEventListener('focusin', function (e) { if (e.target.matches && e.target.matches(':focus-visible')) { focusHold = true; refresh(); } });
+      root.addEventListener('focusout', function (e) { if (!root.contains(e.relatedTarget)) { focusHold = false; refresh(); } });
+      if (toggle) {
+        toggle.hidden = false;
+        toggle.addEventListener('click', function () {
+          userPaused = !userPaused;
+          toggle.classList.toggle('is-paused', userPaused);
+          toggle.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
+          toggle.setAttribute('aria-label', userPaused ? 'Play automatic slides' : 'Pause automatic slides');
+          if (!userPaused) focusHold = false; // the button itself holds focus; resuming is explicit
+          refresh();
+        });
+      }
+    }
+    /* Hover navigation (mouse only): resting on NEXT / PREV for DWELL moves one slide, and keeps
+       moving every DWELL while the pointer stays in that zone. One dwell timer only; it is restarted
+       (never stacked) by every navigation, including a click, so a click is instant and is never
+       followed by a surprise second advance. Leaving the zone cancels it at once. The cursor's ring
+       traces the wait. Not on touch (tap and swipe stay as they were) and not under reduced motion. */
+    var DWELL = 2000, dwellT = 0, dwellDir = 0, dwellX = 0, dwellY = 0;
+    var canDwell = !!cursor && !RM && n > 1 && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    root.style.setProperty('--cz-dwell', DWELL + 'ms');
+    function dwellStop() { clearTimeout(dwellT); dwellT = 0; if (cursor) cursor.classList.remove('is-dwell'); }
+    function dwellStart() {
+      dwellStop();
+      if (!dwellDir || document.hidden) return;
+      void cursor.offsetWidth; // restart the ring from empty
+      cursor.classList.add('is-dwell');
+      dwellT = setTimeout(function () {
+        dwellT = 0;
+        if (!dwellDir) return;
+        go(dwellDir, dwellX, dwellY);
+        dwellStart();
+      }, DWELL);
+    }
+
+    TEH.carousel = { goTo: function (i) { goTo(i); }, index: function () { return idx; }, pause: function () { userPaused = true; refresh(); }, play: function () { userPaused = false; refresh(); }, running: function () { return !!timer; }, busy: function () { return busy; }, dwelling: function () { return !!dwellT; }, hold: HOLD, dwell: DWELL };
+
+    bars.forEach(function (b) { b.addEventListener('click', function () { goTo(parseInt(b.getAttribute('data-goto'), 10)); }); });
+    function zoneClick(dir) {
+      return function (e) {
+        var r = root.getBoundingClientRect();
+        go(dir, e.detail ? e.clientX - r.left : null, e.detail ? e.clientY - r.top : null);
+        if (dwellDir) dwellStart(); // a click resets the hover wait
+      };
+    }
+    $$('[data-next]', root).forEach(function (b) { b.addEventListener('click', zoneClick(1)); });
+    $$('[data-prev]', root).forEach(function (b) { b.addEventListener('click', zoneClick(-1)); });
     root.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') { e.preventDefault(); go(1); } if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); } });
 
     // custom cursor over the side zones (desktop pointer only)
@@ -112,8 +199,19 @@
       var label = cursor.querySelector('span');
       $$('.carousel__zone', root).forEach(function (z) {
         var next = z.classList.contains('carousel__zone--next');
-        z.addEventListener('pointermove', function (e) { var r = root.getBoundingClientRect(); cursor.style.setProperty('--cx', (e.clientX - r.left) + 'px'); cursor.style.setProperty('--cy', (e.clientY - r.top) + 'px'); label.textContent = next ? 'Next' : 'Prev'; cursor.classList.add('is-on'); });
-        z.addEventListener('pointerleave', function () { cursor.classList.remove('is-on', 'is-down'); });
+        z.addEventListener('pointermove', function (e) {
+          var r = root.getBoundingClientRect();
+          dwellX = e.clientX - r.left; dwellY = e.clientY - r.top;
+          cursor.style.setProperty('--cx', dwellX + 'px'); cursor.style.setProperty('--cy', dwellY + 'px'); label.textContent = next ? 'Next' : 'Prev'; cursor.classList.add('is-on');
+          // (re)arm on entering a zone, switching zones, or after a pause (tab hidden / scrolled away)
+          if (canDwell && e.pointerType === 'mouse' && inView && !document.hidden && (dwellDir !== (next ? 1 : -1) || !dwellT)) {
+            dwellDir = next ? 1 : -1; hoverHold = true; refresh(); dwellStart();
+          }
+        });
+        z.addEventListener('pointerleave', function () {
+          cursor.classList.remove('is-on', 'is-down');
+          if (dwellDir) { dwellDir = 0; dwellStop(); hoverHold = false; refresh(); }
+        });
         z.addEventListener('pointerdown', function () { cursor.classList.add('is-down'); });
         z.addEventListener('pointerup', function () { cursor.classList.remove('is-down'); });
       });
@@ -123,8 +221,19 @@
     root.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
     root.addEventListener('touchend', function (e) { if (sx == null) return; var dx = e.changedTouches[0].clientX - sx, dy = e.changedTouches[0].clientY - sy; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1); sx = null; }, { passive: true });
 
+    // Phones/tablets: a long title ("Celebrations") must fit between the round arrows, never under
+    // them or past the screen edge. Shrink only the titles that need it (bottom-anchored in CSS, so the
+    // gap to the tagline is unchanged).
+    function fit() {
+      var arrow = $('.carousel__arrows button', root), rr = root.getBoundingClientRect();
+      titles.forEach(function (t) { t.style.fontSize = ''; });
+      arrowsShown = !!(arrow && arrow.offsetWidth);
+      if (!arrowsShown) return;
+      var avail = rr.width - 2 * (arrow.getBoundingClientRect().right - rr.left + 0.8 * rem());
+      titles.forEach(function (t) { var s = avail / t.offsetWidth; if (s < 1) t.style.fontSize = 'calc(var(--fs-mega) * ' + s.toFixed(3) + ')'; });
+    }
     sync();
-    var ready = function () { layout(false); };
+    var ready = function () { fit(); layout(false); };
     (document.fonts ? document.fonts.ready : Promise.resolve()).then(ready);
     window.addEventListener('resize', ready);
     ready();
@@ -143,21 +252,41 @@
   /* ======================= 7. OVAL ======================= */
   (function oval() {
     var el = $('[data-oval]'); if (!el) return;
-    var img = $('[data-oval-img]', el);
+    var img = $('[data-oval-img]', el), stage = el.parentElement, sec = stage.parentElement;
     // One radius length only: it grows from a soft rectangle to half the frame's shorter side, which is
     // a capsule on wide frames and a circle on the square mobile frame. Never an elliptical "rx / ry".
+    //
+    // Why the old version went unnoticed: it ran from "top bottom" to "center 55%" with an ease-out,
+    // so half the rounding happened while only the top ~200px of the frame had entered the screen,
+    // and it was finished before the whole shape was ever in view. Now the morph:
+    //   - starts only once 85% of the frame is visible (the rectangle is seen whole first),
+    //   - continues while the frame holds centred (CSS sticky over --oval-hold of scroll),
+    //   - completes at 85% of that hold, so the finished capsule / circle rests briefly before it leaves,
+    //   - uses a sine in-out curve, so the start, middle and end each read as distinct states.
+    // Desktop 1440×900: ~90vh of scroll from rectangle to capsule (plus the rectangle's own entry).
     var last = 1;
     var apply = function (p) {
       last = p;
-      var w = el.offsetWidth, h = el.offsetHeight, end = Math.min(w, h) / 2, r0 = Math.min(4 * rem(), end);
-      var e = 1 - Math.pow(1 - p, 2);
+      var w = el.offsetWidth, h = el.offsetHeight, end = Math.min(w, h) / 2, r0 = Math.min(4 * rem(), end * 0.1); // crisp start corners, ≈5% of the frame height at every width
+      var e = 0.5 - 0.5 * Math.cos(Math.PI * p);
       el.style.setProperty('--oval-r', (r0 + (end - r0) * e).toFixed(1) + 'px');
+      el.setAttribute('data-oval-p', p.toFixed(3));
+      // the photo settles from a slight zoom in step with the shape; its vertical parallax is core.js
+      if (img) img.style.setProperty('--zoom', (1.08 - 0.08 * e).toFixed(4));
     };
     if (RM || !hasGsap) return; // CSS fallback already gives the final capsule / circle
-    ScrollTrigger.create({ trigger: el, start: 'top bottom', end: 'center 55%', onUpdate: function (st) { apply(st.progress); }, onRefresh: function (st) { apply(st.progress); } });
-    if ('ResizeObserver' in window) new ResizeObserver(function () { apply(last); }).observe(el);
-    // gentle settle of the photo as it arrives; its vertical parallax comes from data-parallax (core.js)
-    gsap.fromTo(img, { '--zoom': 1.08 }, { '--zoom': 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'center center', scrub: true } });
+    sec.classList.add('oval--morph');
+    var setH = function () { stage.style.setProperty('--oval-h', el.offsetHeight + 'px'); };
+    setH();
+    var stickTop = function () { return parseFloat(getComputedStyle(el).top) || 0; };
+    var hold = function () { return stage.offsetHeight - el.offsetHeight; };
+    ScrollTrigger.create({
+      trigger: stage, invalidateOnRefresh: true,
+      start: function () { return 'top ' + Math.round(window.innerHeight - 0.85 * el.offsetHeight) + 'px'; },
+      end: function () { return 'top ' + Math.round(stickTop() - 0.85 * hold()) + 'px'; },
+      onUpdate: function (st) { apply(st.progress); }, onRefresh: function (st) { apply(st.progress); }
+    });
+    if ('ResizeObserver' in window) new ResizeObserver(function () { setH(); apply(last); }).observe(el);
   })();
 
   /* ======================= 8. ANATOMY HOTSPOTS ======================= */

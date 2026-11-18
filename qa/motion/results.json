@@ -46,7 +46,7 @@
    "name": "hero: crossfade layers over a fully opaque previous image (never blank)",
    "ok": true,
    "detail": {
-    "frontOpacity": 0.116253,
+    "frontOpacity": 0.116401,
     "underActiveOpacity": 1
    }
   },
@@ -58,8 +58,8 @@
     "layers": [
      [
       "hero-venue.mp4",
-      true,
-      false
+      false,
+      true
      ],
      [
       "aisle-florals.mp4",
@@ -106,7 +106,7 @@
    "ok": true,
    "detail": {
     "tag": "IMG",
-    "op": 0.00221067,
+    "op": 0,
     "active": false,
     "front": false,
     "src": "hero-venue.webp",
@@ -197,15 +197,15 @@
    }
   },
   {
-   "name": "parallax d1440 florals: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "name": "parallax d1440 florals: photo moves inside frame (rate 0.129), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -165.7,
-     -121.8,
-     -77.9,
-     -46.8,
-     -15.6
+     -241.8,
+     -210.8,
+     -173.4,
+     -123.2,
+     -83.6
     ]
    }
   },
@@ -223,12 +223,12 @@
    }
   },
   {
-   "name": "parallax d1440 footer-band: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "name": "parallax d1440 footer-band: photo moves inside frame (rate 0.304), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -169.2,
-     -131.6
+     -149.9,
+     -55.9
     ]
    }
   },
@@ -239,7 +239,7 @@
     "hit": {
      "el": "BUTTON.carousel__zone carousel__zone--next",
      "cur": "1",
-     "sy": 2176,
+     "sy": 2196,
      "ih": 900
     },
     "nb": {
@@ -249,7 +249,7 @@
      "height": 900
     },
     "beforeDy": -170,
-    "enteringDy": -172.2,
+    "enteringDy": -180.5,
     "afterDy": -170,
     "after300pxDy": -124.7
    }
@@ -313,10 +313,10 @@
    "detail": {
     "dy": [
      -158.9,
-     -125.6,
+     -125.7,
      -92.4,
      -59.3,
-     -26
+     -26.1
     ]
    }
   },
@@ -334,15 +334,15 @@
    }
   },
   {
-   "name": "parallax d1920 florals: photo moves inside frame (rate 0.122), no blank edge (min overscan 0.0px)",
+   "name": "parallax d1920 florals: photo moves inside frame (rate 0.129), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -200.1,
-     -147.1,
-     -94,
-     -56.5,
-     -18.8
+     -292.2,
+     -254.7,
+     -209.6,
+     -148.3,
+     -100.4
     ]
    }
   },
@@ -360,12 +360,12 @@
    }
   },
   {
-   "name": "parallax d1920 footer-band: photo moves inside frame (rate 0.121), no blank edge (min overscan 0.0px)",
+   "name": "parallax d1920 footer-band: photo moves inside frame (rate 0.304), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -202.5,
-     -157.5
+     -179.8,
+     -66.8
     ]
    }
   },
@@ -376,17 +376,17 @@
     "hit": {
      "el": "BUTTON.carousel__zone carousel__zone--next",
      "cur": "1",
-     "sy": 2721,
+     "sy": 2747,
      "ih": 1080
     },
     "nb": {
      "x": 1382.40625,
-     "y": 269.796875,
+     "y": 270.46875,
      "width": 537.59375,
      "height": 1080
     },
     "beforeDy": -203.8,
-    "enteringDy": -204.8,
+    "enteringDy": -215.4,
     "afterDy": -203.8,
     "after300pxDy": -158.5
    }
@@ -424,10 +424,10 @@
    "detail": {
     "dy": [
      -62.6,
-     -48.9,
-     -35.4,
+     -49,
+     -35.3,
      -21.8,
-     -8.2
+     -8.1
     ]
    }
   },
@@ -458,15 +458,15 @@
    }
   },
   {
-   "name": "parallax t768 florals: photo moves inside frame (rate 0.08), no blank edge (min overscan 0.0px)",
+   "name": "parallax t768 florals: photo moves inside frame (rate 0.086), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -122.7,
-     -88.1,
-     -53.5,
-     -32.1,
-     -10.7
+     -167.9,
+     -146.5,
+     -116.7,
+     -73.6,
+     -48.2
     ]
    }
   },
@@ -484,12 +484,12 @@
    }
   },
   {
-   "name": "parallax t768 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)",
+   "name": "parallax t768 footer-band: photo moves inside frame (rate 0.185), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -105.3,
-     -81.9
+     -76.5,
+     -17.4
     ]
    }
   },
@@ -500,17 +500,17 @@
     "hit": {
      "el": "svg.[object SVGAnimatedString]",
      "cur": "1",
-     "sy": 2778,
+     "sy": 2824,
      "ih": 1024
     },
     "nb": {
      "x": 697.4375,
-     "y": 526.359375,
+     "y": 467.15625,
      "width": 45.65625,
      "height": 45.65625
     },
     "beforeDy": -116.9,
-    "enteringDy": -120.6,
+    "enteringDy": -127.3,
     "afterDy": -116.9,
     "after300pxDy": -89.5
    }
@@ -548,8 +548,8 @@
    "detail": {
     "dy": [
      -45.5,
-     -35.7,
-     -25.8,
+     -35.6,
+     -25.9,
      -16.1,
      -6.3
     ]
@@ -560,7 +560,7 @@
    "ok": true,
    "detail": {
     "dy": [
-     -53.9,
+     -54,
      -42,
      -30,
      -18,
@@ -576,21 +576,21 @@
      -41.6,
      -32.2,
      -22.8,
-     -13.4,
-     -4
+     -13.3,
+     -3.9
     ]
    }
   },
   {
-   "name": "parallax m390 florals: photo moves inside frame (rate 0.077), no blank edge (min overscan 0.0px)",
+   "name": "parallax m390 florals: photo moves inside frame (rate 0.08), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -81.3,
-     -59.4,
-     -37.5,
-     -22.5,
-     -7.5
+     -113,
+     -97.9,
+     -76.3,
+     -52.7,
+     -35.8
     ]
    }
   },
@@ -608,12 +608,12 @@
    }
   },
   {
-   "name": "parallax m390 footer-band: photo moves inside frame (rate 0.073), no blank edge (min overscan 0.0px)",
+   "name": "parallax m390 footer-band: photo moves inside frame (rate 0.186), no blank edge (min overscan 0.0px)",
    "ok": true,
    "detail": {
     "dy": [
-     -87.3,
-     -67.9
+     -63.4,
+     -14.5
     ]
    }
   },
@@ -624,17 +624,17 @@
     "hit": {
      "el": "svg.[object SVGAnimatedString]",
      "cur": "1",
-     "sy": 2448,
+     "sy": 2494,
      "ih": 844
     },
     "nb": {
      "x": 327.625,
-     "y": 412.25,
+     "y": 392.875,
      "width": 45.75,
      "height": 45.75
     },
     "beforeDy": -96.3,
-    "enteringDy": -101.5,
+    "enteringDy": -104.2,
     "afterDy": -96.3,
     "after300pxDy": -68.9
    }
@@ -676,8 +676,8 @@
    "name": "shape d1440: grows from soft rectangle (radius increases while entering)",
    "ok": true,
    "detail": [
-    "enter:182.6px",
-    "mid:299px",
+    "enter:31.7px",
+    "mid:84.9px",
     "settled:317px"
    ]
   },
@@ -720,8 +720,8 @@
    "name": "shape d1920: grows from soft rectangle (radius increases while entering)",
    "ok": true,
    "detail": [
-    "enter:224.3px",
-    "mid:365.8px",
+    "enter:38.9px",
+    "mid:102.5px",
     "settled:389px"
    ]
   },
@@ -748,8 +748,8 @@
    "name": "shape t768: grows from soft rectangle (radius increases while entering)",
    "ok": true,
    "detail": [
-    "enter:208.8px",
-    "mid:339px",
+    "enter:35.9px",
+    "mid:116.5px",
     "settled:359px"
    ]
   },
@@ -776,43 +776,43 @@
    "name": "shape m390: grows from soft rectangle (radius increases while entering)",
    "ok": true,
    "detail": [
-    "enter:125.6px",
-    "mid:177.3px",
+    "enter:17.9px",
+    "mid:80.8px",
     "settled:178.5px"
    ]
   },
   {
-   "name": "perf m390 (4× CPU throttle, real touch swipes): scrolled to 12022/12022, 83 fps avg, p95 16.8ms, unexpected layout shift 0",
+   "name": "perf m390 (4× CPU throttle, real touch swipes): scrolled to 12564/12564, 58 fps avg, p95 33.4ms, unexpected layout shift 0",
    "ok": true,
    "detail": {
-    "frames": 1200,
-    "avgMs": 12,
-    "fps": 83,
-    "over50ms": 1,
-    "p95": 16.8,
+    "frames": 1471,
+    "avgMs": 17.3,
+    "fps": 58,
+    "over50ms": 12,
+    "p95": 33.4,
     "cls": 0,
-    "heroResizeShift": 0.168,
-    "y": 12022,
-    "maxY": 12022,
-    "docHBefore": 12866,
-    "docHAfter": 12866
+    "heroResizeShift": 0.174,
+    "y": 12564,
+    "maxY": 12564,
+    "docHBefore": 13408,
+    "docHAfter": 13408
    }
   },
   {
-   "name": "perf d1440: scrolled to 9882/9882, 118 fps avg, p95 8.4ms, unexpected layout shift 0",
+   "name": "perf d1440: scrolled to 10576/10577, 112 fps avg, p95 16.4ms, unexpected layout shift 0.0001",
    "ok": true,
    "detail": {
-    "frames": 621,
-    "avgMs": 8.5,
-    "fps": 118,
+    "frames": 597,
+    "avgMs": 9,
+    "fps": 112,
     "over50ms": 0,
-    "p95": 8.4,
-    "cls": 0,
+    "p95": 16.4,
+    "cls": 0.0001,
     "heroResizeShift": 0.21,
-    "y": 9882,
-    "maxY": 9882,
-    "docHBefore": 10782,
-    "docHAfter": 10782
+    "y": 10576,
+    "maxY": 10577,
+    "docHBefore": 11477,
+    "docHAfter": 11477
    }
   }
  ],
@@ -829,11 +829,11 @@
      -27.2
     ],
     "y": [
-     1681,
-     2041,
-     2401,
-     2761,
-     3121
+     1701,
+     2061,
+     2421,
+     2781,
+     3141
     ]
    },
    "teaser": {
@@ -847,11 +847,11 @@
      -10.1
     ],
     "y": [
-     2583,
-     2814,
-     3045,
-     3276,
-     3507
+     2603,
+     2834,
+     3065,
+     3296,
+     3527
     ]
    },
    "trio-left": {
@@ -865,11 +865,11 @@
      -9.1
     ],
     "y": [
-     3836,
-     4090,
-     4343,
-     4597,
-     4850
+     3856,
+     4110,
+     4363,
+     4617,
+     4870
     ]
    },
    "trio-centre": {
@@ -883,11 +883,11 @@
      -20.5
     ],
     "y": [
-     3711,
-     4001,
-     4291,
-     4580,
-     4870
+     3731,
+     4021,
+     4311,
+     4600,
+     4890
     ]
    },
    "trio-right": {
@@ -901,29 +901,29 @@
      -7.2
     ],
     "y": [
-     3877,
-     4131,
-     4385,
-     4638,
-     4892
+     3897,
+     4151,
+     4405,
+     4658,
+     4912
     ]
    },
    "florals": {
-    "rate": 0.122,
+    "rate": 0.129,
     "minOverscanPx": 0,
     "dy": [
-     -165.7,
-     -121.8,
-     -77.9,
-     -46.8,
-     -15.6
+     -241.8,
+     -210.8,
+     -173.4,
+     -123.2,
+     -83.6
     ],
     "y": [
-     4847,
-     5154,
-     5461,
-     5767,
-     6074
+     4867,
+     5174,
+     5481,
+     5787,
+     6094
     ]
    },
    "gallery-strip": {
@@ -937,28 +937,28 @@
      -6
     ],
     "y": [
-     8318,
-     8548,
-     8778,
-     9008,
-     9238
+     9013,
+     9243,
+     9473,
+     9703,
+     9933
     ]
    },
    "footer-band": {
-    "rate": 0.122,
+    "rate": 0.304,
     "minOverscanPx": 0,
     "dy": [
-     -169.2,
-     -131.6
+     -149.9,
+     -55.9
     ],
     "y": [
-     9389,
-     9698
+     10084,
+     10393
     ]
    },
    "carouselSwitch": {
     "before": {
-     "y": 2176,
+     "y": 2196,
      "dy": -170,
      "top": 170,
      "bottom": 102,
@@ -971,12 +971,12 @@
      "vh": 900
     },
     "mid": {
-     "dy": -172.2,
-     "top": 172.1734619140625,
-     "bottom": 104.1734619140625
+     "dy": -180.5,
+     "top": 180.4736328125,
+     "bottom": 112.4736328125
     },
     "after": {
-     "y": 2176,
+     "y": 2196,
      "dy": -170,
      "top": 170,
      "bottom": 102,
@@ -989,7 +989,7 @@
      "vh": 900
     },
     "moved": {
-     "y": 2476,
+     "y": 2496,
      "dy": -124.7,
      "top": 124.7,
      "bottom": 147.3,
@@ -1015,11 +1015,11 @@
      -32.6
     ],
     "y": [
-     2127,
-     2559,
-     2991,
-     3423,
-     3855
+     2153,
+     2585,
+     3017,
+     3449,
+     3881
     ]
    },
    "teaser": {
@@ -1033,11 +1033,11 @@
      -12.6
     ],
     "y": [
-     3222,
-     3506,
-     3790,
-     4074,
-     4358
+     3248,
+     3532,
+     3816,
+     4100,
+     4384
     ]
    },
    "trio-left": {
@@ -1051,11 +1051,11 @@
      -11.2
     ],
     "y": [
-     4893,
-     5207,
-     5521,
-     5835,
-     6149
+     4919,
+     5234,
+     5548,
+     5862,
+     6176
     ]
    },
    "trio-centre": {
@@ -1063,17 +1063,17 @@
     "minOverscanPx": 0,
     "dy": [
      -158.9,
-     -125.6,
+     -125.7,
      -92.4,
      -59.3,
-     -26
+     -26.1
     ],
     "y": [
-     4726,
-     5089,
-     5451,
-     5813,
-     6176
+     4753,
+     5115,
+     5478,
+     5840,
+     6202
     ]
    },
    "trio-right": {
@@ -1087,29 +1087,29 @@
      -8.7
     ],
     "y": [
-     4948,
-     5262,
-     5576,
-     5890,
-     6204
+     4974,
+     5289,
+     5603,
+     5917,
+     6231
     ]
    },
    "florals": {
-    "rate": 0.122,
+    "rate": 0.129,
     "minOverscanPx": 0,
     "dy": [
-     -200.1,
-     -147.1,
-     -94,
-     -56.5,
-     -18.8
+     -292.2,
+     -254.7,
+     -209.6,
+     -148.3,
+     -100.4
     ],
     "y": [
-     6234,
-     6605,
-     6977,
-     7348,
-     7720
+     6260,
+     6632,
+     7004,
+     7375,
+     7747
     ]
    },
    "gallery-strip": {
@@ -1123,65 +1123,65 @@
      -7.3
     ],
     "y": [
-     10800,
-     11083,
-     11365,
-     11648,
-     11931
+     11637,
+     11919,
+     12202,
+     12485,
+     12767
     ]
    },
    "footer-band": {
-    "rate": 0.121,
+    "rate": 0.304,
     "minOverscanPx": 0,
     "dy": [
-     -202.5,
-     -157.5
+     -179.8,
+     -66.8
     ],
     "y": [
-     12211,
-     12582
+     13047,
+     13419
     ]
    },
    "carouselSwitch": {
     "before": {
-     "y": 2721,
+     "y": 2747,
      "dy": -203.8,
      "top": 203.8,
      "bottom": 122.2,
      "left": 0,
      "right": 0,
-     "fTop": 269.796875,
+     "fTop": 270.46875,
      "fH": 1080,
      "fL": 0,
      "fW": 1920,
      "vh": 1080
     },
     "mid": {
-     "dy": -204.8,
-     "top": 204.7974853515625,
-     "bottom": 123.197509765625
+     "dy": -215.4,
+     "top": 215.43536376953125,
+     "bottom": 133.83538818359375
     },
     "after": {
-     "y": 2721,
+     "y": 2747,
      "dy": -203.8,
      "top": 203.8,
      "bottom": 122.2,
      "left": 0,
      "right": 0,
-     "fTop": 269.796875,
+     "fTop": 270.46875,
      "fH": 1080,
      "fL": 0,
      "fW": 1920,
      "vh": 1080
     },
     "moved": {
-     "y": 3021,
+     "y": 3047,
      "dy": -158.5,
      "top": 158.5,
      "bottom": 167.5,
      "left": 0,
      "right": 0,
-     "fTop": -30.203125,
+     "fTop": -29.53125,
      "fH": 1080,
      "fL": 0,
      "fW": 1920,
@@ -1201,11 +1201,11 @@
      -18.7
     ],
     "y": [
-     2215,
-     2624,
-     3034,
-     3444,
-     3853
+     2261,
+     2670,
+     3080,
+     3490,
+     3899
     ]
    },
    "teaser": {
@@ -1213,17 +1213,17 @@
     "minOverscanPx": 0,
     "dy": [
      -62.6,
-     -48.9,
-     -35.4,
+     -49,
+     -35.3,
      -21.8,
-     -8.2
+     -8.1
     ],
     "y": [
-     3581,
-     3894,
-     4206,
-     4519,
-     4831
+     3632,
+     3944,
+     4257,
+     4569,
+     4882
     ]
    },
    "trio-left": "not displayed at this width",
@@ -1238,11 +1238,11 @@
      -8.3
     ],
     "y": [
-     6167,
-     6465,
-     6763,
-     7062,
-     7360
+     6231,
+     6529,
+     6827,
+     7126,
+     7424
     ]
    },
    "trio-right": {
@@ -1256,29 +1256,29 @@
      -5.8
     ],
     "y": [
-     6188,
-     6486,
-     6784,
-     7083,
-     7381
+     6252,
+     6550,
+     6848,
+     7147,
+     7445
     ]
    },
    "florals": {
-    "rate": 0.08,
+    "rate": 0.086,
     "minOverscanPx": 0,
     "dy": [
-     -122.7,
-     -88.1,
-     -53.5,
-     -32.1,
-     -10.7
+     -167.9,
+     -146.5,
+     -116.7,
+     -73.6,
+     -48.2
     ],
     "y": [
-     7679,
-     8028,
-     8376,
-     8724,
-     9073
+     7743,
+     8092,
+     8440,
+     8788,
+     9137
     ]
    },
    "gallery-strip": {
@@ -1292,65 +1292,65 @@
      -3.9
     ],
     "y": [
-     12113,
-     12359,
-     12605,
-     12852,
-     13098
+     12800,
+     13047,
+     13293,
+     13539,
+     13786
     ]
    },
    "footer-band": {
-    "rate": 0.073,
+    "rate": 0.185,
     "minOverscanPx": 0,
     "dy": [
-     -105.3,
-     -81.9
+     -76.5,
+     -17.4
     ],
     "y": [
-     13751,
-     14070
+     14443,
+     14763
     ]
    },
    "carouselSwitch": {
     "before": {
-     "y": 2778,
+     "y": 2824,
      "dy": -116.9,
      "top": 116.9,
      "bottom": 70.1,
      "left": 0,
      "right": 0,
-     "fTop": 255.9375,
+     "fTop": 255.96875,
      "fH": 1024,
      "fL": 0,
      "fW": 768,
      "vh": 1024
     },
     "mid": {
-     "dy": -120.6,
-     "top": 120.63116455078125,
-     "bottom": 73.83099365234375
+     "dy": -127.3,
+     "top": 127.315185546875,
+     "bottom": 80.51513671875
     },
     "after": {
-     "y": 2778,
+     "y": 2824,
      "dy": -116.9,
      "top": 116.9,
      "bottom": 70.1,
      "left": 0,
      "right": 0,
-     "fTop": 255.9375,
+     "fTop": 255.96875,
      "fH": 1024,
      "fL": 0,
      "fW": 768,
      "vh": 1024
     },
     "moved": {
-     "y": 3078,
+     "y": 3124,
      "dy": -89.5,
      "top": 89.5,
      "bottom": 97.5,
      "left": 0,
      "right": 0,
-     "fTop": -44.0625,
+     "fTop": -44.03125,
      "fH": 1024,
      "fL": 0,
      "fW": 768,
@@ -1370,11 +1370,11 @@
      -15.4
     ],
     "y": [
-     1984,
-     2321,
-     2659,
-     2997,
-     3334
+     2030,
+     2367,
+     2705,
+     3043,
+     3380
     ]
    },
    "teaser": {
@@ -1382,17 +1382,17 @@
     "minOverscanPx": 0,
     "dy": [
      -45.5,
-     -35.7,
-     -25.8,
+     -35.6,
+     -25.9,
      -16.1,
      -6.3
     ],
     "y": [
-     3229,
-     3451,
-     3674,
-     3896,
-     4118
+     3279,
+     3502,
+     3724,
+     3946,
+     4169
     ]
    },
    "trio-left": "not displayed at this width",
@@ -1400,18 +1400,18 @@
     "rate": 0.056,
     "minOverscanPx": 0,
     "dy": [
-     -53.9,
+     -54,
      -42,
      -30,
      -18,
      -6
     ],
     "y": [
-     5020,
-     5234,
-     5448,
-     5662,
-     5876
+     5083,
+     5297,
+     5511,
+     5726,
+     5940
     ]
    },
    "trio-right": {
@@ -1421,33 +1421,33 @@
      -41.6,
      -32.2,
      -22.8,
-     -13.4,
-     -4
+     -13.3,
+     -3.9
     ],
     "y": [
-     5040,
-     5255,
-     5469,
-     5683,
-     5897
+     5104,
+     5318,
+     5532,
+     5747,
+     5961
     ]
    },
    "florals": {
-    "rate": 0.077,
+    "rate": 0.08,
     "minOverscanPx": 0,
     "dy": [
-     -81.3,
-     -59.4,
-     -37.5,
-     -22.5,
-     -7.5
+     -113,
+     -97.9,
+     -76.3,
+     -52.7,
+     -35.8
     ],
     "y": [
-     6304,
-     6544,
-     6784,
-     7024,
-     7265
+     6368,
+     6608,
+     6848,
+     7088,
+     7328
     ]
    },
    "gallery-strip": {
@@ -1461,65 +1461,65 @@
      -3.4
     ],
     "y": [
-     9961,
-     10172,
-     10382,
-     10592,
-     10803
+     10498,
+     10708,
+     10919,
+     11129,
+     11339
     ]
    },
    "footer-band": {
-    "rate": 0.073,
+    "rate": 0.186,
     "minOverscanPx": 0,
     "dy": [
-     -87.3,
-     -67.9
+     -63.4,
+     -14.5
     ],
     "y": [
-     11681,
-     11945
+     12223,
+     12486
     ]
    },
    "carouselSwitch": {
     "before": {
-     "y": 2448,
+     "y": 2494,
      "dy": -96.3,
      "top": 96.3,
      "bottom": 57.7,
      "left": 0,
      "right": 0,
-     "fTop": 210.984375,
+     "fTop": 211.015625,
      "fH": 844,
      "fL": 0,
      "fW": 390,
      "vh": 844
     },
     "mid": {
-     "dy": -101.5,
-     "top": 101.52899169921875,
-     "bottom": 62.928955078125
+     "dy": -104.2,
+     "top": 104.20660400390625,
+     "bottom": 65.606689453125
     },
     "after": {
-     "y": 2448,
+     "y": 2494,
      "dy": -96.3,
      "top": 96.3,
      "bottom": 57.7,
      "left": 0,
      "right": 0,
-     "fTop": 210.984375,
+     "fTop": 211.015625,
      "fH": 844,
      "fL": 0,
      "fW": 390,
      "vh": 844
     },
     "moved": {
-     "y": 2748,
+     "y": 2794,
      "dy": -68.9,
      "top": 68.9,
      "bottom": 85.1,
      "left": 0,
      "right": 0,
-     "fTop": -89.015625,
+     "fTop": -88.984375,
      "fH": 844,
      "fL": 0,
      "fW": 390,
@@ -1533,11 +1533,11 @@
    "enter": {
     "w": 1400,
     "h": 633.6,
-    "radius": "182.6px",
+    "radius": "31.7px",
     "elliptical": false,
-    "R": 182.6,
+    "R": 31.7,
     "ratio": 2.21,
-    "straight": 1034.8,
+    "straight": 1336.6,
     "kids": [
      {
       "tag": "SPAN",
@@ -1565,11 +1565,11 @@
    "mid": {
     "w": 1400,
     "h": 633.6,
-    "radius": "299px",
+    "radius": "84.9px",
     "elliptical": false,
-    "R": 299,
+    "R": 84.9,
     "ratio": 2.21,
-    "straight": 802,
+    "straight": 1230.2,
     "kids": [
      {
       "tag": "SPAN",
@@ -1631,11 +1631,11 @@
    "enter": {
     "w": 1866.7,
     "h": 777.6,
-    "radius": "224.3px",
+    "radius": "38.9px",
     "elliptical": false,
-    "R": 224.3,
+    "R": 38.9,
     "ratio": 2.401,
-    "straight": 1418.1,
+    "straight": 1788.9,
     "kids": [
      {
       "tag": "SPAN",
@@ -1663,11 +1663,11 @@
    "mid": {
     "w": 1866.7,
     "h": 777.6,
-    "radius": "365.8px",
+    "radius": "102.5px",
     "elliptical": false,
-    "R": 365.8,
+    "R": 102.5,
     "ratio": 2.401,
-    "straight": 1135.1,
+    "straight": 1661.7,
     "kids": [
      {
       "tag": "SPAN",
@@ -1729,11 +1729,11 @@
    "enter": {
     "w": 718.2,
     "h": 718.2,
-    "radius": "208.8px",
+    "radius": "35.9px",
     "elliptical": false,
-    "R": 208.8,
+    "R": 35.9,
     "ratio": 1,
-    "straight": 300.6,
+    "straight": 646.4,
     "kids": [
      {
       "tag": "SPAN",
@@ -1753,7 +1753,7 @@
      {
       "tag": "A",
       "ok": true,
-      "cx": 383.984375
+      "cx": 383.9921875
      }
     ],
     "centred": true
@@ -1761,11 +1761,11 @@
    "mid": {
     "w": 718.2,
     "h": 718.2,
-    "radius": "339px",
+    "radius": "116.5px",
     "elliptical": false,
-    "R": 339,
+    "R": 116.5,
     "ratio": 1,
-    "straight": 40.2,
+    "straight": 485.2,
     "kids": [
      {
       "tag": "SPAN",
@@ -1785,7 +1785,7 @@
      {
       "tag": "A",
       "ok": true,
-      "cx": 383.984375
+      "cx": 383.9921875
      }
     ],
     "centred": true
@@ -1817,7 +1817,7 @@
      {
       "tag": "A",
       "ok": true,
-      "cx": 383.984375
+      "cx": 383.9921875
      }
     ],
     "centred": true
@@ -1827,11 +1827,11 @@
    "enter": {
     "w": 356.8,
     "h": 356.8,
-    "radius": "125.6px",
+    "radius": "17.9px",
     "elliptical": false,
-    "R": 125.6,
+    "R": 17.9,
     "ratio": 1,
-    "straight": 105.6,
+    "straight": 320.9,
     "kids": [
      {
       "tag": "SPAN",
@@ -1851,7 +1851,7 @@
      {
       "tag": "A",
       "ok": true,
-      "cx": 194.984375
+      "cx": 194.9921875
      }
     ],
     "centred": true
@@ -1859,11 +1859,11 @@
    "mid": {
     "w": 356.8,
     "h": 356.8,
-    "radius": "177.3px",
+    "radius": "80.8px",
     "elliptical": false,
-    "R": 177.3,
+    "R": 80.8,
     "ratio": 1,
-    "straight": 2.1,
+    "straight": 195.2,
     "kids": [
      {
       "tag": "SPAN",
@@ -1883,7 +1883,7 @@
      {
       "tag": "A",
       "ok": true,
-      "cx": 194.984375
+      "cx": 194.9921875
      }
     ],
     "centred": true
@@ -1915,7 +1915,7 @@
      {
       "tag": "A",
       "ok": true,
-      "cx": 194.984375
+      "cx": 194.9921875
      }
     ],
     "centred": true
@@ -1944,30 +1944,30 @@
  },
  "perf": {
   "m390": {
-   "frames": 1200,
-   "avgMs": 12,
-   "fps": 83,
-   "over50ms": 1,
-   "p95": 16.8,
+   "frames": 1471,
+   "avgMs": 17.3,
+   "fps": 58,
+   "over50ms": 12,
+   "p95": 33.4,
    "cls": 0,
-   "heroResizeShift": 0.168,
-   "y": 12022,
-   "maxY": 12022,
-   "docHBefore": 12866,
-   "docHAfter": 12866
+   "heroResizeShift": 0.174,
+   "y": 12564,
+   "maxY": 12564,
+   "docHBefore": 13408,
+   "docHAfter": 13408
   },
   "d1440": {
-   "frames": 621,
-   "avgMs": 8.5,
-   "fps": 118,
+   "frames": 597,
+   "avgMs": 9,
+   "fps": 112,
    "over50ms": 0,
-   "p95": 8.4,
-   "cls": 0,
+   "p95": 16.4,
+   "cls": 0.0001,
    "heroResizeShift": 0.21,
-   "y": 9882,
-   "maxY": 9882,
-   "docHBefore": 10782,
-   "docHAfter": 10782
+   "y": 10576,
+   "maxY": 10577,
+   "docHBefore": 11477,
+   "docHAfter": 11477
   }
  }
 }
