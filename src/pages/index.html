@@ -32,10 +32,10 @@
         <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.5v9M11 3.5v9"/></svg>
         <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 3.5 12 8l-6.5 4.5z"/></svg>
       </button>
-      <form class="enquiry-bar" action="enquiry.html" method="get" data-hero-bar>
+      <form class="enquiry-bar" action="enquiry.html" method="get" data-hero-bar data-pick-anchor>
         <label class="enquiry-bar__field">
           <span>Occasion</span>
-          <select name="type">
+          <select name="type" data-pick>
             <option value="wedding">Wedding</option>
             <option value="private">Private celebration</option>
             <option value="corporate">Corporate or gala</option>
@@ -44,11 +44,11 @@
         </label>
         <label class="enquiry-bar__field">
           <span>Date</span>
-          <input type="date" name="date" aria-label="Event date">
+          <input type="date" name="date" data-pick>
         </label>
         <label class="enquiry-bar__field">
           <span>Guests</span>
-          <select name="guests">
+          <select name="guests" data-pick>
             <option value="under-30">Up to 30</option>
             <option value="30-80" selected>30 to 80</option>
             <option value="80-150">80 to 150</option>
@@ -369,6 +369,7 @@
 <!-- @include scripts -->
 <script src="assets/js/config/hero-media.js"></script>
 <script src="assets/js/hero-media.js"></script>
+<script src="assets/js/picker.js"></script>
 <script src="assets/js/home.js"></script>
 </body>
 </html>

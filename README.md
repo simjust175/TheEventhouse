@@ -23,13 +23,13 @@ Pages: `/` (home) · `/gallery.html` · `/collection.html` · `/enquiry.html`
 | `src/partials/` | Shared shell: header, menu overlay, basket drawer, footers, CTA band, icon sprite, scripts |
 | `site/` | Built, servable output (HTML generated; `assets/` edited directly) |
 | `site/assets/css/` | `main.css` (tokens, shell, shared components) · `home.css` · `pages.css` (gallery/collection/enquiry) |
-| `site/assets/js/` | `core.js` (basket, drawer, menu, reveals, Lenis) · `products.js` (placeholder catalogue) · one file per page |
+| `site/assets/js/` | `core.js` (basket, drawer, menu, reveals, Lenis) · `products.js` (placeholder catalogue) · `picker.js` (bespoke Occasion / Date / Guests controls) · one file per page |
 | `site/assets/vendor/` | GSAP 3.13 + ScrollTrigger + SplitText, Lenis 1.3 (self-hosted, pinned) |
 | `site/assets/fonts/` | Cormorant Garamond + Jost (OFL, self-hosted) |
 | `tools/` | Build, server, reference capture, QA and test scripts |
 | `site/assets/js/config/hero-media.js` | Homepage hero photos/videos (see below) |
 | `site/assets/video/` | Hero clips (placeholder, rendered from our stills by `tools/make-hero-clips.sh`) |
-| `docs/` | `01_REFERENCE_ANALYSIS.md` (Phase 1) · `02_IMPLEMENTATION_AND_QA.md` (summary, QA, limitations, missing materials) · `03_MOTION_REFINEMENT.md` (hero media, parallax, capsule/circle, carousel, final refinements, motion QA) |
+| `docs/` | `01_REFERENCE_ANALYSIS.md` (Phase 1) · `02_IMPLEMENTATION_AND_QA.md` (summary, QA, limitations, missing materials) · `03_MOTION_REFINEMENT.md` (hero media, parallax, capsule/circle, carousel, final refinements, motion QA) · `04_ENQUIRY_CONTROLS.md` (custom dropdowns and calendar, accessibility, form QA) |
 | `qa/` | Screenshot evidence (`compare/` holds the side-by-side sheets) |
 
 ## Re-running QA
@@ -50,6 +50,9 @@ node tools/compare-carousel.mjs           # carousel composition vs vineyard.co.
 node tools/verify-refine.mjs              # rounded-feature morph, footer parallax, hover navigation, reduced motion (6 viewports)
 python tools/oval_sheet.py               # start / halfway / final morph frames side by side → qa/motion/oval/
 node tools/audit-targets.mjs              # touch targets ≥ 44px and button labels at 390–1440px
+node tools/verify-forms.mjs               # enquiry pickers: selection, keyboard, calendar rules, time zones, GET hand-off, sheets, no-JS
+node tools/verify-forms.mjs --only=flow   # one suite: home | flow | tz | enquiry | mobile | misc
+python tools/bar_compare.py              # closed enquiry bar before / after → qa/forms/bar-before-after.jpg
 ```
 
 All QA scripts expect the preview server on port 4600 and Google Chrome at its default Windows path (override with `CHROME_PATH`).

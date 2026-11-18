@@ -35,7 +35,7 @@
             <legend>Your event</legend>
             <div class="field">
               <label for="f-type">Occasion</label>
-              <select id="f-type" name="type">
+              <select id="f-type" name="type" data-pick>
                 <option value="wedding">Wedding</option>
                 <option value="private">Private celebration</option>
                 <option value="corporate">Corporate or gala</option>
@@ -44,11 +44,11 @@
             </div>
             <div class="field">
               <label for="f-date">Event date</label>
-              <input id="f-date" name="date" type="date">
+              <input id="f-date" name="date" type="date" data-pick>
             </div>
             <div class="field">
               <label for="f-guests">Guests</label>
-              <select id="f-guests" name="guests">
+              <select id="f-guests" name="guests" data-pick>
                 <option value="under-30">Up to 30</option>
                 <option value="30-80" selected>30 to 80</option>
                 <option value="80-150">80 to 150</option>
@@ -87,7 +87,7 @@
             </div>
             <div class="field">
               <label for="f-lang">Preferred language</label>
-              <select id="f-lang" name="lang"><option>English</option><option>Deutsch</option><option>Français</option><option>Italiano</option></select>
+              <select id="f-lang" name="lang" data-pick><option>English</option><option>Deutsch</option><option>Français</option><option>Italiano</option></select>
             </div>
             <div class="field field--full">
               <label for="f-msg">Your vision</label>
@@ -107,6 +107,7 @@
 
 <!-- @include footer-compact -->
 <!-- @include scripts -->
+<script src="assets/js/picker.js"></script>
 <script src="assets/js/enquiry.js"></script>
 </body>
 </html>

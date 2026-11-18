@@ -78,7 +78,9 @@ if (want('hero')) {
   { const { ctx, page } = await open('d1440', null); const s0 = await state(page);
     check('hero: production config is a mixed video/photo sequence', s0.n === 4 && s0.layers.some((l) => l.tag === 'VIDEO') && s0.layers.some((l) => l.tag === 'IMG'), s0.layers.map((l) => l.tag));
     await page.waitForTimeout(8600); const s1 = await state(page);
-    check('hero: mixed sequence advances from the video to the photo, label follows', s1.idx === 1 && /table/i.test(s1.label), { idx: s1.idx, label: s1.label });
+    // the expected label comes from the live config, so reordering the hero media does not break the check
+    const alt1 = await page.evaluate(() => window.TEH_CONFIG.heroMedia.items[1].alt);
+    check('hero: mixed sequence advances to the second item, label follows', s1.idx === 1 && s1.label === alt1, { idx: s1.idx, label: s1.label, expected: alt1 });
     await heroShot(page, 'mixed-desktop'); await ctx.close(); }
   // 6 broken video → poster
   { const { ctx, page } = await open('d1440', cfg([{ type: 'video', src: 'assets/video/missing.mp4', poster: 'assets/img/hero-venue.webp', alt: 'x' }, P1])); await page.waitForTimeout(1500); const s = await state(page);

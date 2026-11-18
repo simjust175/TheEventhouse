@@ -17,9 +17,10 @@
     var cfg = (window.TEH_CONFIG && window.TEH_CONFIG.heroMedia) || null;
     if (layers && cfg && TEH.HeroMedia) TEH.heroMedia = TEH.HeroMedia(layers, cfg, { toggle: toggle });
 
-    // Prefill the enquiry bar date with a sensible minimum (today)
+    // Enquiry bar: today (local date, not UTC) is the earliest date; the custom pickers enhance the native fields
     var date = bar && bar.querySelector('input[type=date]');
-    if (date) date.min = new Date().toISOString().slice(0, 10);
+    if (date && TEH.pick) date.min = TEH.pick.iso(TEH.pick.today());
+    if (bar && TEH.pick) TEH.pick.enhance(bar);
 
     if (RM || !hasGsap) {
       hero.classList.add('no-hero-motion');

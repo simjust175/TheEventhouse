@@ -232,6 +232,11 @@ body.is-filtered .catalogue { padding-top: 0; }
 .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { box-shadow: 0 2px 0 var(--c-bronze); }
 .field.has-error input, .field.has-error select, .field.has-error textarea { border-color: #A3402B; }
 .field__error { font-size: 1.3rem; color: #A3402B; min-height: 0; }
+/* bespoke pickers on the form (assets/js/picker.js): same underline language as the text fields */
+.field .pick { font-size: 1.7rem; line-height: normal; padding: 1rem 0; border-bottom: 1px solid var(--c-stone); transition: border-color .4s var(--ease), box-shadow .4s var(--ease); }
+.field .pick:hover, .field .pick[aria-expanded="true"] { border-color: var(--c-ink); }
+.field .pick:focus-visible { border-color: var(--c-ink); box-shadow: 0 2px 0 var(--c-bronze); }
+.field .pick__value > * { overflow: hidden; text-overflow: ellipsis; }
 .checks { display: flex; flex-wrap: wrap; gap: 1.2rem; }
 .check { position: relative; }
 .check input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }

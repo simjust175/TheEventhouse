@@ -36,7 +36,10 @@ const count = (p) => p.evaluate(() => TEH.basket.count());
   for (let i = 0; i < 10; i++) {
     await p.keyboard.press('Tab');
     stops.push(await p.evaluate(() => { const a = document.activeElement; const s = getComputedStyle(a); const r = a.getBoundingClientRect();
-      return { t: (a.getAttribute('aria-label') || a.textContent || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 28), ring: (s.outlineStyle !== 'none' && parseFloat(s.outlineWidth) > 0) || s.boxShadow !== 'none', onscreen: r.width > 0 && r.bottom > 0 && r.top < innerHeight }; }));
+      // the enquiry bar's pickers show focus as a ringed capsule behind the field (a pseudo-element of the field)
+      const z = a.closest('.pick-zone'), zs = z && getComputedStyle(z, '::before');
+      const zoneRing = !!zs && a.matches(':focus-visible') && zs.boxShadow !== 'none'; // opacity is still fading in at this instant
+      return { t: (a.getAttribute('aria-label') || (a.querySelector('.pick__text') || a).textContent || a.tagName).trim().replace(/\s+/g, ' ').slice(0, 28), ring: (s.outlineStyle !== 'none' && parseFloat(s.outlineWidth) > 0) || s.boxShadow !== 'none' || zoneRing, onscreen: r.width > 0 && r.bottom > 0 && r.top < innerHeight }; }));
   }
   check('home: Tab stops have a visible focus ring', stops.every((s) => s.ring), stops.map((s) => s.t + (s.ring ? '' : '[NO RING]') + (s.onscreen ? '' : '[OFFSCREEN]')).join(' | '));
   await shot(p, 'home-focus');

@@ -25,12 +25,15 @@
 
   // prefill from the homepage bar / carousel / services links
   var q = new URL(location.href).searchParams;
-  var date = $('#f-date'); date.min = new Date().toISOString().slice(0, 10);
+  var P = TEH.pick, date = $('#f-date');
+  if (P) date.min = P.iso(P.today()); // local date: toISOString() is UTC and can be a day out around midnight
   if (q.get('type') && $('#f-type option[value="' + q.get('type') + '"]')) $('#f-type').value = q.get('type');
-  if (q.get('date')) date.value = q.get('date');
+  if (q.get('date') && (!P || P.parse(q.get('date')))) date.value = q.get('date');
   if (q.get('guests') && $('#f-guests option[value="' + q.get('guests') + '"]')) $('#f-guests').value = q.get('guests');
   if (q.get('service')) { var s = $('input[name=service][value="' + q.get('service') + '"]'); if (s) s.checked = true; }
   if (TEH.basket.items().some(function (i) { return TEH_FIND(i.id).cat === 'rentals'; })) { var r = $('input[name=service][value=rentals]'); if (r) r.checked = true; }
+  // bespoke Occasion / Date / Guests / Language controls, built after the prefill so they show it
+  if (P) P.enhance(form);
 
   function setErr(input, msg) {
     var f = input.closest('.field') || input.closest('.consent');
@@ -67,7 +70,7 @@
       '<p class="lead">In the live site, the studio would now receive your enquiry and reply personally. This prototype has not sent anything.</p>' +
       '<dl><dt>Reference</dt><dd>' + ref + ' <span class="tbc">demo</span></dd>' +
       '<dt>Occasion</dt><dd>' + esc(label('#f-type')) + '</dd>' +
-      '<dt>Date</dt><dd>' + esc(data.get('date') || 'To be decided') + '</dd>' +
+      '<dt>Date</dt><dd>' + esc(data.get('date') ? (P && P.parse(data.get('date')) ? P.long(P.parse(data.get('date'))) : data.get('date')) : 'To be decided') + '</dd>' +
       '<dt>Guests</dt><dd>' + esc(label('#f-guests')) + '</dd>' +
       '<dt>Services</dt><dd>' + esc(services.length ? services.join(', ') : 'Not specified') + '</dd>' +
       '<dt>Pieces</dt><dd>' + (items.length ? items.map(function (i) { return esc(TEH_FIND(i.id).name) + ' × ' + i.qty; }).join('<br>') : 'None selected') + '</dd></dl>' +
